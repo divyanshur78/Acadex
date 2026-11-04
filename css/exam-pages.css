@@ -1,0 +1,28 @@
+﻿
+/* ACEDEX PREVIOUS YEAR QUESTION COMPONENTS */
+.pyq-section,.previous-year-questions{width:100%;margin:24px 0}
+.pyq-header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:18px}
+.pyq-header h2,.pyq-header h3{margin:0;color:#203f50;font-size:22px;letter-spacing:-.5px}
+.pyq-header p{margin:7px 0 0;color:#7b8991;font-size:12px;line-height:1.6}
+.pyq-filter-panel{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:16px;border:1px solid #e4ebee;border-radius:13px;background:#fff;margin-bottom:17px}
+.pyq-filter-panel label{font-size:12px;font-weight:700;color:#385364}
+.pyq-filter-panel select,.pyq-filter-panel input{min-height:39px;padding:8px 11px;border:1px solid #dce5e9;border-radius:8px;background:#fbfdfd;color:#385364;font:inherit;font-size:12px}
+.pyq-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.pyq-card{display:flex;align-items:center;gap:14px;padding:17px;border:1px solid #e3eaed;border-radius:13px;background:#fff;transition:border-color .2s,transform .2s}
+.pyq-card:hover{border-color:#9bd4cf;transform:translateY(-2px)}
+.pyq-card-icon{display:grid;place-items:center;flex:0 0 42px;height:42px;border-radius:11px;background:#e8f7f4;color:#0a9691;font-size:19px}
+.pyq-card-content{min-width:0;flex:1}
+.pyq-card-content h3{margin:0 0 6px;color:#294958;font-size:13px}
+.pyq-card-content p{margin:0;color:#829098;font-size:11px;line-height:1.5}
+.pyq-card-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.pyq-meta-tag{padding:4px 8px;border-radius:20px;background:#f0f5f6;color:#617580;font-size:10px;font-weight:650}
+.pyq-card-action{font-size:12px;font-weight:750;color:#0a9291;text-decoration:none;white-space:nowrap}
+.pyq-card-action:hover{text-decoration:underline}
+.pyq-empty-state{padding:30px 18px;border:1px dashed #cedcde;border-radius:13px;background:#f9fcfc;text-align:center}
+.pyq-empty-state h3{margin:0 0 8px;color:#355263;font-size:14px}
+.pyq-empty-state p{margin:0;color:#829098;font-size:12px;line-height:1.6}
+.pyq-paper-viewer{width:100%;min-height:450px;border:1px solid #e2e9ec;border-radius:13px;background:#f7fafb}
+.pyq-download-link{display:inline-flex;align-items:center;gap:8px;padding:10px 15px;border-radius:9px;background:#147e83;color:#fff;text-decoration:none;font-size:12px;font-weight:750}
+.pyq-download-link:hover{background:#106b70}
+@media(max-width:650px){.pyq-card-grid{grid-template-columns:1fr}.pyq-header{align-items:flex-start;flex-direction:column}.pyq-filter-panel{align-items:stretch;flex-direction:column}.pyq-filter-panel select,.pyq-filter-panel input{width:100%}.pyq-card{align-items:flex-start}.pyq-card-action{white-space:normal}}
+@media(prefers-reduced-motion:reduce){.pyq-card{transition:none}}

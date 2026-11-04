@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore semester-wise subjects and academic resources on AcedeX.">
+    <title>Semester | AcedeX</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/course-pages.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="course-page-body">
+    <a class="page-back-button" href="programme.html" data-action="history-back" aria-label="Go back to previous page" title="Go back">
+        <span class="page-back-icon" aria-hidden="true">←</span>
+        <span>Back</span>
+    </a>
+
+    <main class="course-workspace" data-page="semester">
+        <header class="course-topbar">
+            <a class="course-brand" href="../index.html">Acede<span>X</span></a>
+            <nav class="course-top-links">
+                <a href="../index.html">Dashboard</a>
+                <a href="courses.html">All Courses</a>
+                <a href="digital-library.html">Digital Library</a>
+            </nav>
+        </header>
+
+        <nav class="course-breadcrumbs" id="semesterBreadcrumbs" aria-label="Semester navigation">
+            <a href="courses.html">Academic Fields</a>
+            <span aria-hidden="true">/</span>
+            <a href="programme.html" data-breadcrumb="programme">Programme</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page" data-breadcrumb="semester">Semester</span>
+        </nav>
+
+        <section class="course-hero">
+            <div class="course-eyebrow">SEMESTER WORKSPACE</div>
+            <h1 id="semesterTitle">Semester Details</h1>
+            <p id="semesterDescription">
+                Explore the subjects, syllabus and learning resources included in this semester.
+            </p>
+            <div class="subject-meta" id="semesterMeta" data-content-container="semester-meta"></div>
+        </section>
+
+        <section aria-labelledby="semesterOverviewTitle">
+            <div class="course-section-heading">
+                <div>
+                    <h2 id="semesterOverviewTitle">Semester Overview</h2>
+                    <p>Academic information for this semester.</p>
+                </div>
+            </div>
+            <div class="subject-detail-main" id="semesterOverview">
+                <p>Semester information will appear when verified academic data is connected.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="subjectSectionTitle">
+            <div class="course-section-heading">
+                <div>
+                    <h2 id="subjectSectionTitle">Subjects in This Semester</h2>
+                    <p>Choose a subject to explore its syllabus and learning resources.</p>
+                </div>
+            </div>
+
+            <div class="course-grid" id="semesterSubjectGrid"
+                 data-content-container="subjects"
+                 aria-live="polite">
+                <div class="course-empty">
+                    <div class="course-empty-icon">⌛</div>
+                    <h3>Subject information coming soon</h3>
+                    <p>Verified semester subjects will appear here when academic data is connected.</p>
+                </div>
+            </div>
+        </section>
+
+        <section aria-labelledby="semesterResourcesTitle">
+            <div class="course-section-heading">
+                <div>
+                    <h2 id="semesterResourcesTitle">Semester Learning Resources</h2>
+                    <p>Study materials connected with this semester.</p>
+                </div>
+            </div>
+            <div class="subject-resource-list" id="semesterResources"
+                 data-content-container="semester-resources">
+                <div class="subject-resource">Learning resources will appear when academic data is connected.</div>
+            </div>
+        </section>
+
+        <footer class="course-footer">
+            © 2026 AcedeX · One space for your academic journey.
+        </footer>
+    </main>
+</body>
+</html>

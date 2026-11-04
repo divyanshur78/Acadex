@@ -342,3 +342,62 @@
         transition-duration: 0.01ms !important;
     }
 }
+
+/* Consistent previous-page navigation */
+.page-back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 18px 0 12px 24px;
+    padding: 10px 17px;
+    color: #245b50;
+    background: #ffffff;
+    border: 1px solid #dce9e5;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+.page-back-button:hover {
+    background: #eaf5f1;
+    transform: translateX(-3px);
+    box-shadow: 0 4px 12px rgba(36, 91, 80, .10);
+}
+
+.page-back-icon {
+    font-size: 21px;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .page-back-button {
+        margin: 14px 0 10px 14px;
+    }
+}
+
+/* ACEDEX — CONSISTENT INNER-PAGE BACK BUTTON */
+.page-back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 16px;
+    margin: 18px 0 18px 24px;
+    color: var(--color-primary);
+    background: var(--color-primary-soft);
+    border: 1px solid rgba(69,104,232,.14);
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all .2s ease;
+}
+.page-back-button:hover {
+    color: #fff;
+    background: var(--color-primary);
+    transform: translateX(-3px);
+}
+.page-back-icon { font-size: 19px; line-height: 1; }
+@media(max-width:600px) {
+    .page-back-button { margin: 14px 0 14px 14px; }
+}
