@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore programme information and semesters on AcedeX.">
+    <title>Programme | AcedeX</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/course-pages.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="course-page-body">
+    <a class="page-back-button" href="courses.html" data-action="history-back" aria-label="Go back to previous page" title="Go back">
+        <span class="page-back-icon" aria-hidden="true">←</span>
+        <span>Back</span>
+    </a>
+
+    <main class="course-workspace" data-page="programme">
+        <header class="course-topbar">
+            <a class="course-brand" href="../index.html">Acede<span>X</span></a>
+            <nav class="course-top-links">
+                <a href="../index.html">Dashboard</a>
+                <a href="courses.html">All Courses</a>
+                <a href="digital-library.html">Digital Library</a>
+            </nav>
+        </header>
+
+        <nav class="course-breadcrumbs" id="programmeBreadcrumbs" aria-label="Programme navigation">
+            <a href="courses.html">Academic Fields</a>
+            <span aria-hidden="true">/</span>
+            <span data-breadcrumb="field">Academic Field</span>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page" data-breadcrumb="programme">Programme</span>
+        </nav>
+
+        <section class="course-hero">
+            <div class="course-eyebrow">ACADEMIC PROGRAMME</div>
+            <h1 id="programmeTitle">Programme Name</h1>
+            <p id="programmeDescription">
+                Explore programme information, academic structure and semester-wise subjects.
+            </p>
+            <div class="subject-meta" id="programmeMeta" data-content-container="programme-meta"></div>
+        </section>
+
+        <section aria-labelledby="programmeOverviewTitle">
+            <div class="course-section-heading">
+                <div>
+                    <h2 id="programmeOverviewTitle">Programme Overview</h2>
+                    <p>Programme information and academic details.</p>
+                </div>
+            </div>
+            <div class="subject-detail-main" id="programmeOverview">
+                <p>Programme overview will appear when verified academic data is connected.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="semesterSectionTitle">
+            <div class="course-section-heading">
+                <div>
+                    <h2 id="semesterSectionTitle">Explore Semesters</h2>
+                    <p>Select a semester to access its subjects and learning resources.</p>
+                </div>
+            </div>
+
+            <div class="semester-grid" id="programmeSemesterGrid"
+                 data-content-container="semesters"
+                 aria-live="polite">
+                <div class="course-empty">
+                    <div class="course-empty-icon">⌛</div>
+                    <h3>Semester information coming soon</h3>
+                    <p>Semester listings will appear when programme data is connected.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="course-footer">
+            © 2026 AcedeX · One space for your academic journey.
+        </footer>
+    </main>
+</body>
+</html>

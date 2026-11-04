@@ -1,75 +1,260 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore subject information and learning resources on AcedeX.">
-    <title>Subject Details | AcedeX</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/components.css">
-    <link rel="stylesheet" href="../css/course-pages.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f8fc">
+  <title>Subject Details | AcedeX</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/course-pages.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/exam-pages.css">
 </head>
-<body class="course-page-body">
-    <main class="course-workspace">
-        <header class="course-topbar">
-            <a class="course-brand" href="../index.html">Acede<span>X</span></a>
-            <nav class="course-top-links">
-                <a href="../index.html">Dashboard</a>
-                <a href="courses.html">All Courses</a>
-                <a href="digital-library.html">Digital Library</a>
-            </nav>
-        </header>
+<body data-page="subject-detail">
+  <div class="course-workspace">
+    <header class="course-topbar">
+      <a class="course-brand" href="../index.html" aria-label="AcedeX Home">
+        <span class="course-brand-mark">A</span>
+        <span>AcedeX</span>
+      </a>
+      <nav class="course-topbar-nav" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="courses.html" class="active">Courses</a>
+        <a href="digital-library.html">Digital Library</a>
+        <a href="book-locator.html">Book Locator</a>
+        <a href="exam-preparation.html">Exam Preparation</a>
+        <a href="profile.html">Profile</a>
+      </nav>
+      <a class="course-back-link" href="courses.html" data-action="history-back">← Back</a>
+    </header>
 
-        <nav class="course-breadcrumbs" id="detailBreadcrumbs" aria-label="Subject navigation">
-            <a class="course-back" href="courses.html">← Back to Courses</a>
-        </nav>
+    <main class="subject-detail-page">
+      <nav class="course-breadcrumbs" id="detailBreadcrumbs" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <a href="courses.html">Courses</a>
+        <span>/</span>
+        <span data-breadcrumb="field">Academic Field</span>
+        <span>/</span>
+        <span data-breadcrumb="programme">Programme</span>
+        <span>/</span>
+        <span data-breadcrumb="semester">Semester</span>
+        <span>/</span>
+        <span data-breadcrumb="subject" aria-current="page">Subject</span>
+      </nav>
 
-        <section class="course-hero">
-            <div class="course-eyebrow">SUBJECT WORKSPACE</div>
-            <h1 id="subjectTitle">Subject details</h1>
-            <p id="subjectDescription">
-                Your subject overview, syllabus and learning resources will appear here.
-            </p>
-            <div class="subject-meta" id="subjectMeta"></div>
-        </section>
+      <section class="subject-detail-hero">
+        <div class="subject-detail-hero-content">
+          <span class="course-eyebrow">SUBJECT OVERVIEW</span>
+          <h1 id="subjectTitle" data-subject-title>Subject Name</h1>
+          <p id="subjectDescription" data-subject-description>
+            A detailed overview of the selected subject, its learning objectives and academic content.
+          </p>
+          <div class="subject-meta-list" id="subjectMeta" data-subject-meta>
+            <span data-subject-code>Subject Code</span>
+            <span data-subject-credits>Credits</span>
+            <span data-subject-semester>Semester</span>
+          </div>
+        </div>
+        <div class="subject-detail-hero-art" aria-hidden="true">
+          <span class="subject-art-symbol">A</span>
+          <span class="subject-art-orbit"></span>
+        </div>
+      </section>
 
-        <section class="subject-detail-layout">
-            <div class="subject-detail-main">
-                <h2>Subject overview</h2>
-                <p id="subjectOverview">Subject information will appear when academic data is connected.</p>
+      <section class="subject-overview-panel subject-content-panel" id="subjectOverviewSection">
+        <div class="subject-section-heading">
+          <div>
+            <span class="course-eyebrow">GET STARTED</span>
+            <h2>About this subject</h2>
+          </div>
+        </div>
+        <div id="subjectOverview" data-content-container="subject-overview">
+          <p>Subject overview and learning objectives will appear here.</p>
+        </div>
+      </section>
 
-                <div class="course-section-heading">
-                    <div>
-                        <h2>Learning resources</h2>
-                        <p>Materials connected to this subject.</p>
-                    </div>
-                </div>
-                <div class="subject-resource-list" id="subjectResources"></div>
+      <div class="subject-detail-layout">
+        <div class="subject-detail-main">
 
-                <div class="course-section-heading">
-                    <div>
-                        <h2>Syllabus and units</h2>
-                        <p>Explore the subject's academic structure.</p>
-                    </div>
-                </div>
-                <div class="subject-resource-list" id="subjectUnits"></div>
+          <section class="subject-detail-section subject-content-panel" id="subjectUnitsSection">
+            <div class="subject-section-heading">
+              <div>
+                <span class="course-eyebrow">COURSE STRUCTURE</span>
+                <h2>Syllabus & Units</h2>
+                <p>Explore the topics and units covered throughout this subject.</p>
+              </div>
+              <span class="subject-section-count" data-unit-count>Units</span>
             </div>
+            <div class="subject-unit-list" id="subjectUnits" data-content-container="subject-units">
+              <div class="subject-empty-state" data-empty-state="units">
+                <span class="subject-empty-icon">▤</span>
+                <h3>Units will appear here</h3>
+                <p>The official syllabus and unit-wise topics will be added when academic data is available.</p>
+              </div>
+            </div>
+          </section>
 
-            <aside class="subject-detail-side">
-                <div class="course-eyebrow">YOUR SUBJECT</div>
-                <h3>Quick access</h3>
-                <p>Related academic materials can be connected here.</p>
-                <a class="course-back" href="digital-library.html">Explore Digital Library</a>
-                <br><br>
-                <a class="course-back" href="exam-preparation.html">Exam Preparation</a>
-                <div class="course-status">Academic data integration ready</div>
-            </aside>
-        </section>
+          <section class="subject-detail-section subject-content-panel" id="shortNotesSection">
+            <div class="subject-section-heading">
+              <div>
+                <span class="course-eyebrow">STUDY MATERIAL</span>
+                <h2>Short Notes</h2>
+                <p>Concise study notes organised by unit and topic.</p>
+              </div>
+              <span class="subject-section-icon">✎</span>
+            </div>
+            <div class="subject-resource-grid" id="subjectShortNotes" data-content-container="short-notes">
+              <div class="subject-empty-state" data-empty-state="short-notes">
+                <span class="subject-empty-icon">▤</span>
+                <h3>No notes available yet</h3>
+                <p>Short notes will be listed here when they are added to the library.</p>
+              </div>
+            </div>
+          </section>
 
-        <footer class="course-footer">
-            © 2026 AcedeX · One space for your academic journey.
-        </footer>
+          <section class="subject-detail-section subject-content-panel" id="quickRevisionSection">
+            <div class="subject-section-heading">
+              <div>
+                <span class="course-eyebrow">LAST-MINUTE PREPARATION</span>
+                <h2>Quick Revision</h2>
+                <p>Important concepts and key points for faster revision.</p>
+              </div>
+              <span class="subject-section-icon">↗</span>
+            </div>
+            <div class="subject-resource-grid" id="subjectQuickRevision" data-content-container="quick-revision">
+              <div class="subject-empty-state" data-empty-state="quick-revision">
+                <span class="subject-empty-icon">◷</span>
+                <h3>Revision material will appear here</h3>
+                <p>Quick revision resources will be organised here topic-wise.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="subject-detail-section subject-content-panel" id="quizzesSection">
+            <div class="subject-section-heading">
+              <div>
+                <span class="course-eyebrow">TEST YOUR KNOWLEDGE</span>
+                <h2>Quizzes & Practice</h2>
+                <p>Practice questions to check your understanding of each unit.</p>
+              </div>
+              <span class="subject-section-icon">?</span>
+            </div>
+            <div class="subject-resource-grid" id="subjectQuizzes" data-content-container="quizzes">
+              <div class="subject-empty-state" data-empty-state="quizzes">
+                <span class="subject-empty-icon">✓</span>
+                <h3>Practice quizzes will appear here</h3>
+                <p>Quiz sets and their explanations will be available once added.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="subject-detail-section subject-content-panel" id="importantQuestionsSection">
+            <div class="subject-section-heading">
+              <div>
+                <span class="course-eyebrow">EXAM FOCUS</span>
+                <h2>Important Questions</h2>
+                <p>Important questions arranged by unit and topic.</p>
+              </div>
+              <span class="subject-section-icon">★</span>
+            </div>
+            <div class="subject-resource-grid" id="subjectImportantQuestions" data-content-container="important-questions">
+              <div class="subject-empty-state" data-empty-state="important-questions">
+                <span class="subject-empty-icon">?</span>
+                <h3>Question sets will appear here</h3>
+                <p>Verified subject questions will be added here.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="subject-detail-section subject-content-panel" id="pyqSection">
+            <div class="subject-section-heading">
+              <div>
+                <span class="course-eyebrow">PREVIOUS EXAM PAPERS</span>
+                <h2>Previous Year Questions</h2>
+                <p>Access available previous year papers for this subject.</p>
+              </div>
+              <a class="subject-inline-link" href="exam-preparation.html">Exam Preparation →</a>
+            </div>
+            <div class="subject-resource-grid" id="subjectPYQs" data-content-container="previous-year-questions">
+              <div class="subject-empty-state" data-empty-state="pyqs">
+                <span class="subject-empty-icon">▧</span>
+                <h3>No previous papers listed</h3>
+                <p>Available papers will be organised by examination session and year.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="subject-detail-section subject-content-panel" id="booksSection">
+            <div class="subject-section-heading">
+              <div>
+                <span class="course-eyebrow">RECOMMENDED READING</span>
+                <h2>Books & References</h2>
+                <p>Recommended textbooks and reference material for deeper learning.</p>
+              </div>
+              <a class="subject-inline-link" href="digital-library.html">Open Library →</a>
+            </div>
+            <div class="subject-resource-grid" id="subjectBooks" data-content-container="books-references">
+              <div class="subject-empty-state" data-empty-state="books">
+                <span class="subject-empty-icon">▤</span>
+                <h3>Reading list will appear here</h3>
+                <p>Recommended books and references will be listed with their bibliographic details.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <aside class="subject-detail-side">
+          <div class="subject-sidebar-card">
+            <span class="course-eyebrow">SUBJECT CONTENT</span>
+            <h3>On this page</h3>
+            <nav class="subject-sidebar-nav" aria-label="Subject sections">
+              <a href="#subjectOverviewSection">Overview</a>
+              <a href="#subjectUnitsSection">Syllabus & Units</a>
+              <a href="#shortNotesSection">Short Notes</a>
+              <a href="#quickRevisionSection">Quick Revision</a>
+              <a href="#quizzesSection">Quizzes & Practice</a>
+              <a href="#importantQuestionsSection">Important Questions</a>
+              <a href="#pyqSection">Previous Year Questions</a>
+              <a href="#booksSection">Books & References</a>
+              <a href="#subjectResourcesSection">Other Resources</a>
+            </nav>
+          </div>
+          <div class="subject-sidebar-card subject-help-card">
+            <span class="course-eyebrow">EXPLORE MORE</span>
+            <h3>Continue learning</h3>
+            <a href="digital-library.html" class="subject-sidebar-action">Digital Library <span>→</span></a>
+            <a href="exam-preparation.html" class="subject-sidebar-action">Exam Preparation <span>→</span></a>
+            <a href="book-locator.html" class="subject-sidebar-action">Find a Book <span>→</span></a>
+          </div>
+        </aside>
+      </div>
+
+      <section class="subject-detail-section subject-content-panel" id="subjectResourcesSection">
+        <div class="subject-section-heading">
+          <div>
+            <span class="course-eyebrow">ADDITIONAL MATERIAL</span>
+            <h2>Other Learning Resources</h2>
+            <p>Additional PDFs, presentations, lecture material and useful references.</p>
+          </div>
+          <a class="subject-inline-link" href="digital-library.html">Browse Library →</a>
+        </div>
+        <div class="subject-resource-list" id="subjectResources" data-content-container="subject-resources">
+          <div class="subject-empty-state" data-empty-state="resources">
+            <span class="subject-empty-icon">⇩</span>
+            <h3>Resources will appear here</h3>
+            <p>Additional learning resources will be listed here when available.</p>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="course-footer">
+      <span>© AcedeX</span>
+      <span>Learn. Prepare. Progress.</span>
+    </footer>
+  </div>
 </body>
 </html>
 

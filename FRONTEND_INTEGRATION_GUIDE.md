@@ -1,403 +1,325 @@
 ﻿# AcedeX Frontend Integration Guide
 
-Version: 1.0
-Purpose: Frontend-to-JavaScript integration specification.
-
----
-
-## 1. Project overview
-
-AcedeX is an academic platform designed to organise university learning
-resources and examination preparation.
+## Project boundary
+The frontend structure and styling are maintained separately from application logic.
+
+HTML and CSS pages are prepared for integration. JavaScript behaviour, academic data, API communication, dynamic rendering, search, filtering, authentication and state management are assigned to the integration developer.
+
+Do not rebuild the visual pages unless a UI change is specifically requested.
+
+## Pages
+- `index.html` — Dashboard and module entry points.
+- `pages/courses.html` — Academic field and programme browser.
+- `pages/course-details.html` — Subject information and resources.
+- `pages/digital-library.html` — Digital academic resource collections.
+- `pages/book-locator.html` — Physical library catalogue and location.
+- `pages/book-details.html` — Book metadata and related resources.
+- `pages/exam-preparation.html` — Examination preparation categories.
+- `pages/exam-details.html` — Exam overview and preparation resources.
+- `pages/profile.html` — Student profile and learning space.
+
+## JavaScript implementation required
+
+### Shared application
+- Initialise navigation and shared page behaviour.
+- Connect profile information and dashboard data.
+- Implement global search and notifications where present.
+- Preserve existing HTML and CSS structure.
+
+### Courses
+- Load academic fields and programmes.
+- Implement field → programme → semester → subject navigation.
+- Render subject details, units and resources.
+- Implement course and subject search.
+- Populate breadcrumbs and subject metadata.
+
+### Digital Library
+- Load books, notes, journals, research papers and references.
+- Implement resource search and category filters.
+- Filter by academic field, programme, semester and subject.
+- Link library resources to related course subjects.
+
+### Book Locator
+- Search the physical library catalogue.
+- Display verified building, floor, section, rack, shelf and call number.
+- Display verified availability and copy counts.
+- Link book records to their detail pages.
+- Never invent library location or inventory records.
+
+### Book Details
+- Populate title, author, edition, publisher, ISBN and description.
+- Connect related subjects and resources.
+- Link the physical-copy action to the relevant catalogue record.
+
+### Exam Preparation
+- Load semester examination, GATE, CDS, AFCAT and placement categories.
+- Implement category and subject navigation.
+- Connect revision notes, summaries, practice and reference material.
+
+### Exam Details
+- Populate examination syllabus and pattern.
+- Render subjects, sections and topics.
+- Connect topic notes, revision resources and practice questions.
+- Integrate previous-year papers with their metadata.
+- Distinguish official answer keys from independently prepared solutions.
+
+### Student Profile
+- Load authenticated student information.
+- Populate programme, semester and academic details.
+- Connect saved resources and learning activity.
+- Respect the authentication and access-control design.
+
+## Integration rules
+1. Preserve existing page routes, IDs, classes and data attributes.
+2. Keep JavaScript in the designated `js/` directory.
+3. Avoid inline JavaScript in HTML.
+4. Do not replace the page layouts with generated templates.
+5. Keep data separate from rendering and application logic.
+6. Validate imported data before rendering.
+7. Do not execute uploaded JavaScript files supplied as academic data.
+8. Use accessible labels and keyboard-friendly controls.
+9. Provide clear empty, loading and error states.
+10. Keep all user-specific data protected by backend access controls.
+
+## Data structure direction
+Use stable IDs for fields, programmes, semesters, subjects, resources, books and examinations.
+
+Recommended hierarchy:
+
+Academic field
+  → Programme
+    → Semester
+      → Subject
+        → Units
+        → Resources
+        → Books
+        → PYQs
+
+Examination
+  → Subject or section
+    → Topic
+      → Notes
+      → Revision material
+      → Practice questions
+      → PYQs
 
-The platform contains six academic fields:
+Resource records should include title, type, subject association, source, access URL and applicable rights/licence information.
 
-1. Computer Science & IT
-2. Engineering & Technology
-3. Management & Commerce
-4. Pharmaceutical Sciences
-5. Agriculture
-6. Law
-
-Main modules:
-
-- Courses
-- Digital Library
-- Book Locator
-- Exam Preparation
-- Student Profile
-
-The frontend is built with HTML5 and CSS3.
-JavaScript is responsible for data loading, rendering, filtering,
-searching, navigation behaviour and other dynamic interactions.
-
-Do not redesign the existing interface when implementing JavaScript.
-
----
-
-## 2. Development rules
-
-1. Preserve existing HTML IDs.
-2. Preserve existing data-* attributes.
-3. Use descriptive JavaScript variable and function names.
-4. Keep data separate from presentation.
-5. Do not hardcode individual programmes or subjects into HTML.
-6. Use reusable rendering functions.
-7. Use semantic HTML elements.
-8. Handle empty, loading and error states.
-9. Never invent academic information or library inventory.
-10. Do not execute uploaded JavaScript files from students or researchers.
-
----
-
-## 3. Homepage DOM contract
-
-| Element ID | Responsibility |
-|---|---|
-| mainSidebar | Main sidebar container |
-| globalSearchForm | Global search form |
-| globalSearchInput | Search input |
-| academicFieldGrid | Academic field cards |
-| platformModuleGrid | Main platform module cards |
-| recentResourceList | Recently added resource items |
-| academicOverview | Student academic overview |
-| currentYear | Footer year |
-
-Important data attributes:
-
-- data-action="toggle-sidebar"
-- data-action="open-notifications"
-- data-user-name
-- data-user-program
-- data-user-initials
-- data-search-scope="all"
-- data-search-term
-- data-field-card
-- data-field-id
-- data-module-id
-- data-component
-- data-empty-state
-
-Do not rename these attributes without coordinating with the frontend owner.
-
----
-
-## 4. Academic field data structure
-
-Each academic field should follow this structure:
-
-{
-  "id": "computer-science-it",
-  "name": "Computer Science & IT",
-  "description": "Computing, software, data and information technology.",
-  "slug": "computer-science-it",
-  "programmes": []
-}
-
-The six field IDs are:
-
-- computer-science-it
-- engineering-technology
-- management-commerce
-- pharmaceutical-sciences
-- agriculture
-- law
-
----
-
-## 5. Academic hierarchy
-
-Use this hierarchy throughout the platform:
-
-Academic Field
-    |
-    +-- Programme
-            |
-            +-- Semester
-                    |
-                    +-- Subject
-                            |
-                            +-- Units / Topics
-                            +-- Notes
-                            +-- Assignments
-                            +-- Practicals
-                            +-- Books
-                            +-- Videos
-                            +-- Previous Year Questions
-
-A subject should be reusable across the Courses, Digital Library
-and Exam Preparation modules where appropriate.
-
----
-
-## 6. Suggested programme data structure
-
-{
-  "id": "btech-cse",
-  "name": "Bachelor of Technology",
-  "specialisation": "Computer Science and Engineering",
-  "fieldId": "computer-science-it",
-  "programmeCode": "",
-  "durationYears": 4,
-  "semesters": []
-}
-
-Exact programme names, codes, duration and curriculum must be
-verified using authorised university sources before publication.
-
----
-
-## 7. Suggested semester data structure
-
-{
-  "id": "btech-cse-sem-1",
-  "programmeId": "btech-cse",
-  "semesterNumber": 1,
-  "academicYear": "",
-  "subjects": []
-}
-
----
-
-## 8. Suggested subject data structure
-
-{
-  "id": "subject-unique-id",
-  "name": "Subject Name",
-  "subjectCode": "",
-  "credits": null,
-  "semesterId": "",
-  "description": "",
-  "units": [],
-  "resources": [],
-  "previousYearQuestions": []
-}
-
----
-
-## 9. Suggested resource data structure
-
-{
-  "id": "resource-unique-id",
-  "title": "Resource Title",
-  "type": "notes",
-  "subjectId": "",
-  "description": "",
-  "fileUrl": "",
-  "sourceUrl": "",
-  "author": "",
-  "publisher": "",
-  "publicationYear": null,
-  "accessType": "open",
-  "licence": "",
-  "createdAt": ""
-}
-
-Supported resource types may include:
-
-- book
-- notes
-- research-paper
-- journal
-- presentation
-- video
-- reference
-- assignment
-- practical-manual
-- question-paper
-
-Only display verified resource links.
-
----
-
-## 10. Book Locator data structure
-
-{
-  "id": "book-unique-id",
-  "title": "Book Title",
-  "author": "",
-  "isbn": "",
-  "callNumber": "",
-  "building": "",
-  "floor": "",
-  "section": "",
-  "rack": "",
-  "shelf": "",
-  "availableCopies": null,
-  "totalCopies": null,
-  "availability": "unknown"
-}
-
-Physical location and availability must come from authorised library
-inventory data. Never generate fictional rack or shelf locations.
-
----
-
-## 11. Exam Preparation hierarchy
-
-Exam Preparation
-    |
-    +-- Semester Exams
-    |       |
-    |       +-- Programme
-    |               |
-    |               +-- Semester
-    |                       |
-    |                       +-- Subject
-    |                               |
-    |                               +-- Short Notes
-    |                               +-- Quick Revision
-    |                               +-- Summaries
-    |                               +-- Practice Questions
-    |                               +-- PYQs
-    |
-    +-- GATE
-    |       |
-    |       +-- Paper
-    |               |
-    |               +-- Subject
-    |                       |
-    |                       +-- Topic
-    |                               |
-    |                               +-- Revision
-    |                               +-- Practice
-    |                               +-- PYQs
-    |
-    +-- CDS
-    |
-    +-- AFCAT
-    |
-    +-- Placement Preparation
-
-CDS, AFCAT and Placement Preparation should use their own
-relevant subject/topic structures.
-
----
-
-## 12. PYQ data requirements
-
-PYQs belong inside the relevant subject or exam topic.
-They are not a separate top-level module.
-
-Suggested question structure:
-
-{
-  "id": "question-unique-id",
-  "examId": "",
-  "subjectId": "",
-  "topicId": "",
-  "year": null,
-  "paperCode": "",
-  "session": "",
-  "questionNumber": "",
-  "questionType": "mcq",
-  "question": "",
-  "options": [],
-  "answer": "",
-  "explanation": "",
-  "answerSource": "aceDex-authored",
-  "sourceUrl": "",
-  "licence": ""
-}
-
-Official answer keys and AcedeX-authored explanations must be
-clearly distinguished.
-
-Uploaded JS files must never be executed in the student browser.
-Import trusted data in a controlled process and validate it before use.
-Prefer JSON, CSV and PDF as resource formats.
-
----
-
-## 13. Search behaviour
-
-The homepage search form uses:
-
-- Form ID: globalSearchForm
-- Input ID: globalSearchInput
-- Attribute: data-search-scope="all"
-
-The form should eventually search across:
-
-- Programmes
-- Subjects
-- Books
-- Notes
-- Research papers
-- Exam topics
-- PYQs
-
-Search results should link to the relevant page and record.
-
----
-
-## 14. Empty states and data handling
-
-The homepage already contains empty-state containers.
-
-When data is available:
-
-1. Replace the corresponding empty state with rendered content.
-2. Do not duplicate the empty-state message.
-3. Handle missing optional fields safely.
-4. Show meaningful feedback if no results exist.
-5. Do not display fake statistics or progress.
-
----
-
-## 15. JavaScript implementation boundaries
-
-Suggested JavaScript responsibilities:
-
-### app.js
-- Shared navigation behaviour
-- Sidebar interaction
-- Search coordination
-- Shared UI helpers
-- User profile information
-- Common application initialisation
-
-### courses.js
-- Field selection
-- Programme listing
-- Semester selection
-- Subject listing
-- Subject details
-- Course resource rendering
-
-### library.js
-- Library filters
-- Resource listings
-- Book details
-- Book location display
-- Availability presentation
-
-### exam-prep.js
-- Exam category navigation
-- Subject/topic selection
-- Revision resource rendering
-- Practice questions
-- PYQ rendering
-
-Keep each module independent where possible.
-
----
-
-## 16. Important collaboration rule
-
-The JavaScript developer should request the latest versions of:
-
-- index.html
-- Relevant page HTML files
-- css/style.css
-- css/components.css
-- css/responsive.css
-- This integration guide
-
-Before implementing a feature, inspect the existing IDs, classes,
-data attributes and page structure.
-
-Do not create a second UI or replace the design with a different
-framework without agreement from the frontend developer.
-
-The goal is to make JavaScript fit the AcedeX interface exactly.
+Book records should include title, authors, edition, publisher, ISBN, catalogue ID and verified physical-location metadata where available.
+
+PYQ records should include examination, year, session, paper code, subject/topic, question number, marks, answer source and rights/licence information.
+
+## Important
+The current frontend is a presentation layer. Search forms, filters and data areas are structural UI elements until the integration developer implements their behaviour. Ordinary page links provide the current navigation between available HTML pages.
+
+## Previous-page navigation
+
+Every inner HTML page contains a `.page-back-button` link with
+`data-action="history-back"` and a fallback destination of `../index.html`.
+
+JavaScript integration requirement:
+- Detect clicks on elements with `data-action="history-back"`.
+- If browser history has a usable previous entry, navigate using `history.back()`.
+- Otherwise, follow the link's existing `href` fallback.
+- Prevent the default link navigation only when handling browser history.
+- Keep this behaviour in the shared application JavaScript.
+- Do not add duplicate handlers to individual pages.
+
+## IMPORTANT: True Previous-Page Navigation
+
+The back button MUST behave like the browser Back button.
+
+Required behaviour:
+- Use the browser history stack with `window.history.back()`.
+- Do NOT redirect every page to the homepage or dashboard.
+- Do NOT use a fixed parent-page URL.
+- Preserve the exact navigation sequence.
+
+Example:
+Homepage → Exam Preparation → Courses → Course Details
+
+Back from Course Details must open Courses.
+Back from Courses must open Exam Preparation.
+Back from Exam Preparation must open Homepage.
+
+Implementation:
+- Target: `[data-action="history-back"]`
+- Prevent the link's default navigation when browser history is available.
+- Call `window.history.back()`.
+- If no usable previous history entry exists, allow the existing homepage fallback link to work.
+- Implement this once in the shared application JavaScript.
+
+## CRITICAL FIX — Back Button Must Follow Actual Navigation History
+
+The current back button incorrectly redirects users to the Dashboard.
+
+This is NOT acceptable.
+
+Every inner-page back button must return to the exact page from which the user entered the current page.
+
+Example navigation:
+Exam Preparation → AFCAT → Explore Courses → Course Details
+
+Expected back navigation:
+Course Details → Explore Courses → AFCAT → Exam Preparation
+
+Implementation requirements for shared JavaScript:
+1. Select all elements using `[data-action="history-back"]`.
+2. On click, prevent the default link navigation.
+3. If `window.history.length > 1`, call `window.history.back()`.
+4. Do not replace browser history using `location.replace()`.
+5. Do not redirect to `index.html` when a valid previous page exists.
+6. Keep the homepage link only as a fallback for direct page entry with no usable previous page.
+7. Do not treat an entire module as one history entry. Every actual page navigation must remain in browser history.
+8. Register the handler once in shared application JavaScript.
+
+Test the complete navigation sequence above, including all three Back actions.
+
+
+<!-- ACEDEX_COURSES_HANDOVER_START -->
+## Courses module frontend handover
+
+### Approved navigation flow
+Academic Field → Programme → Semester → Subject Detail.
+
+### Frontend responsibilities
+- HTML page structure and CSS presentation.
+- Responsive layouts and accessible semantic markup.
+- Stable IDs, classes and `data-*` attributes for integration.
+- Static page-to-page links where appropriate.
+- Clear loading, empty and unavailable states.
+
+### Integration responsibilities
+The JavaScript/data integration owner handles:
+- Loading academic field, programme, semester and subject data.
+- Dynamic page content and breadcrumb values.
+- Search and filtering behaviour.
+- Dynamic cards and resource lists.
+- Bookmarking, progress, quizzes and user-specific state.
+- Navigation state and browser history handling.
+
+### Subject content model
+The reusable Subject Detail page provides integration targets for:
+- Subject overview, code, credits and description.
+- Official syllabus and unit-wise topics.
+- Short notes and quick revision material.
+- Quizzes and practice questions.
+- Important questions and previous year papers.
+- Books, references, PDFs and presentations.
+
+### Data integrity
+Do not invent official LPU syllabus details, subject codes, credits, book availability, examination papers or physical library locations. Populate these sections only from verified academic data.
+
+### Frontend boundary
+This frontend handover does not introduce or modify JavaScript. Existing JavaScript files remain under the integration owner's responsibility.
+<!-- ACEDEX_COURSES_HANDOVER_END -->
+
+
+<!-- ACEDEX_LIBRARY_HANDOVER_START -->
+## Digital Library frontend handover
+
+The Digital Library is for academic resource discovery and access. It is not an e-commerce storefront.
+
+The interface covers textbooks, references, lecture notes, research papers, journals, study material, presentations and previous year questions.
+
+Resource filters should support academic field, programme, semester, subject, resource type, author and publication year.
+
+Book/resource detail views should accommodate title, author, edition, publisher, subject, cover, description, availability, related resources and a Find This Book route where applicable.
+
+The integration owner is responsible for dynamic search, filters, sorting, resource data, bookmarks and availability updates. Do not invent resource metadata or claim a book is available without verified inventory data.
+
+The frontend owner is responsible for semantic HTML, responsive CSS, empty/loading states and stable integration hooks. No JavaScript is introduced by this work.
+<!-- ACEDEX_LIBRARY_HANDOVER_END -->
+
+
+<!-- ACEDEX_BOOK_LOCATOR_HANDOVER_START -->
+## Physical Book Locator frontend handover
+
+The Book Locator is designed to help students locate physical library inventory. It is not an online bookstore.
+
+Each inventory record should support available verified fields:
+- Book/resource identifier
+- Title and author
+- Subject
+- Building
+- Floor
+- Section
+- Rack
+- Shelf
+- Total copies
+- Available copies
+- Availability status
+
+The integration owner handles inventory retrieval, search, filtering, sorting and live availability. The frontend provides the search/filter layout, result cards, location presentation, responsive styling and empty states.
+
+Do not invent building names, floor numbers, rack identifiers, shelf locations, copy counts or availability. Do not add shopping-cart, checkout or payment functionality.
+<!-- ACEDEX_BOOK_LOCATOR_HANDOVER_END -->
+
+## Academic Field Pages – JavaScript Integration Handover
+
+Six dedicated field pages are available in `pages/academic-fields/`.
+
+The six page keys are:
+- `computer-science-it`
+- `engineering-technology`
+- `management-commerce`
+- `pharmaceutical-sciences`
+- `agriculture`
+- `law`
+
+The page root exposes `data-academic-field` with the relevant field key.
+
+Required integration:
+1. Read the field key from `data-academic-field`.
+2. Load only programmes mapped to that academic field.
+3. Connect the course search input using `data-field-course-search`.
+4. Render verified programme cards inside `[data-field-programmes]`.
+5. Populate field-specific specialisations in `[data-field-specialisations]`.
+6. Populate career information in `[data-field-careers]`.
+7. Connect programme cards to the existing programme → semester → subject → reusable subject-detail hierarchy.
+8. Preserve the existing shared subject-detail page; do not create duplicate subject systems.
+
+The frontend currently provides static study-area and career examples for layout purposes. Verify all actual LPU programme names, availability and specialisations before presenting them as official offerings.
+
+Do not add a Schools and Departments section. Do not create a separate placement preparation page. Placement preparation remains within Exam Preparation.
+
+All JavaScript and academic data integration remain the teammate's responsibility. Do not modify the existing frontend HTML/CSS structure unnecessarily.
+
+## Academic Field Page Integration Rules
+
+The six field landing pages are static HTML/CSS frontend pages. The JavaScript/data teammate owns all dynamic functionality.
+
+The field key is exposed through `data-academic-field`. Use this key to retrieve the matching academic data.
+
+Required behaviour:
+- Course search must be scoped to the currently opened field.
+- Programme cards must show only programmes mapped to that field.
+- Programme links must connect to the existing programme page.
+- Semester links must connect to the existing semester page.
+- Subject links must connect to the reusable `course-details.html` page.
+- Specialisations and career information must be field-specific.
+- Related resource links must preserve the existing Digital Library and Exam Preparation modules.
+
+Do not create duplicate subject detail pages, a standalone placement module, or a Schools and Departments section.
+
+Do not treat illustrative study areas as verified official LPU programme specialisations. Use the approved academic data source for official offerings.
+
+## Profile and Common Student Features – Integration Handover
+
+Frontend page: `pages/profile.html`
+Stylesheet: `css/profile-pages.css`
+
+The JavaScript/data integration teammate should connect:
+1. Student profile information and academic details.
+2. Saved resources and bookmarks.
+3. Recently viewed programmes, subjects and resources.
+4. Learning progress and activity summaries.
+5. Quiz and mock-test history.
+6. Student preferences.
+
+Requirements:
+- Populate information from the appropriate student record.
+- Preserve empty states when no data exists.
+- Reuse resource identifiers across modules.
+- Do not fabricate student details, progress or quiz results.
+- Keep dynamic functionality in the teammate-owned JavaScript layer.
