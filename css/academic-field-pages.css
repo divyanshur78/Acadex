@@ -75,3 +75,150 @@
 @media(max-width:650px){.academic-field-page{width:calc(100% - 28px)}.field-site-header{padding:16px 18px}.field-main-nav{gap:10px 14px}.field-main-nav a{font-size:11px}.field-hero{min-height:350px;padding:35px 23px;border-radius:18px}.field-hero h1{font-size:36px}.field-hero p{font-size:13px}.field-hero-decoration{right:-135px;top:75%;transform:translateY(-50%) scale(.8)}.field-section{padding-top:45px}.field-section-heading h2{font-size:24px}.field-overview-panel{padding:20px;font-size:13px}.field-programme-grid,.field-specialisation-grid,.field-career-grid,.field-resource-grid{grid-template-columns:1fr}.field-pathway{grid-template-columns:1fr;gap:7px;padding:19px}.pathway-arrow{transform:rotate(90deg);justify-self:center}.field-footer{padding:23px 18px;flex-wrap:wrap}.field-footer p{order:3;width:100%}}
 @media(prefers-reduced-motion:reduce){.academic-field-page *{scroll-behavior:auto!important;transition:none!important}}
 @media print{.field-site-header,.field-hero-actions,.field-search-panel,.field-footer{display:none!important}.field-hero{background:#fff;color:#111;padding:20px}.field-hero h1,.field-hero p{color:#111}.academic-field-page{width:100%}}
+
+
+/* FIELD EXPLORER STYLES */
+.field-explorer-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:18px;
+    margin-top:24px;
+}
+.field-explorer-card{
+    position:relative;
+    min-width:0;
+    padding:25px 22px;
+    border:1px solid #e1e9ed;
+    border-radius:17px;
+    background:#fff;
+    box-shadow:0 7px 22px #183c4b08;
+    transition:transform .2s,border-color .2s,box-shadow .2s;
+}
+.field-explorer-card:hover{
+    transform:translateY(-4px);
+    border-color:#f2a45d;
+    box-shadow:0 13px 28px #183c4b12;
+}
+.explorer-number{
+    position:absolute;
+    top:18px;
+    right:19px;
+    font-size:12px;
+    font-weight:850;
+    color:#b0bdc3;
+}
+.explorer-icon{
+    display:grid;
+    place-items:center;
+    width:48px;
+    height:48px;
+    margin-bottom:20px;
+    border-radius:14px;
+    background:#fff2e7;
+    color:#e77b2d;
+    font-size:25px;
+}
+.explorer-label{
+    display:block;
+    margin-bottom:8px;
+    color:#df803b;
+    font-size:10px;
+    font-weight:850;
+    letter-spacing:1.1px;
+}
+.field-explorer-card h3{
+    margin:0 0 10px;
+    color:#244555;
+    font-size:17px;
+    line-height:1.4;
+}
+.field-explorer-card>p{
+    min-height:58px;
+    margin:0 0 17px;
+    color:#788991;
+    font-size:12px;
+    line-height:1.7;
+}
+.explorer-link{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:#d9772d;
+    font-size:12px;
+    font-weight:800;
+    text-decoration:none;
+}
+.explorer-placeholder{
+    padding:12px;
+    border:1px dashed #d9e3e6;
+    border-radius:10px;
+    background:#f8fbfc;
+    color:#829199;
+    font-size:11px;
+    line-height:1.6;
+}
+.field-explorer-footer{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    margin-top:22px;
+    padding:18px 21px;
+    border:1px solid #f2e5d9;
+    border-radius:14px;
+    background:#fffaf5;
+}
+.field-explorer-footer>span{
+    color:#8c7770;
+    font-size:10px;
+    font-weight:850;
+    letter-spacing:1px;
+}
+@media(max-width:900px){
+    .field-explorer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:650px){
+    .field-explorer-grid{grid-template-columns:1fr}
+    .field-explorer-card>p{min-height:0}
+    .field-explorer-footer{align-items:flex-start;flex-direction:column}
+}
+
+/* SPECIALISATION CARD ENHANCEMENTS */
+.field-specialisation-grid{
+    gap:18px;
+    margin-top:22px;
+}
+.field-specialisation-card{
+    position:relative;
+    min-height:135px;
+    padding:22px;
+    overflow:hidden;
+    border:1px solid #e9e8e4;
+    border-left:4px solid #ed984e;
+    border-radius:15px;
+    background:linear-gradient(145deg,#fff 65%,#fff8f1);
+    box-shadow:0 6px 20px #263f4a08;
+}
+.field-specialisation-card:nth-child(2n){
+    border-left-color:#159d9a;
+    background:linear-gradient(145deg,#fff 65%,#f2fbfa);
+}
+.field-specialisation-card:nth-child(3n){
+    border-left-color:#7d83ce;
+    background:linear-gradient(145deg,#fff 65%,#f6f6ff);
+}
+.field-specialisation-card .field-card-mark{
+    width:34px;
+    height:34px;
+    margin-bottom:15px;
+    border-radius:10px;
+    font-size:17px;
+}
+.field-specialisation-card h3{
+    font-size:14px;
+    line-height:1.55;
+}
+.field-specialisation-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 25px #263f4a12;
+}

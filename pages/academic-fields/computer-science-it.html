@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -80,8 +80,7 @@
                 <p class="field-search-hint">Search and filtering will be connected to the academic programme data.</p>
             </div>
             <div class="field-programme-grid" id="fieldProgrammeResults"
-                data-field-programmes="computer-science-it" data-content-container="field-programmes"
-                data-content-container="field-programmes">
+                data-field-programmes="computer-science-it" data-content-container="field-programmes">
                 <div class="field-data-placeholder">
                     <span class="placeholder-icon" aria-hidden="true">⌘</span>
                     <h3>Programmes will appear here</h3>
@@ -100,53 +99,84 @@
                 </div>
             </div>
             <div class="field-specialisation-grid" data-field-specialisations="computer-science-it" data-content-container="field-specialisations">
-                <article class="field-specialisation-card" data-study-area>
+                <a class="field-specialisation-card" data-study-area href="../specialisations/artificial-intelligence-machine-learning.html" data-specialisation-link="artificial-intelligence-machine-learning">
 <div class="field-card-mark" aria-hidden="true">✦</div>
 <h3>Artificial Intelligence & Machine Learning</h3>
-</article>
-<article class="field-specialisation-card" data-study-area>
+</a>
+<a class="field-specialisation-card" data-study-area href="../specialisations/data-science-analytics.html" data-specialisation-link="data-science-analytics">
 <div class="field-card-mark" aria-hidden="true">✦</div>
 <h3>Data Science & Analytics</h3>
-</article>
-<article class="field-specialisation-card" data-study-area>
+</a>
+<a class="field-specialisation-card" data-study-area href="../specialisations/cyber-security.html" data-specialisation-link="cyber-security">
 <div class="field-card-mark" aria-hidden="true">✦</div>
 <h3>Cyber Security</h3>
-</article>
-<article class="field-specialisation-card" data-study-area>
+</a>
+<a class="field-specialisation-card" data-study-area href="../specialisations/software-engineering.html" data-specialisation-link="software-engineering">
 <div class="field-card-mark" aria-hidden="true">✦</div>
 <h3>Software Engineering</h3>
-</article>
-<article class="field-specialisation-card" data-study-area>
+</a>
+<a class="field-specialisation-card" data-study-area href="../specialisations/cloud-computing.html" data-specialisation-link="cloud-computing">
 <div class="field-card-mark" aria-hidden="true">✦</div>
 <h3>Cloud Computing</h3>
-</article>
-<article class="field-specialisation-card" data-study-area>
+</a>
+<a class="field-specialisation-card" data-study-area href="../specialisations/internet-of-things.html" data-specialisation-link="internet-of-things">
 <div class="field-card-mark" aria-hidden="true">✦</div>
 <h3>Internet of Things</h3>
-</article>
+</a>
             </div>
             <p class="field-disclaimer">Study areas are provided for exploration. Actual programme specialisations depend on the verified academic catalogue.</p>
         </section>
 
-        <section class="field-section field-pathway-section" id="field-subjects">
-            <div class="field-section-heading">
-                <div>
-                    <span class="field-eyebrow">FROM PROGRAMME TO SUBJECT</span>
-                    <h2>Explore Semesters & Subjects</h2>
-                    <p>Move through your academic journey and explore the subjects in each semester.</p>
-                </div>
+        <section class="field-section field-pathway-section" id="field-subjects"
+    data-academic-field="computer-science-it">
+    <div class="field-section-heading">
+        <div>
+            <span class="field-eyebrow">YOUR ACADEMIC JOURNEY</span>
+            <h2>Explore Semesters & Subjects</h2>
+            <p>Explore the academic structure of programmes in this field, semester by semester.</p>
+        </div>
+    </div>
+
+    <div class="field-explorer-grid">
+        <article class="field-explorer-card field-explorer-programme">
+            <span class="explorer-number">01</span>
+            <div class="explorer-icon" aria-hidden="true">▤</div>
+            <span class="explorer-label">FIRST STEP</span>
+            <h3>Choose Your Programme</h3>
+            <p>Explore the available degrees and programmes connected to this academic field.</p>
+            <a href="#field-programmes" class="explorer-link">Explore Programmes <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="field-explorer-card" data-field-semesters="computer-science-it">
+            <span class="explorer-number">02</span>
+            <div class="explorer-icon" aria-hidden="true">▦</div>
+            <span class="explorer-label">SECOND STEP</span>
+            <h3>Select Your Semester</h3>
+            <p>View semester-wise academic structures, subject lists and learning resources.</p>
+            <div class="explorer-placeholder" data-content-container="field-semesters">
+                Semester information will appear after programme selection.
             </div>
-            <div class="field-pathway">
-                <div class="pathway-step"><span>01</span><strong>Choose a Programme</strong><p>Explore available degrees in this field.</p></div>
-                <div class="pathway-arrow" aria-hidden="true">→</div>
-                <div class="pathway-step"><span>02</span><strong>Select a Semester</strong><p>View the academic structure and semester details.</p></div>
-                <div class="pathway-arrow" aria-hidden="true">→</div>
-                <div class="pathway-step"><span>03</span><strong>Explore Subjects</strong><p>Open subject details, units and study material.</p></div>
+        </article>
+
+        <article class="field-explorer-card" data-field-subjects="computer-science-it">
+            <span class="explorer-number">03</span>
+            <div class="explorer-icon" aria-hidden="true">▧</div>
+            <span class="explorer-label">THIRD STEP</span>
+            <h3>Explore Your Subjects</h3>
+            <p>Access subject units, notes, quick revision, quizzes and previous-year questions.</p>
+            <div class="explorer-placeholder" data-content-container="field-subjects">
+                Subject details will appear after semester selection.
             </div>
-            <div class="field-pathway-action">
-                <a class="field-primary-button" href="../courses.html">Open Course Directory <span aria-hidden="true">→</span></a>
-            </div>
-        </section>
+        </article>
+    </div>
+
+    <div class="field-explorer-footer">
+        <span>YOUR LEARNING PATH STARTS HERE</span>
+        <a href="#field-programmes" class="field-primary-button">
+            Start Exploring <span aria-hidden="true">→</span>
+        </a>
+    </div>
+</section>
 
         <section class="field-section" id="field-careers">
             <div class="field-section-heading">
@@ -215,4 +245,3 @@
     </footer>
 </body>
 </html>
-

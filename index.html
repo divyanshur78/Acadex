@@ -251,6 +251,121 @@
                 </section>
 
 
+                <!-- ACADEMIC PATH EXPLORER -->
+                <section class="academic-path-section" id="academicPathExplorer" aria-labelledby="academicPathHeading">
+                    <div class="academic-path-heading">
+                        <div>
+                            <span class="academic-path-kicker">YOUR LEARNING JOURNEY</span>
+                            <h2 id="academicPathHeading">Explore Your Academic Path</h2>
+                            <p>Choose your field, specialisation and semester to find your learning space.</p>
+                        </div>
+                        <div class="academic-path-visual" aria-hidden="true">
+                            <span>🎓</span>
+                        </div>
+                    </div>
+
+                    <div class="academic-path-selectors">
+                        <div class="academic-path-field">
+                            <label for="pathAcademicField">01. Academic Field</label>
+                            <select id="pathAcademicField" name="academic_field" data-path-field>
+                                <option value="">Choose your academic field</option>
+                                <option value="computer-science-it">Computer Science & IT</option>
+                                <option value="engineering-technology">Engineering & Technology</option>
+                                <option value="management-commerce">Management & Commerce</option>
+                                <option value="pharmaceutical-sciences">Pharmaceutical Sciences</option>
+                                <option value="agriculture">Agriculture</option>
+                                <option value="law">Law</option>
+                            </select>
+                        </div>
+
+                        <div class="academic-path-field">
+                            <label for="pathSpecialisation">02. Specialisation</label>
+                            <select id="pathSpecialisation" name="specialisation" data-path-specialisation>
+                                <option value="">Choose your specialisation</option>
+
+                                <optgroup label="Computer Science & IT">
+                                    <option value="artificial-intelligence-machine-learning" data-field-id="computer-science-it">Artificial Intelligence & Machine Learning</option>
+                                    <option value="data-science-analytics" data-field-id="computer-science-it">Data Science & Analytics</option>
+                                    <option value="cyber-security" data-field-id="computer-science-it">Cyber Security</option>
+                                    <option value="software-engineering" data-field-id="computer-science-it">Software Engineering</option>
+                                    <option value="cloud-computing" data-field-id="computer-science-it">Cloud Computing</option>
+                                    <option value="internet-of-things" data-field-id="computer-science-it">Internet of Things</option>
+                                </optgroup>
+
+                                <optgroup label="Engineering & Technology">
+                                    <option value="mechanical-engineering" data-field-id="engineering-technology">Mechanical Engineering</option>
+                                    <option value="civil-engineering" data-field-id="engineering-technology">Civil Engineering</option>
+                                    <option value="electrical-engineering" data-field-id="engineering-technology">Electrical Engineering</option>
+                                    <option value="electronics-communication" data-field-id="engineering-technology">Electronics & Communication</option>
+                                    <option value="mechatronics-robotics" data-field-id="engineering-technology">Mechatronics & Robotics</option>
+                                    <option value="automotive-manufacturing" data-field-id="engineering-technology">Automotive & Manufacturing</option>
+                                </optgroup>
+
+                                <optgroup label="Management & Commerce">
+                                    <option value="finance-accounting" data-field-id="management-commerce">Finance & Accounting</option>
+                                    <option value="marketing-management" data-field-id="management-commerce">Marketing Management</option>
+                                    <option value="human-resource-management" data-field-id="management-commerce">Human Resource Management</option>
+                                    <option value="business-analytics" data-field-id="management-commerce">Business Analytics</option>
+                                    <option value="international-business" data-field-id="management-commerce">International Business</option>
+                                    <option value="entrepreneurship" data-field-id="management-commerce">Entrepreneurship</option>
+                                </optgroup>
+
+                                <optgroup label="Pharmaceutical Sciences">
+                                    <option value="pharmaceutics" data-field-id="pharmaceutical-sciences">Pharmaceutics</option>
+                                    <option value="pharmacology" data-field-id="pharmaceutical-sciences">Pharmacology</option>
+                                    <option value="pharmaceutical-chemistry" data-field-id="pharmaceutical-sciences">Pharmaceutical Chemistry</option>
+                                    <option value="pharmacognosy" data-field-id="pharmaceutical-sciences">Pharmacognosy</option>
+                                    <option value="quality-assurance" data-field-id="pharmaceutical-sciences">Quality Assurance</option>
+                                    <option value="clinical-research" data-field-id="pharmaceutical-sciences">Clinical Research</option>
+                                </optgroup>
+
+                                <optgroup label="Agriculture">
+                                    <option value="agronomy" data-field-id="agriculture">Agronomy</option>
+                                    <option value="horticulture" data-field-id="agriculture">Horticulture</option>
+                                    <option value="soil-science" data-field-id="agriculture">Soil Science</option>
+                                    <option value="plant-breeding-genetics" data-field-id="agriculture">Plant Breeding & Genetics</option>
+                                    <option value="agricultural-economics" data-field-id="agriculture">Agricultural Economics</option>
+                                    <option value="agricultural-engineering" data-field-id="agriculture">Agricultural Engineering</option>
+                                </optgroup>
+
+                                <optgroup label="Law">
+                                    <option value="constitutional-law" data-field-id="law">Constitutional Law</option>
+                                    <option value="criminal-law" data-field-id="law">Criminal Law</option>
+                                    <option value="corporate-commercial-law" data-field-id="law">Corporate & Commercial Law</option>
+                                    <option value="intellectual-property-law" data-field-id="law">Intellectual Property Law</option>
+                                    <option value="environmental-law" data-field-id="law">Environmental Law</option>
+                                    <option value="international-law" data-field-id="law">International Law</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <div class="academic-path-field">
+                            <label for="pathSemester">03. Semester</label>
+                            <select id="pathSemester" name="semester" data-path-semester>
+                                <option value="">Choose your semester</option>
+                                <option value="1">Semester 1</option>
+                                <option value="2">Semester 2</option>
+                                <option value="3">Semester 3</option>
+                                <option value="4">Semester 4</option>
+                                <option value="5">Semester 5</option>
+                                <option value="6">Semester 6</option>
+                                <option value="7">Semester 7</option>
+                                <option value="8">Semester 8</option>
+                            </select>
+                        </div>
+
+                        <button type="button" class="academic-path-explore" id="exploreAcademicPath"
+                            data-action="explore-academic-path">
+                            Explore <span aria-hidden="true">→</span>
+                        </button>
+                    </div>
+
+                    <div class="academic-path-footer">
+                        <span aria-hidden="true">✦</span>
+                        Your selected semester will take you closer to the subjects and resources you need.
+                    </div>
+                </section>
+
                 <!-- ACADEMIC FIELDS -->
                 <section class="content-section" id="academicFieldsSection">
                     <div class="section-heading">
@@ -536,6 +651,4 @@
     </div>
     <script src="js/acedex-brand.js"></script>`r`n</body>
 </html>
-
-
 
