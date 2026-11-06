@@ -323,3 +323,106 @@ Requirements:
 - Reuse resource identifiers across modules.
 - Do not fabricate student details, progress or quiz results.
 - Keep dynamic functionality in the teammate-owned JavaScript layer.
+
+---
+
+# Semester Pages & Academic Path Integration
+
+## 1. Semester Page Structure
+
+The frontend contains 288 semester pages:
+
+`pages/semesters/<specialisation-slug>/semester-<number>.html`
+
+Example:
+- `pages/semesters/artificial-intelligence-machine-learning/semester-1.html`
+- `pages/semesters/artificial-intelligence-machine-learning/semester-2.html`
+
+There are currently 8 placeholder semester pages for each of the 36 specialisations. These are frontend placeholders, not confirmation that every programme has eight semesters. The actual semester count must come from verified programme data.
+
+## 2. Academic Path Explorer
+
+Dashboard location: `index.html`
+
+Existing controls:
+- `#pathAcademicField` — selected academic field
+- `#pathSpecialisation` — selected specialisation
+- `#pathSemester` — selected semester
+- `#exploreAcademicPath` — Explore action
+
+Integration requirements:
+1. Read the selected academic field.
+2. Show only specialisations belonging to that field.
+3. Keep the specialisation control disabled until a field is selected.
+4. Populate valid semesters according to the selected programme.
+5. Keep Explore disabled or show validation until all required selections are valid.
+6. On Explore, navigate to the matching semester page using the selected specialisation slug and semester number.
+
+Expected route pattern:
+
+`pages/semesters/<specialisation-slug>/semester-<number>.html`
+
+Do not send every selection to one fixed semester page.
+
+## 3. Specialisation Semester Directory
+
+Each file in `pages/specialisations/` contains a semester directory with links to its eight placeholder semester pages.
+
+Relevant hooks:
+- `data-specialisation-semesters`
+- `data-semester-number`
+- `data-specialisation-id`
+
+The teammate should use verified programme data to show only the semesters available for the selected programme. Do not assume that all programmes have the same semester count.
+
+## 4. Semester Page Data Hooks
+
+Each semester page exposes:
+
+- `data-specialisation-id` — specialisation slug
+- `data-academic-field` — academic field slug
+- `data-semester-number` — semester number
+- `data-content-container="semester-workspace"` — semester workspace
+- `data-content-container="semester-syllabus"` — syllabus area
+- `data-content-container="semester-subjects"` — subject directory
+
+Resource categories:
+- `semester-notes`
+- `semester-books`
+- `semester-assignments`
+- `semester-practicals`
+- `semester-projects`
+- `semester-pyqs`
+- `semester-revision`
+
+Populate these areas from the verified academic/resource data. Keep subject-level resources associated with the correct subject and semester.
+
+## 5. Syllabus and Resource Downloads
+
+The syllabus area currently contains a pending-upload state.
+
+When a verified syllabus document is available:
+- Display its correct document title.
+- Provide a working download link.
+- Use the actual file URL or project asset path supplied by the content/data layer.
+- Do not create fake PDF links or placeholder download destinations.
+- Show an unavailable state when no file exists.
+
+Apply the same rule to notes, assignments, practical files, projects and PYQs. Resources that need detailed subject-wise navigation may open a dedicated resource page; simple files should offer direct downloads.
+
+## 6. Subject-Level Navigation
+
+The subject directory is currently a placeholder.
+
+Once verified subject data is available, each subject should expose its name, course code and relevant metadata where supplied. Its resource links should lead to the correct subject material, not to another semester or specialisation.
+
+## 7. Frontend Responsibility
+
+The HTML/CSS frontend is already prepared. JavaScript, filtering, data loading, validation and navigation are the teammate's responsibility.
+
+Do not duplicate the 288 HTML pages or replace the existing page structure when connecting the data. Preserve the existing IDs, classes and data attributes.
+
+## 8. Academic Data Verification
+
+The current semester count, subject list, course codes and syllabus files are placeholders until verified against the applicable programme curriculum. Do not present illustrative or unverified data as official LPU academic information.
+
