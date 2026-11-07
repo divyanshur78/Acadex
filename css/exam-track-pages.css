@@ -1308,3 +1308,1071 @@
         padding: 18px;
     }
 }
+
+/* EXAM TRACK PAGES - SHARED VISUAL POLISH */
+
+body.exam-track-page {
+    background: #fffaf5;
+}
+
+body.exam-track-page .track-container {
+    max-width: 1320px;
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+body.exam-track-page .track-hero {
+    min-height: 330px;
+    padding: 46px;
+    border-radius: 25px;
+    box-shadow: 0 16px 38px rgba(45, 35, 65, .10);
+}
+
+body.exam-track-page .track-eyebrow {
+    letter-spacing: 1.8px;
+}
+
+body.exam-track-page .track-hero h1 {
+    line-height: 1.13;
+    letter-spacing: -.8px;
+}
+
+body.exam-track-page .track-hero-content > p {
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+body.exam-track-page .track-hero-actions a {
+    min-height: 45px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+body.exam-track-page .track-hero-actions a:hover {
+    transform: translateY(-2px);
+}
+
+body.exam-track-page .track-overview {
+    margin: 34px 0 46px;
+    padding: 24px 27px;
+    border: 1px solid var(--track-border, #eadfd8);
+    border-radius: 19px;
+    background: #fff;
+    box-shadow: 0 7px 22px rgba(35, 35, 55, .045);
+}
+
+body.exam-track-page .track-overview h2 {
+    font-size: 27px;
+    line-height: 1.35;
+}
+
+body.exam-track-page .track-content-section {
+    margin: 48px 0;
+    scroll-margin-top: 35px;
+}
+
+body.exam-track-page .track-section-heading {
+    margin-bottom: 23px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #eee5dc;
+}
+
+body.exam-track-page .track-section-heading h2 {
+    font-size: clamp(23px, 3vw, 29px);
+    line-height: 1.3;
+    letter-spacing: -.4px;
+}
+
+body.exam-track-page .track-section-heading p {
+    max-width: 720px;
+    line-height: 1.75;
+}
+
+body.exam-track-page .track-heading-icon {
+    width: 55px;
+    height: 55px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: var(--track-soft, #fff0e3);
+    font-size: 25px;
+}
+
+body.exam-track-page .exam-resource-grid {
+    gap: 19px;
+}
+
+body.exam-track-page .exam-resource-card {
+    min-height: 195px;
+    padding: 23px;
+    border: 1px solid var(--track-border, #eadfd8);
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 5px 17px rgba(35, 35, 55, .045);
+    transition: transform .22s ease, box-shadow .22s ease;
+}
+
+body.exam-track-page .exam-resource-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 13px 27px rgba(35, 35, 55, .09);
+}
+
+body.exam-track-page .exam-resource-card h4 {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+body.exam-track-page .exam-resource-card p {
+    line-height: 1.75;
+}
+
+body.exam-track-page .resource-status {
+    line-height: 1.5;
+}
+
+body.exam-track-page .track-notice {
+    margin-top: 20px;
+    padding: 17px 20px;
+    border-radius: 13px;
+    line-height: 1.75;
+}
+
+body.exam-track-page .track-library-link {
+    display: inline-flex;
+    margin-top: 19px;
+    font-weight: 800;
+}
+
+body.exam-track-page .track-upload-area {
+    margin-top: 22px;
+    padding: 23px;
+    border: 1.5px dashed var(--track-primary, #e97832);
+    border-radius: 18px;
+    background: var(--track-soft, #fff5ed);
+}
+
+body.exam-track-page .exam-learning-hub {
+    gap: 23px;
+}
+
+body.exam-track-page .exam-subject-section {
+    gap: 19px;
+    padding: 23px;
+    border: 1.5px solid var(--track-border, #e9dfd6);
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 6px 20px rgba(35, 35, 55, .045);
+}
+
+body.exam-track-page .exam-subject-summary {
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 18px;
+    border-radius: 13px;
+    background: var(--track-soft, #fff3e9);
+    cursor: pointer;
+    transition: background .2s ease;
+}
+
+body.exam-track-page .exam-subject-summary:hover {
+    background: var(--track-border, #f4dfcf);
+}
+
+body.exam-track-page .exam-subject-title {
+    font-size: 16px;
+    font-weight: 850;
+    line-height: 1.45;
+}
+
+body.exam-track-page .exam-subject-hint {
+    margin-left: auto;
+    color: var(--track-primary, #d76b2c);
+    font-size: 10px;
+    font-weight: 850;
+    letter-spacing: .8px;
+}
+
+body.exam-track-page .exam-subject-chevron {
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    border-radius: 9px;
+    background: #fff;
+    color: var(--track-primary, #d76b2c);
+    font-size: 18px;
+    font-weight: 800;
+}
+
+body.exam-track-page .exam-subject-section[open] > .exam-subject-summary {
+    border-bottom: 2px solid var(--track-primary, #e97832);
+}
+
+body.exam-track-page .exam-subject-heading {
+    padding: 8px 3px 14px;
+    border-bottom: 1px solid #eee7e0;
+}
+
+body.exam-track-page .exam-topic-card {
+    padding: 23px;
+    border: 1px solid var(--track-border, #e9dfd6);
+    border-radius: 17px;
+    background: #fffdfa;
+    box-shadow: 0 4px 14px rgba(35, 35, 55, .035);
+}
+
+body.exam-track-page .exam-topic-heading {
+    margin-bottom: 17px;
+}
+
+body.exam-track-page .exam-topic-heading h4 {
+    font-size: 18px;
+    line-height: 1.45;
+}
+
+body.exam-track-page .exam-topic-card p,
+body.exam-track-page .exam-topic-card li {
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+body.exam-track-page .exam-topic-card ul,
+body.exam-track-page .exam-topic-card ol {
+    padding-left: 23px;
+}
+
+body.exam-track-page .exam-question-list {
+    gap: 14px;
+    margin-top: 20px;
+}
+
+body.exam-track-page .exam-question-card {
+    padding: 20px;
+    border: 1px solid #e9e2dc;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 3px 12px rgba(35, 35, 55, .035);
+}
+
+body.exam-track-page .exam-question-card h4 {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+body.exam-track-page .exam-question-options {
+    line-height: 2;
+}
+
+body.exam-track-page .exam-answer {
+    margin-top: 13px;
+    padding: 13px 15px;
+    border-radius: 11px;
+    background: var(--track-soft, #fff3e9);
+    line-height: 1.7;
+}
+
+body.exam-track-page .exam-pyq-panel {
+    margin-top: 25px;
+    border: 1.5px solid var(--track-border, #eadfd8);
+    box-shadow: 0 6px 20px rgba(35, 35, 55, .05);
+}
+
+body.exam-track-page .starter-revision {
+    padding: 25px;
+    border: 1px solid var(--track-border, #eadfd8);
+    border-radius: 19px;
+    background: #fff;
+    box-shadow: 0 6px 20px rgba(35, 35, 55, .04);
+}
+
+body.exam-track-page .starter-revision label {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    padding: 12px 14px;
+    border-radius: 11px;
+    background: #fff9f3;
+    line-height: 1.65;
+}
+
+body.exam-track-page .starter-revision input {
+    margin-top: 4px;
+    accent-color: var(--track-primary, #e97832);
+}
+
+body.exam-track-page .track-study-banner {
+    margin: 42px 0 28px;
+    padding: 29px;
+    border-radius: 21px;
+    box-shadow: 0 10px 25px rgba(35, 35, 55, .07);
+}
+
+body.exam-track-page .track-study-banner h2 {
+    line-height: 1.35;
+}
+
+body.exam-track-page .track-study-banner > a {
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+body.exam-track-page .track-study-banner > a:hover {
+    transform: translateY(-2px);
+}
+
+body.exam-track-page .track-footer-navigation {
+    padding: 20px 0 8px;
+    border-top: 1px solid #eee5dc;
+}
+
+body.exam-track-page .track-footer-navigation a {
+    transition: color .2s ease;
+}
+
+body.exam-track-page .track-footer-navigation a:hover {
+    color: var(--track-primary, #d76b2c);
+}
+
+body.exam-track-page a:focus-visible,
+body.exam-track-page summary:focus-visible,
+body.exam-track-page input:focus-visible {
+    outline: 3px solid var(--track-primary, #e97832);
+    outline-offset: 4px;
+}
+
+@media (max-width: 850px) {
+    body.exam-track-page .track-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    body.exam-track-page .track-hero {
+        padding: 35px;
+    }
+
+    body.exam-track-page .exam-resource-grid {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 560px) {
+    body.exam-track-page .track-container {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    body.exam-track-page .track-hero {
+        padding: 27px 21px;
+        border-radius: 19px;
+    }
+
+    body.exam-track-page .track-overview {
+        padding: 19px;
+    }
+
+    body.exam-track-page .track-content-section {
+        margin: 36px 0;
+    }
+
+    body.exam-track-page .track-section-heading {
+        gap: 12px;
+    }
+
+    body.exam-track-page .track-heading-icon {
+        width: 43px;
+        height: 43px;
+        font-size: 20px;
+    }
+
+    body.exam-track-page .exam-subject-section {
+        padding: 12px;
+        gap: 14px;
+    }
+
+    body.exam-track-page .exam-subject-summary {
+        gap: 8px;
+        padding: 13px 11px;
+    }
+
+    body.exam-track-page .exam-subject-title {
+        font-size: 14px;
+    }
+
+    body.exam-track-page .exam-subject-hint {
+        font-size: 9px;
+    }
+
+    body.exam-track-page .exam-topic-card,
+    body.exam-track-page .exam-question-card {
+        padding: 16px;
+    }
+
+    body.exam-track-page .track-upload-area {
+        padding: 17px;
+    }
+
+    body.exam-track-page .starter-revision {
+        padding: 16px;
+    }
+
+    body.exam-track-page .track-footer-navigation {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body.exam-track-page *,
+    body.exam-track-page *::before,
+    body.exam-track-page *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+    }
+}
+
+/* END EXAM TRACK SHARED POLISH */
+
+
+/* SEMESTER RESOURCE PAGES — VISUAL POLISH */
+
+body.semester-notes-detail-page {
+    background: #fffaf5;
+}
+
+body.semester-notes-detail-page .semester-notes-container {
+    width: min(1240px, calc(100% - 48px));
+    padding-bottom: 45px;
+}
+
+body.semester-notes-detail-page .semester-notes-hero {
+    min-height: 285px;
+    padding: 38px;
+    border: 1px solid #f2d5bd;
+    border-radius: 24px;
+    background: linear-gradient(115deg, #fff0e2, #fffaf5 68%, #ffeedf);
+    box-shadow: 0 10px 28px rgba(150, 79, 34, .07);
+}
+
+body.semester-notes-detail-page .semester-notes-hero .track-eyebrow {
+    color: #c66a2d;
+    font-weight: 850;
+    letter-spacing: 1.4px;
+}
+
+body.semester-notes-detail-page .semester-notes-hero h1 {
+    color: #713b20;
+    font-size: clamp(27px, 3vw, 37px);
+    line-height: 1.25;
+}
+
+body.semester-notes-detail-page .semester-notes-hero p {
+    max-width: 680px;
+    color: #80634f;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+body.semester-notes-detail-page .track-primary-button {
+    background: linear-gradient(110deg, #e87932, #cf5d20);
+    box-shadow: 0 6px 15px rgba(207, 93, 32, .18);
+}
+
+body.semester-notes-detail-page .track-secondary-button {
+    border-color: #e9b58e;
+    color: #a95122;
+    background: #fff;
+}
+
+body.semester-notes-detail-page .semester-note-selection {
+    margin-top: 25px;
+    padding: 25px;
+    border: 1px solid #f0dfd1;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 6px 20px rgba(56, 47, 38, .04);
+}
+
+body.semester-notes-detail-page .track-section-heading h2 {
+    color: #713b20;
+    font-size: 22px;
+}
+
+body.semester-notes-detail-page .track-section-heading p {
+    color: #887466;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+body.semester-notes-detail-page .semester-note-filter-grid {
+    gap: 13px;
+}
+
+body.semester-notes-detail-page .semester-note-filter {
+    min-height: 82px;
+    padding: 16px;
+    border: 1px solid #f0d9c7;
+    border-radius: 13px;
+    background: #fff9f3;
+}
+
+body.semester-notes-detail-page .semester-note-filter span {
+    color: #bd6a37;
+    font-size: 9px;
+    font-weight: 850;
+    letter-spacing: .8px;
+}
+
+body.semester-notes-detail-page .semester-note-filter strong {
+    display: block;
+    margin-top: 9px;
+    color: #563b2c;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+body.semester-notes-detail-page .semester-note-integration-message {
+    margin-top: 15px;
+    color: #8a7565;
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+body.semester-notes-detail-page .semester-note-material-section {
+    margin-top: 30px;
+    padding: 27px;
+    border: 1px solid #f0dfd1;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 7px 22px rgba(56, 47, 38, .04);
+}
+
+body.semester-notes-detail-page .semester-note-academic-context {
+    margin: 17px 0 22px;
+    padding: 14px 17px;
+    border: 1px solid #f2d8c4;
+    border-radius: 12px;
+    background: #fff6ed;
+}
+
+body.semester-notes-detail-page .semester-note-academic-context strong {
+    color: #79482d;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+body.semester-notes-detail-page .semester-note-unit-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 19px;
+}
+
+body.semester-notes-detail-page .semester-note-content-card {
+    min-width: 0;
+    padding: 23px;
+    border: 1px solid #efdfd2;
+    border-radius: 17px;
+    background: linear-gradient(150deg, #fff, #fffaf6);
+    box-shadow: 0 5px 17px rgba(56, 47, 38, .04);
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+body.semester-notes-detail-page .semester-note-content-card:hover {
+    transform: translateY(-3px);
+    border-color: #e9b58e;
+    box-shadow: 0 11px 23px rgba(150, 79, 34, .08);
+}
+
+body.semester-notes-detail-page .semester-note-number {
+    display: inline-flex;
+    padding: 6px 10px;
+    border: 1px solid #f2d5bd;
+    border-radius: 20px;
+    background: #fff0e3;
+    color: #bd6128;
+    font-size: 9px;
+    font-weight: 850;
+    letter-spacing: .7px;
+}
+
+body.semester-notes-detail-page .semester-note-content-card h3 {
+    margin-top: 13px;
+    color: #663b25;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+body.semester-notes-detail-page .semester-note-content-card > p {
+    margin-top: 8px;
+    color: #806f62;
+    font-size: 11px;
+    line-height: 1.75;
+}
+
+body.semester-notes-detail-page .semester-note-content-card details {
+    margin-top: 15px;
+    border-top: 1px solid #f0e4da;
+}
+
+body.semester-notes-detail-page .semester-note-content-card details > summary {
+    padding: 13px 2px 4px;
+    color: #bd6128;
+    font-size: 11px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+body.semester-notes-detail-page .semester-note-reading {
+    padding-top: 12px;
+    color: #57483e;
+    font-size: 12px;
+    line-height: 1.85;
+}
+
+body.semester-notes-detail-page .semester-note-reading h4,
+body.semester-notes-detail-page .semester-note-reference-group h4 {
+    margin: 16px 0 8px;
+    color: #713b20;
+    font-size: 13px;
+}
+
+body.semester-notes-detail-page .semester-note-reading p {
+    margin: 8px 0;
+    line-height: 1.85;
+}
+
+body.semester-notes-detail-page .semester-note-formula {
+    margin: 11px 0;
+    padding: 13px 15px;
+    border: 1px solid #f0d8c4;
+    border-left: 3px solid #e47b37;
+    border-radius: 10px;
+    background: #fff5eb;
+    color: #713b20;
+    font-size: 12px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+body.semester-notes-detail-page .semester-note-example,
+body.semester-notes-detail-page .semester-note-problem {
+    margin: 13px 0;
+    padding: 15px;
+    border: 1px solid #e9dfd4;
+    border-radius: 12px;
+    background: #faf8f5;
+}
+
+body.semester-notes-detail-page .semester-note-problem h4,
+body.semester-notes-detail-page .semester-note-solution h4 {
+    color: #713b20;
+    font-size: 12px;
+}
+
+body.semester-notes-detail-page .semester-note-solution {
+    margin-top: 13px;
+    padding: 15px;
+    border: 1px solid #f0d8c4;
+    border-radius: 12px;
+    background: #fff9f3;
+}
+
+body.semester-notes-detail-page .semester-note-solution ol {
+    padding-left: 21px;
+}
+
+body.semester-notes-detail-page .semester-note-solution li {
+    margin: 8px 0;
+    padding-left: 3px;
+    color: #59483b;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+body.semester-notes-detail-page .semester-note-reference-group {
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px solid #f0e4da;
+}
+
+body.semester-notes-detail-page .semester-note-reference-group dt {
+    margin-top: 10px;
+    color: #713b20;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+body.semester-notes-detail-page .semester-note-reference-group dd {
+    margin: 4px 0 0;
+    color: #806f62;
+    font-size: 11px;
+    line-height: 1.75;
+}
+
+body.semester-notes-detail-page .track-notice {
+    margin-top: 22px;
+    border-radius: 13px;
+}
+
+body.semester-notes-detail-page .track-study-banner {
+    margin-top: 28px;
+    border-radius: 19px;
+}
+
+body.semester-notes-detail-page .track-footer-navigation {
+    margin-top: 22px;
+}
+
+body.semester-notes-detail-page a:focus-visible,
+body.semester-notes-detail-page summary:focus-visible {
+    outline: 3px solid #ed8b48;
+    outline-offset: 4px;
+}
+
+@media (max-width: 850px) {
+    body.semester-notes-detail-page .semester-note-unit-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    body.semester-notes-detail-page .semester-notes-hero {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    body.semester-notes-detail-page .semester-notes-container {
+        width: calc(100% - 24px);
+    }
+
+    body.semester-notes-detail-page .semester-notes-hero {
+        min-height: auto;
+        padding: 24px 20px;
+        border-radius: 19px;
+    }
+
+    body.semester-notes-detail-page .semester-note-selection,
+    body.semester-notes-detail-page .semester-note-material-section {
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    body.semester-notes-detail-page .semester-note-filter-grid,
+    body.semester-notes-detail-page .semester-note-unit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    body.semester-notes-detail-page .semester-note-content-card {
+        padding: 19px;
+    }
+
+    body.semester-notes-detail-page .semester-note-content-card h3 {
+        font-size: 15px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body.semester-notes-detail-page * {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
+
+
+/* SEMESTER PREPARATION — LEARNING HUB POLISH */
+
+body.theme-semester .exam-learning-hub {
+    margin-top: 28px;
+    padding: 25px;
+    border: 1px solid #f0dfd1;
+    border-radius: 23px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(48, 57, 72, .05);
+}
+
+body.theme-semester .exam-learning-hub-heading {
+    margin-bottom: 22px;
+}
+
+body.theme-semester .exam-learning-hub-heading h2 {
+    color: #293d49;
+    font-size: clamp(22px, 3vw, 29px);
+    line-height: 1.35;
+}
+
+body.theme-semester .exam-learning-group {
+    margin-top: 17px;
+    overflow: hidden;
+    border: 1px solid #f0d8c3;
+    border-radius: 17px;
+    background: #fffaf5;
+}
+
+body.theme-semester .exam-learning-group-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 19px 21px;
+    cursor: pointer;
+    list-style: none;
+}
+
+body.theme-semester .exam-learning-group-summary::-webkit-details-marker,
+body.theme-semester .exam-subject-summary::-webkit-details-marker {
+    display: none;
+}
+
+body.theme-semester .exam-learning-group-title {
+    color: #344653;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+body.theme-semester .exam-learning-group-description {
+    color: #78858b;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+body.theme-semester .exam-learning-group-content {
+    padding: 0 18px 18px;
+}
+
+body.theme-semester .exam-subject-accordion {
+    margin-top: 13px;
+    overflow: hidden;
+    border: 1px solid #eadfd5;
+    border-radius: 14px;
+    background: #fff;
+}
+
+body.theme-semester .exam-subject-summary {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 17px 19px;
+    cursor: pointer;
+    list-style: none;
+    background: #fff;
+}
+
+body.theme-semester .exam-subject-title {
+    flex: 1;
+    color: #344653;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+body.theme-semester .exam-subject-hint {
+    color: #d36d28;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .7px;
+}
+
+body.theme-semester .exam-subject-chevron {
+    color: #df792f;
+    font-size: 20px;
+}
+
+body.theme-semester .exam-subject-accordion[open] > .exam-subject-summary {
+    border-bottom: 1px solid #f1e6dc;
+    background: #fff8f1;
+}
+
+body.theme-semester .exam-subject-accordion > .exam-notes,
+body.theme-semester .exam-subject-accordion > .exam-topic-card {
+    margin: 17px;
+}
+
+body.theme-semester .exam-topic-card {
+    padding: 21px;
+    border: 1px solid #eee2d8;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 5px 16px rgba(48, 57, 72, .035);
+}
+
+body.theme-semester .exam-topic-heading {
+    margin-bottom: 15px;
+}
+
+body.theme-semester .exam-topic-heading h3 {
+    color: #344653;
+    font-size: 17px;
+    line-height: 1.45;
+}
+
+body.theme-semester .exam-notes,
+body.theme-semester .exam-formula,
+body.theme-semester .exam-solved {
+    margin-top: 12px;
+    border: 1px solid #f0e3d8;
+    border-radius: 12px;
+    background: #fffaf6;
+}
+
+body.theme-semester .exam-notes > summary,
+body.theme-semester .exam-formula > summary,
+body.theme-semester .exam-solved > summary {
+    padding: 13px 16px;
+    color: #a95720;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+body.theme-semester .exam-notes-body {
+    padding: 5px 18px 18px;
+    color: #586971;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+body.theme-semester .exam-notes-body h5 {
+    margin: 16px 0 8px;
+    color: #344653;
+    font-size: 15px;
+}
+
+body.theme-semester .exam-notes-body li {
+    margin: 6px 0;
+    padding-left: 3px;
+}
+
+body.theme-semester .book-math {
+    margin: 13px 0;
+    padding: 13px 16px;
+    overflow-wrap: anywhere;
+    border-left: 3px solid #e8792d;
+    border-radius: 8px;
+    background: #fff0e3;
+    color: #81451f;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+body.theme-semester .exam-practice-area {
+    margin-top: 20px;
+    padding-top: 17px;
+    border-top: 1px solid #f0e5dc;
+}
+
+body.theme-semester .exam-question-list {
+    display: grid;
+    gap: 13px;
+}
+
+body.theme-semester .exam-question-card {
+    padding: 17px;
+    border: 1px solid #eadfd5;
+    border-radius: 13px;
+    background: #fff;
+}
+
+body.theme-semester .exam-question-card > p {
+    margin: 9px 0;
+    color: #344653;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.65;
+}
+
+body.theme-semester .exam-question-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px 18px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    background: #fffaf5;
+    color: #586971;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+body.theme-semester .exam-answer,
+body.theme-semester .exam-answer-reveal {
+    display: block;
+    margin-top: 12px;
+    padding: 11px 14px;
+    border: 1px solid #dcecdf;
+    border-radius: 10px;
+    background: #f5fbf5;
+}
+
+body.theme-semester .exam-answer > summary,
+body.theme-semester .exam-answer-reveal > summary {
+    color: #39734a;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+body.theme-semester .exam-answer p,
+body.theme-semester .exam-answer-reveal p {
+    margin-top: 9px;
+    color: #52685a;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+body.theme-semester .exam-learning-hub :focus-visible {
+    outline: 3px solid #ed8a43;
+    outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+    body.theme-semester .exam-learning-hub {
+        padding: 15px;
+        border-radius: 17px;
+    }
+
+    body.theme-semester .exam-learning-group-summary {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+        padding: 16px;
+    }
+
+    body.theme-semester .exam-learning-group-content {
+        padding: 0 10px 12px;
+    }
+
+    body.theme-semester .exam-subject-summary {
+        flex-wrap: wrap;
+        padding: 14px;
+    }
+
+    body.theme-semester .exam-subject-title {
+        min-width: 70%;
+        font-size: 14px;
+    }
+
+    body.theme-semester .exam-topic-card {
+        padding: 14px;
+    }
+
+    body.theme-semester .exam-question-options {
+        grid-template-columns: 1fr;
+    }
+
+    body.theme-semester .exam-subject-accordion > .exam-notes,
+    body.theme-semester .exam-subject-accordion > .exam-topic-card {
+        margin: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body.theme-semester .exam-learning-hub *,
+    body.theme-semester .exam-learning-hub *::before,
+    body.theme-semester .exam-learning-hub *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+    }
+}
+
