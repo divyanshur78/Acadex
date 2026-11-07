@@ -106,3 +106,132 @@
         width: 100%;
     }
 }
+
+/* ACADEMIC CONTEXT — FINAL VISUAL POLISH */
+
+.academic-context-strip {
+    position: relative;
+    gap: 20px;
+    padding: 23px 25px;
+    border: 1.5px solid transparent;
+    border-radius: 21px;
+    background:
+        linear-gradient(#fffaf6, #fff) padding-box,
+        linear-gradient(115deg, #ef7628, #f5bd83, #e7a2a2) border-box;
+    box-shadow: 0 10px 28px rgba(116, 67, 35, .07);
+}
+
+.academic-context-heading {
+    min-width: 205px;
+}
+
+.academic-context-icon {
+    width: 49px;
+    height: 49px;
+    flex-basis: 49px;
+    border: 1px solid #f5d2b9;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #fff0e3, #ffe2cb);
+    font-size: 24px;
+}
+
+.academic-context-heading strong {
+    font-size: 14px;
+    letter-spacing: -.2px;
+}
+
+.academic-context-heading small {
+    max-width: 210px;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.academic-context-details {
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.academic-context-item {
+    flex: 1 1 115px;
+    min-width: 105px;
+    padding: 12px 13px;
+    border: 1px solid #f1e5dc;
+    border-radius: 13px;
+    background: rgba(255, 255, 255, .82);
+}
+
+.academic-context-item span {
+    font-size: 9px;
+    letter-spacing: .08em;
+}
+
+.academic-context-item strong {
+    font-size: 12px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.academic-context-edit {
+    min-height: 40px;
+    padding: 10px 17px;
+    border: 1px solid #e87537;
+    border-radius: 11px;
+    background: #fff;
+    white-space: nowrap;
+}
+
+.academic-context-edit:hover {
+    background: #e87537;
+    box-shadow: 0 5px 13px rgba(232, 117, 55, .2);
+}
+
+.academic-context-edit:focus-visible {
+    outline: 3px solid rgba(232, 117, 55, .3);
+    outline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+    .academic-context-strip {
+        align-items: flex-start;
+    }
+
+    .academic-context-details {
+        flex-basis: 100%;
+    }
+
+    .academic-context-edit {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .academic-context-strip {
+        gap: 14px;
+        padding: 17px;
+        border-radius: 17px;
+    }
+
+    .academic-context-heading {
+        min-width: 0;
+    }
+
+    .academic-context-details {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+    }
+
+    .academic-context-item {
+        min-width: 0;
+        padding: 11px 10px;
+    }
+
+    .academic-context-item strong {
+        font-size: 11px;
+    }
+
+    .academic-context-edit {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
