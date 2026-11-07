@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="../css/components.css">
 <link rel="stylesheet" href="../css/library-pages.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/academic-personalisation.css">
 </head>
 <body class="library-page">
 <a class="page-back-button" href="../index.html" data-action="history-back" aria-label="Go back to previous page" title="Go back">
@@ -21,6 +22,35 @@
 </nav>
 </header>
 <main class="library-container">
+<section class="academic-context-strip" data-academic-context
+         aria-label="Your academic profile">
+    <div class="academic-context-heading">
+        <span class="academic-context-icon">🎓</span>
+        <div>
+            <strong>Your Academic Context</strong>
+            <small>Learning resources linked to your student profile</small>
+        </div>
+    </div>
+    <div class="academic-context-details">
+        <div class="academic-context-item">
+            <span>Programme</span>
+            <strong data-academic-programme>Loading programme</strong>
+        </div>
+        <div class="academic-context-item">
+            <span>Academic Field</span>
+            <strong data-academic-field>Loading academic field</strong>
+        </div>
+        <div class="academic-context-item">
+            <span>Semester</span>
+            <strong data-academic-semester>Loading semester</strong>
+        </div>
+        <div class="academic-context-item">
+            <span>Academic Year</span>
+            <strong data-academic-year>Loading academic year</strong>
+        </div>
+    </div>
+    <a href="profile.html" class="academic-context-edit">View Profile</a>
+</section>
 <section class="library-hero">
 <div class="library-eyebrow">Your campus library companion</div>
 <h1>Find your book.<br>Know where it is.</h1>
@@ -56,6 +86,7 @@
 <footer class="library-footer">AcedeX · Campus book discovery</footer>
 </body>
 </html>
+
 
 
 

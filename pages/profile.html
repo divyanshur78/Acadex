@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="../css/library-pages.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/profile-pages.css">
+    <link rel="stylesheet" href="../css/academic-personalisation.css">
 </head>
 <body class="library-page">
 <a class="page-back-button" href="../index.html" data-action="history-back" aria-label="Go back to previous page" title="Go back">
@@ -22,6 +23,35 @@
 </nav>
 </header>
 <main class="library-container">
+<section class="academic-context-strip" data-academic-context
+         aria-label="Your academic profile">
+    <div class="academic-context-heading">
+        <span class="academic-context-icon">🎓</span>
+        <div>
+            <strong>Your Academic Context</strong>
+            <small>Learning resources linked to your student profile</small>
+        </div>
+    </div>
+    <div class="academic-context-details">
+        <div class="academic-context-item">
+            <span>Programme</span>
+            <strong data-academic-programme>Loading programme</strong>
+        </div>
+        <div class="academic-context-item">
+            <span>Academic Field</span>
+            <strong data-academic-field>Loading academic field</strong>
+        </div>
+        <div class="academic-context-item">
+            <span>Semester</span>
+            <strong data-academic-semester>Loading semester</strong>
+        </div>
+        <div class="academic-context-item">
+            <span>Academic Year</span>
+            <strong data-academic-year>Loading academic year</strong>
+        </div>
+    </div>
+    <a href="#profile-academic-information" class="academic-context-edit">View Profile</a>
+</section>
 <section class="library-hero">
 <div class="library-eyebrow">Your academic space</div>
 <h1>Student Profile</h1>
@@ -36,7 +66,7 @@
 <div class="library-meta" style="justify-content:center"><span class="library-tag">Student Account</span></div>
 </div>
 <div class="library-card">
-<h2>Academic Information</h2>
+<h2 id="profile-academic-information">Academic Information</h2>
 <div class="location-panel" style="margin-top:20px">
 <div class="location-item"><small>Registration Number</small><strong>Student ID</strong></div>
 <div class="location-item"><small>Programme</small><strong>Programme Name</strong></div>
@@ -60,6 +90,8 @@
 <footer class="library-footer">AcedeX · Your academic space</footer>
 </body>
 </html>
+
+
 
 
 

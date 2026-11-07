@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/course-pages.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/academic-personalisation.css">
 </head>
 <body class="course-page-body">
 <a class="page-back-button" href="../index.html" data-action="history-back" aria-label="Go back to previous page" title="Go back">
@@ -16,6 +17,35 @@
     <span>Back</span>
 </a>
     <main class="course-workspace">
+<section class="academic-context-strip" data-academic-context
+         aria-label="Your academic profile">
+    <div class="academic-context-heading">
+        <span class="academic-context-icon">🎓</span>
+        <div>
+            <strong>Your Academic Context</strong>
+            <small>Learning resources linked to your student profile</small>
+        </div>
+    </div>
+    <div class="academic-context-details">
+        <div class="academic-context-item">
+            <span>Programme</span>
+            <strong data-academic-programme>Loading programme</strong>
+        </div>
+        <div class="academic-context-item">
+            <span>Academic Field</span>
+            <strong data-academic-field>Loading academic field</strong>
+        </div>
+        <div class="academic-context-item">
+            <span>Semester</span>
+            <strong data-academic-semester>Loading semester</strong>
+        </div>
+        <div class="academic-context-item">
+            <span>Academic Year</span>
+            <strong data-academic-year>Loading academic year</strong>
+        </div>
+    </div>
+    <a href="profile.html" class="academic-context-edit">View Profile</a>
+</section>
         <header class="course-topbar">
             <a class="course-brand" href="../index.html">Acede<span>X</span></a>
             <nav class="course-top-links">
@@ -64,6 +94,7 @@
     </main>
 </body>
 </html>
+
 
 
 
