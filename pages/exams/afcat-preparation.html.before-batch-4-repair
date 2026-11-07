@@ -1,0 +1,553 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFCAT Preparation | AcedeX</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/library-pages.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/exam-preparation.css">
+    <link rel="stylesheet" href="../../css/exam-track-pages.css">
+</head>
+<body class="library-page exam-track-page theme-afcat" data-exam-category="afcat">
+<a class="exam-back-link" href="../exam-preparation.html">← Back to Exam Preparation</a>
+
+<a class="page-back-button" href="../exam-preparation.html" aria-label="Back to exam preparation">
+    <span class="page-back-icon">←</span><span>Back</span>
+</a>
+
+<header class="library-header">
+    <a class="library-brand" href="../../index.html">Acede<span>X</span></a>
+    <nav class="library-nav">
+        <a href="../../index.html">Dashboard</a>
+        <a href="../courses.html">Courses</a>
+        <a href="../digital-library.html">Digital Library</a>
+        <a href="../book-locator.html">Book Locator</a>
+        <a class="active" href="../exam-preparation.html">Exam Prep</a>
+    </nav>
+</header>
+
+<main class="library-container track-container">
+
+    <section class="track-hero">
+        <div class="track-hero-content">
+            <span class="track-eyebrow">AIR FORCE COMMON ADMISSION TEST</span>
+            <div class="track-hero-icon">✈️</div>
+            <h1>AFCAT Preparation</h1>
+            <p>Explore organised AFCAT preparation across General Awareness, Verbal Ability, Numerical Ability, Reasoning and Military Aptitude.</p>
+            <div class="track-hero-actions">
+                <a href="#track-syllabus" class="track-primary-button">Explore Syllabus ↓</a>
+                <a href="#track-resources" class="track-secondary-button">Study Resources</a>
+            </div>
+        </div>
+        <div class="track-hero-side">
+            <span class="hero-side-icon">✈️</span>
+            <span class="hero-side-label">YOUR PREPARATION<br>STARTS HERE</span>
+        </div>
+    </section>
+
+    <section class="track-overview">
+        <div>
+            <span class="track-section-kicker">YOUR LEARNING SPACE</span>
+            <h2>Prepare with a clear direction.</h2>
+            <p>Explore each section below to organise your learning and access relevant preparation material.</p>
+        </div>
+        <div class="track-overview-tags">
+            <span>Syllabus</span><span>Notes</span><span>Books</span><span>Practice</span>
+        </div>
+    </section>
+
+    <section class="track-content-section" id="track-syllabus">
+        <div class="track-section-heading">
+            <div><span>01 · KNOW WHAT TO STUDY</span><h2>Syllabus and Exam Structure</h2><p>Understand the topics and structure relevant to your preparation.</p></div>
+            <span class="track-heading-icon">📋</span>
+        </div>
+        <div class="exam-resource-grid">
+            <article class="exam-resource-card"><span class="resource-index">01</span><h4>General Awareness</h4><p>Study material and verified resources will be available in this section.</p><div class="resource-status" data-content-container="syllabus">Content awaiting integration</div></article>
+<article class="exam-resource-card"><span class="resource-index">02</span><h4>Verbal Ability in English</h4><p>Study material and verified resources will be available in this section.</p><div class="resource-status" data-content-container="syllabus">Content awaiting integration</div></article>
+<article class="exam-resource-card"><span class="resource-index">03</span><h4>Numerical Ability</h4><p>Study material and verified resources will be available in this section.</p><div class="resource-status" data-content-container="syllabus">Content awaiting integration</div></article>
+<article class="exam-resource-card"><span class="resource-index">04</span><h4>Reasoning and Military Aptitude</h4><p>Study material and verified resources will be available in this section.</p><div class="resource-status" data-content-container="syllabus">Content awaiting integration</div></article>
+<article class="exam-resource-card"><span class="resource-index">05</span><h4>Examination pattern and applicable selection stages</h4><p>Study material and verified resources will be available in this section.</p><div class="resource-status" data-content-container="syllabus">Content awaiting integration</div></article>
+        </div>
+        <div class="track-notice">
+            <strong>Content verification:</strong> AFCAT syllabus, eligibility and selection procedures must be verified against the latest official Indian Air Force notification.
+        </div>
+    </section>
+
+    <section class="track-content-section" id="track-notes">
+        <div class="track-section-heading">
+            <div><span>02 · UNDERSTAND THE CONCEPTS</span><h2>Notes and Study Material</h2><p>Organised notes to support topic-wise learning and revision.</p></div>
+            <span class="track-heading-icon">📝</span>
+        </div>
+        <div class="exam-resource-grid">
+            <article class="exam-resource-card"><span class="resource-index">01</span><h4>General Awareness and current affairs notes</h4><p>Study material and verified resources will be available in this section.</p><div class="resource-status" data-content-container="notes">Content awaiting integration</div></article>
+<article class="exam-resource-card"><span class="resource-index">02</span><h4>English vocabulary and grammar summaries</h4><p>Study material and verified resources will be available in this section.</p><div class="resource-status" data-content-container="notes">Content awaiting integration</div></article>
+<article class="exam-resource-card"><span class="resource-index">03</span><h4>Numerical Ability formulas</h4><p>Study material and verified resources will be available in this section.</p><div class="resource-status" data-content-container="notes">Content awaiting integration</div></article>
+<article class="exam-resource-card"><span class="resource-index">04</span><h4>Reasoning concepts and practice explanations</h4><p>Study material and verified resources will be available in this section.</p><div class="resource-status" data-content-container="notes">Content awaiting integration</div></article>
+        </div>
+    </section>
+
+    <section class="track-content-section" id="track-books">
+        <div class="track-section-heading">
+            <div><span>03 · BUILD YOUR REFERENCES</span><h2>Books and References</h2><p>Find textbooks, supplementary reading and relevant library references.</p></div>
+            <span class="track-heading-icon">📚</span>
+        </div>
+        <div class="exam-resource-grid">
+            <article class="exam-resource-card"><span class="resource-index">01</span><h4>English language reference books</h4><p>Study material and verified resources will be available in this section.</p><div class="resource-status" data-content-container="books">Content awaiting integration</div></article>
+<article class="exam-resource-card"><span class="resource-index">02</span><h4>General Awareness and current affairs resources</h4><p>Study material and verified resources will be available in this section.</p><div class="resource-status" data-content-container="books">Content awaiting integration</div></article>
+<article class="exam-resource-card"><span class="resource-index">03</span><h4>Quantitative aptitude references</h4><p>Study material and verified resources will be available in this section.</p><div class="resource-status" data-content-container="books">Content awaiting integration</div></article>
+<article class="exam-resource-card"><span class="resource-index">04</span><h4>Reasoning and military aptitude practice books</h4><p>Study material and verified resources will be available in this section.</p><div class="resource-status" data-content-container="books">Content awaiting integration</div></article>
+        </div>
+        <a class="track-library-link" href="../digital-library.html">Explore Digital Library →</a>
+    </section>
+
+    <section class="track-content-section" id="track-resources">
+        <div class="track-section-heading">
+            <div><span>04 · TEST YOUR PREPARATION</span><h2>Practice, Quizzes and PYQs</h2><p>Strengthen your understanding through practice and previous examination papers.</p></div>
+            <span class="track-heading-icon">✍️</span>
+        </div>
+        <div class="exam-resource-grid">
+            <article class="exam-resource-card"><span class="resource-index">01</span><h4>Previous-year AFCAT papers</h4><p>Study material and verified resources will be available in this section.</p><div class="resource-status" data-content-container="practice">Content awaiting integration</div></article>
+<article class="exam-resource-card"><span class="resource-index">02</span><h4>English and vocabulary quizzes</h4><p>Study material and verified resources will be available in this section.</p><div class="resource-status" data-content-container="practice">Content awaiting integration</div></article>
+<article class="exam-resource-card"><span class="resource-index">03</span><h4>Numerical Ability exercises</h4><p>Study material and verified resources will be available in this section.</p><div class="resource-status" data-content-container="practice">Content awaiting integration</div></article>
+<article class="exam-resource-card"><span class="resource-index">04</span><h4>Reasoning and military aptitude practice</h4><p>Study material and verified resources will be available in this section.</p><div class="resource-status" data-content-container="practice">Content awaiting integration</div></article>
+<article class="exam-resource-card"><span class="resource-index">05</span><h4>Timed mock examinations</h4><p>Study material and verified resources will be available in this section.</p><div class="resource-status" data-content-container="practice">Content awaiting integration</div></article>
+        </div>
+        <div class="track-upload-area" data-upload-category="afcat-pyq">
+            <span class="upload-icon">📄</span>
+            <div><h3>Previous-Year Question Papers</h3><p>Verified papers, answer keys and solutions can be connected here.</p></div>
+            <span class="resource-status" data-content-container="pyq-downloads">Awaiting verified uploads</span>
+        </div>
+    </section>
+
+    <section class="track-content-section">
+        <div class="track-section-heading">
+            <div><span>05 · GO BEYOND THE BASICS</span><h2>Additional Preparation Resources</h2><p>Useful supporting material for a more complete preparation journey.</p></div>
+            <span class="track-heading-icon">🚀</span>
+        </div>
+        <div class="exam-resource-grid">
+            <article class="exam-resource-card"><span class="resource-index">01</span><h4>Current affairs updates</h4><p>Study material and verified resources will be available in this section.</p><div class="resource-status" data-content-container="additional-resources">Content awaiting integration</div></article>
+<article class="exam-resource-card"><span class="resource-index">02</span><h4>Formula and shortcut revision</h4><p>Study material and verified resources will be available in this section.</p><div class="resource-status" data-content-container="additional-resources">Content awaiting integration</div></article>
+<article class="exam-resource-card"><span class="resource-index">03</span><h4>Topic-wise question banks</h4><p>Study material and verified resources will be available in this section.</p><div class="resource-status" data-content-container="additional-resources">Content awaiting integration</div></article>
+<article class="exam-resource-card"><span class="resource-index">04</span><h4>Exam pattern and preparation planner</h4><p>Study material and verified resources will be available in this section.</p><div class="resource-status" data-content-container="additional-resources">Content awaiting integration</div></article>
+        </div>
+    </section>
+
+    
+<section class="track-content-section exam-learning-hub" id="detailed-learning">
+    <div class="track-section-heading">
+        <div>
+            <span>06 · DETAILED LEARNING CENTRE</span>
+            <h2>Subject-wise Notes and Practice</h2>
+            <p>Strengthen language, numerical ability, reasoning and general awareness.</p>
+        </div>
+        <span class="track-heading-icon">📚</span>
+    </div>
+
+    <div class="exam-pattern-panel">
+        <span>UNDERSTAND THE QUESTION FORMAT</span>
+        <h3>Exam Pattern and Practice Approach</h3>
+        <p>AFCAT practice should reflect objective questions and the latest official syllabus. Confirm current duration, marking rules and subject coverage from the official notification.</p>
+    </div>
+
+    <div class="exam-learning-guide">
+        <h3>How to use these learning modules</h3>
+        <p>Study the concept notes first, review the formula sheet, follow the solved example and then attempt the questions without opening the answers. Questions are labelled by difficulty.</p>
+        <div class="exam-level-guide">
+            <span class="exam-level exam-level-beginner">Beginner</span>
+            <span class="exam-level exam-level-intermediate">Intermediate</span>
+            <span class="exam-level exam-level-advanced">Advanced</span>
+            <span class="exam-level exam-level-exam">Exam level</span>
+        </div>
+    </div>
+
+    
+    <details class="exam-subject-section exam-subject-accordion">
+<summary class="exam-subject-summary"><span class="exam-subject-title">English</span><span class="exam-subject-hint">VIEW TOPICS</span><span class="exam-subject-chevron" aria-hidden="true">＋</span></summary>
+        <div class="exam-subject-heading">
+            <span>SUBJECT MODULE</span>
+            
+            <p>Vocabulary, grammar and comprehension.</p>
+        </div>
+        
+    <article class="exam-topic-card">
+        <div class="exam-topic-heading">
+            <div><span class="exam-topic-label">FOUNDATION</span>
+            <h4>Vocabulary: Synonyms, Antonyms and Idioms</h4></div>
+        </div>
+        <details class="exam-notes" open>
+            <summary>Detailed concept notes</summary>
+            <div class="exam-notes-body"><h5>1. Synonyms and antonyms</h5>
+<p>A synonym is a word with a similar meaning, while an antonym expresses an opposite meaning. The correct choice depends on the context in which a word is used.</p>
+<p>For example, <strong>abundant</strong> means plentiful, while <strong>scarce</strong> means limited or insufficient.</p>
+<h5>2. Word roots, prefixes and suffixes</h5>
+<p>Word roots carry the central meaning of a word. Prefixes appear before a root and suffixes appear after it. Understanding them helps you work out unfamiliar vocabulary.</p>
+<ul><li>Un-: not or opposite, as in unhappy.</li><li>Pre-: before, as in preview.</li><li>-ology: study of, as in biology.</li><li>-less: without, as in careless.</li></ul>
+<h5>3. Idioms and phrases</h5>
+<p>An idiom is an established expression whose meaning cannot always be understood from its individual words. Learn its meaning along with a sentence showing how it is used.</p>
+<ul><li>Break the ice: begin a friendly conversation.</li><li>Once in a blue moon: very rarely.</li><li>At the eleventh hour: at the last possible moment.</li></ul>
+<h5>4. One-word substitutions</h5>
+<p>A one-word substitution replaces a longer description with one precise word. Learn the definition carefully and notice whether the required word is a noun, adjective or another part of speech.</p>
+<h5>5. Vocabulary in context</h5>
+<p>Read the complete sentence before choosing an answer. Look for clues in nearby words, the tone of the sentence and the relationship between its ideas. A familiar synonym may still be incorrect if it does not fit the context.</p>
+<h5>6. Reading comprehension</h5>
+<p>Identify the main idea, supporting details, author's purpose and tone. Answers should be supported by the passage rather than personal assumptions.</p>
+<h5>Common mistakes</h5>
+<ul><li>Choosing a word based only on a similar spelling.</li><li>Ignoring the context of the sentence.</li><li>Confusing an idiom's literal meaning with its intended meaning.</li><li>Choosing a one-word substitution with the wrong grammatical role.</li></ul></div>
+        </details>
+        <details class="exam-formula">
+            <summary>Important formulas and quick reference</summary>
+            <div class="exam-notes-body"><ul><li>Abundant = plentiful.</li><li>Reluctant = unwilling.</li><li>Concise = brief but complete.</li><li>Optimistic = hopeful.</li></ul></div>
+        </details>
+        <details class="exam-solved">
+            <summary>Worked example</summary>
+            <div class="exam-notes-body"><p>Sentence: 'The instructions were concise and easy to follow.'</p><ol><li>Concise describes the instructions.</li><li>The context suggests clarity without unnecessary length.</li><li>Meaning: <strong>brief but complete</strong>.</li></ol></div>
+        </details>
+        <div class="exam-practice-area">
+            <h5>Topic-wise practice</h5>
+            <p>Attempt the questions before revealing their solutions.</p>
+            <div class="exam-question-list">
+        <article class="exam-question-card">
+            <span class="exam-level exam-level-beginner">Beginner</span>
+            <h4>Question 1: Synonym of &#x27;Abundant&#x27;?</h4>
+            <ol class="exam-question-options" type="A"><li><strong>A.</strong> Scarce</li><li><strong>B.</strong> Plentiful</li><li><strong>C.</strong> Empty</li><li><strong>D.</strong> Weak</li></ol>
+            <details class="exam-answer">
+                <summary>Reveal answer and explanation</summary>
+                <div><strong>Answer: Plentiful</strong>
+                <p>Abundant means plentiful.</p></div>
+            </details>
+        </article>
+        <article class="exam-question-card">
+            <span class="exam-level exam-level-intermediate">Intermediate</span>
+            <h4>Question 2: Antonym of &#x27;Expand&#x27;?</h4>
+            <ol class="exam-question-options" type="A"><li><strong>A.</strong> Extend</li><li><strong>B.</strong> Enlarge</li><li><strong>C.</strong> Contract</li><li><strong>D.</strong> Increase</li></ol>
+            <details class="exam-answer">
+                <summary>Reveal answer and explanation</summary>
+                <div><strong>Answer: Contract</strong>
+                <p>Contract means to become smaller.</p></div>
+            </details>
+        </article>
+        <article class="exam-question-card">
+            <span class="exam-level exam-level-advanced">Advanced</span>
+            <h4>Question 3: &#x27;To break the ice&#x27; means:</h4>
+            <ol class="exam-question-options" type="A"><li><strong>A.</strong> To damage something</li><li><strong>B.</strong> To begin a friendly conversation</li><li><strong>C.</strong> To end a meeting</li><li><strong>D.</strong> To create confusion</li></ol>
+            <details class="exam-answer">
+                <summary>Reveal answer and explanation</summary>
+                <div><strong>Answer: To begin a friendly conversation</strong>
+                <p>The idiom refers to easing social interaction.</p></div>
+            </details>
+        </article>
+        <article class="exam-question-card">
+            <span class="exam-level exam-level-exam">Exam</span>
+            <h4>Question 4: A person who speaks many languages is a:</h4>
+            <ol class="exam-question-options" type="A"><li><strong>A.</strong> Linguist</li><li><strong>B.</strong> Polyglot</li><li><strong>C.</strong> Orator</li><li><strong>D.</strong> Novelist</li></ol>
+            <details class="exam-answer">
+                <summary>Reveal answer and explanation</summary>
+                <div><strong>Answer: Polyglot</strong>
+                <p>A polyglot knows or uses several languages.</p></div>
+            </details>
+        </article></div>
+        </div>
+    </article>
+    <article class="exam-topic-card">
+        <div class="exam-topic-heading">
+            <div><span class="exam-topic-label">CORE</span>
+            <h4>Grammar: Tenses and Error Detection</h4></div>
+        </div>
+        <details class="exam-notes" open>
+            <summary>Detailed concept notes</summary>
+            <div class="exam-notes-body"><h5>1. Understanding tense</h5>
+<p>Tense shows when an action happens. English commonly uses present, past and future time, each with simple, continuous, perfect and perfect continuous forms.</p>
+<h5>2. The twelve tense forms</h5>
+<ul><li>Present simple: subject + base verb. Example: She studies.</li><li>Present continuous: am/is/are + verb-ing. Example: She is studying.</li><li>Present perfect: has/have + past participle. Example: She has studied.</li><li>Present perfect continuous: has/have been + verb-ing.</li><li>Past simple: subject + past form. Example: She studied.</li><li>Past continuous: was/were + verb-ing.</li><li>Past perfect: had + past participle.</li><li>Past perfect continuous: had been + verb-ing.</li><li>Future simple: will + base verb.</li><li>Future continuous: will be + verb-ing.</li><li>Future perfect: will have + past participle.</li><li>Future perfect continuous: will have been + verb-ing.</li></ul>
+<h5>3. Subject–verb agreement</h5>
+<p>A verb must agree with its subject in number and person. A singular subject generally takes a singular verb, while a plural subject takes a plural verb.</p>
+<p>Example: The list of items <strong>is</strong> ready. The subject is list, not items.</p>
+<h5>4. Articles</h5>
+<p>Use <strong>a</strong> before a consonant sound and <strong>an</strong> before a vowel sound. Use <strong>the</strong> when referring to a particular or already identified person or thing.</p>
+<p>Example: an honest person, a university, the book on the table.</p>
+<h5>5. Prepositions and pronouns</h5>
+<p>Prepositions express relationships of time, place, direction and manner. Pronouns replace nouns and must agree with the nouns they refer to.</p>
+<h5>6. Common error-detection patterns</h5>
+<ul><li>Incorrect subject–verb agreement.</li><li>Wrong tense or inconsistent tense sequence.</li><li>Incorrect article or preposition.</li><li>Pronoun disagreement or unclear reference.</li><li>Incorrect comparison, such as more better.</li><li>Unnecessary repetition or incorrect word order.</li></ul>
+<h5>7. A reliable correction method</h5>
+<p>First identify the subject and main verb. Then check tense, agreement, articles, prepositions and pronouns. Read the corrected sentence again to ensure that its meaning remains logical.</p></div>
+        </details>
+        <details class="exam-formula">
+            <summary>Important formulas and quick reference</summary>
+            <div class="exam-notes-body"><ul><li>Present simple: subject + base verb (with third-person singular agreement).</li><li>Present continuous: am/is/are + verb-ing.</li><li>Present perfect: has/have + past participle.</li><li>Past perfect: had + past participle.</li></ul></div>
+        </details>
+        <details class="exam-solved">
+            <summary>Worked example</summary>
+            <div class="exam-notes-body"><p>Correct: 'She has completed the assignment.'</p><ol><li>Subject is she.</li><li>Present perfect uses has + past participle.</li><li>Completed is the past participle.</li></ol></div>
+        </details>
+        <div class="exam-practice-area">
+            <h5>Topic-wise practice</h5>
+            <p>Attempt the questions before revealing their solutions.</p>
+            <div class="exam-question-list">
+        <article class="exam-question-card">
+            <span class="exam-level exam-level-beginner">Beginner</span>
+            <h4>Question 1: He ___ to the library every day.</h4>
+            <ol class="exam-question-options" type="A"><li><strong>A.</strong> go</li><li><strong>B.</strong> goes</li><li><strong>C.</strong> going</li><li><strong>D.</strong> gone</li></ol>
+            <details class="exam-answer">
+                <summary>Reveal answer and explanation</summary>
+                <div><strong>Answer: goes</strong>
+                <p>Third-person singular takes goes.</p></div>
+            </details>
+        </article>
+        <article class="exam-question-card">
+            <span class="exam-level exam-level-intermediate">Intermediate</span>
+            <h4>Question 2: Choose the correct article: &#x27;___ honest person&#x27;.</h4>
+            <ol class="exam-question-options" type="A"><li><strong>A.</strong> A</li><li><strong>B.</strong> An</li><li><strong>C.</strong> The only</li><li><strong>D.</strong> No article</li></ol>
+            <details class="exam-answer">
+                <summary>Reveal answer and explanation</summary>
+                <div><strong>Answer: An</strong>
+                <p>Honest begins with a vowel sound.</p></div>
+            </details>
+        </article>
+        <article class="exam-question-card">
+            <span class="exam-level exam-level-advanced">Advanced</span>
+            <h4>Question 3: By the time we arrived, the train ___.</h4>
+            <ol class="exam-question-options" type="A"><li><strong>A.</strong> leaves</li><li><strong>B.</strong> has left</li><li><strong>C.</strong> had left</li><li><strong>D.</strong> will leave</li></ol>
+            <details class="exam-answer">
+                <summary>Reveal answer and explanation</summary>
+                <div><strong>Answer: had left</strong>
+                <p>The earlier past action uses past perfect.</p></div>
+            </details>
+        </article>
+        <article class="exam-question-card">
+            <span class="exam-level exam-level-exam">Exam</span>
+            <h4>Question 4: Identify the correct sentence.</h4>
+            <ol class="exam-question-options" type="A"><li><strong>A.</strong> Neither of them are ready.</li><li><strong>B.</strong> Neither of them is ready.</li><li><strong>C.</strong> Neither of them were ready.</li><li><strong>D.</strong> Neither of them have ready.</li></ol>
+            <details class="exam-answer">
+                <summary>Reveal answer and explanation</summary>
+                <div><strong>Answer: Neither of them is ready.</strong>
+                <p>Neither is generally treated as singular in this construction.</p></div>
+            </details>
+        </article></div>
+        </div>
+    </article>
+    </details>
+    <details class="exam-subject-section exam-subject-accordion">
+<summary class="exam-subject-summary"><span class="exam-subject-title">Numerical Ability and Reasoning</span><span class="exam-subject-hint">VIEW TOPICS</span><span class="exam-subject-chevron" aria-hidden="true">＋</span></summary>
+        <div class="exam-subject-heading">
+            <span>SUBJECT MODULE</span>
+            
+            <p>Quantitative and logical problem solving.</p>
+        </div>
+        
+    <article class="exam-topic-card">
+        <div class="exam-topic-heading">
+            <div><span class="exam-topic-label">FOUNDATION</span>
+            <h4>Ratio, Proportion and Time–Distance</h4></div>
+        </div>
+        <details class="exam-notes" open>
+            <summary>Detailed concept notes</summary>
+            <div class="exam-notes-body"><h5>1. Ratio</h5>
+<p>A ratio compares two quantities by division. Write it as a:b or as the fraction a/b. Both quantities must be expressed in the same unit before comparison.</p>
+<p>Example: 12:18 simplifies to 2:3 after dividing both terms by their highest common factor, 6.</p>
+<h5>2. Equivalent ratios and sharing quantities</h5>
+<p>Equivalent ratios are formed by multiplying or dividing both terms by the same non-zero number. To divide a total in a given ratio, add the ratio parts and divide the total by that sum.</p>
+<p>Example: Divide 72 in the ratio 5:7. Total parts = 12. One part = 72/12 = 6. The shares are 30 and 42.</p>
+<h5>3. Proportion</h5>
+<p>Two ratios are in proportion when they are equal. If a/b = c/d, then ad = bc, provided the denominators are non-zero.</p>
+<h5>4. Direct and inverse proportion</h5>
+<p>In direct proportion, both quantities increase or decrease together at a constant rate. In inverse proportion, one quantity increases as the other decreases, while their product remains constant.</p>
+<h5>5. Speed, distance and time</h5>
+<p>Speed measures distance travelled per unit of time.</p>
+<ul><li>Speed = Distance ÷ Time</li><li>Distance = Speed × Time</li><li>Time = Distance ÷ Speed</li></ul>
+<p>Use consistent units. For example, distance in kilometres and time in hours give speed in kilometres per hour.</p>
+<h5>6. Unit conversion</h5>
+<ul><li>1 kilometre = 1,000 metres.</li><li>1 hour = 60 minutes = 3,600 seconds.</li><li>To convert km/h into m/s, multiply by 5/18.</li><li>To convert m/s into km/h, multiply by 18/5.</li></ul>
+<h5>7. Average speed</h5>
+<p>Average speed = total distance ÷ total time. When equal distances are travelled at speeds u and v, average speed is 2uv/(u+v). Do not simply average the two speeds unless the conditions justify it.</p>
+<h5>8. Relative speed</h5>
+<p>For two objects moving in the same direction, relative speed is the difference between their speeds. For opposite directions, add their speeds.</p>
+<h5>9. Trains and boats</h5>
+<p>For a train passing a stationary object, use the train's length as the distance. For two trains, account for both train lengths. In still water, downstream speed equals boat speed plus stream speed, while upstream speed equals boat speed minus stream speed.</p>
+<h5>Common mistakes</h5>
+<ul><li>Comparing quantities expressed in different units.</li><li>Using the wrong time or distance unit.</li><li>Confusing average speed with average of speeds.</li><li>Adding speeds when objects move in the same direction.</li></ul></div>
+        </details>
+        <details class="exam-formula">
+            <summary>Important formulas and quick reference</summary>
+            <div class="exam-notes-body"><ul><li>a:b = a/b.</li><li>a/b = c/d implies ad = bc.</li><li>Speed = Distance/Time.</li><li>Distance = Speed × Time.</li><li>Time = Distance/Speed.</li></ul></div>
+        </details>
+        <details class="exam-solved">
+            <summary>Worked example</summary>
+            <div class="exam-notes-body"><p>A vehicle travels 150 km in 3 hours.</p><ol><li>Speed = distance/time.</li><li>150/3 = 50.</li><li>Average speed = <strong>50 km/h</strong>.</li></ol></div>
+        </details>
+        <div class="exam-practice-area">
+            <h5>Topic-wise practice</h5>
+            <p>Attempt the questions before revealing their solutions.</p>
+            <div class="exam-question-list">
+        <article class="exam-question-card">
+            <span class="exam-level exam-level-beginner">Beginner</span>
+            <h4>Question 1: Simplify 12:18.</h4>
+            <ol class="exam-question-options" type="A"><li><strong>A.</strong> 2:3</li><li><strong>B.</strong> 3:2</li><li><strong>C.</strong> 4:9</li><li><strong>D.</strong> 6:5</li></ol>
+            <details class="exam-answer">
+                <summary>Reveal answer and explanation</summary>
+                <div><strong>Answer: 2:3</strong>
+                <p>Divide both terms by 6.</p></div>
+            </details>
+        </article>
+        <article class="exam-question-card">
+            <span class="exam-level exam-level-intermediate">Intermediate</span>
+            <h4>Question 2: A vehicle travels 120 km in 2 hours. Speed?</h4>
+            <ol class="exam-question-options" type="A"><li><strong>A.</strong> 40 km/h</li><li><strong>B.</strong> 50 km/h</li><li><strong>C.</strong> 60 km/h</li><li><strong>D.</strong> 80 km/h</li></ol>
+            <details class="exam-answer">
+                <summary>Reveal answer and explanation</summary>
+                <div><strong>Answer: 60 km/h</strong>
+                <p>120/2 = 60 km/h.</p></div>
+            </details>
+        </article>
+        <article class="exam-question-card">
+            <span class="exam-level exam-level-advanced">Advanced</span>
+            <h4>Question 3: Divide 72 in ratio 5:7. Larger share?</h4>
+            <ol class="exam-question-options" type="A"><li><strong>A.</strong> 30</li><li><strong>B.</strong> 35</li><li><strong>C.</strong> 42</li><li><strong>D.</strong> 48</li></ol>
+            <details class="exam-answer">
+                <summary>Reveal answer and explanation</summary>
+                <div><strong>Answer: 42</strong>
+                <p>Twelve parts; one part is 6; larger share is 7 × 6.</p></div>
+            </details>
+        </article>
+        <article class="exam-question-card">
+            <span class="exam-level exam-level-exam">Exam</span>
+            <h4>Question 4: If speed doubles for the same distance, travel time becomes:</h4>
+            <ol class="exam-question-options" type="A"><li><strong>A.</strong> Double</li><li><strong>B.</strong> Half</li><li><strong>C.</strong> Four times</li><li><strong>D.</strong> Unchanged</li></ol>
+            <details class="exam-answer">
+                <summary>Reveal answer and explanation</summary>
+                <div><strong>Answer: Half</strong>
+                <p>Time is inversely proportional to speed for fixed distance.</p></div>
+            </details>
+        </article></div>
+        </div>
+    </article>
+    <article class="exam-topic-card">
+        <div class="exam-topic-heading">
+            <div><span class="exam-topic-label">CORE</span>
+            <h4>Logical Reasoning: Series and Coding</h4></div>
+        </div>
+        <details class="exam-notes" open>
+            <summary>Detailed concept notes</summary>
+            <div class="exam-notes-body"><h5>1. Number series</h5>
+<p>A number series follows a rule connecting its terms. Start by checking the difference between consecutive terms. If the differences are not constant, inspect multiplication, division, second differences, squares, cubes or alternating patterns.</p>
+<h5>2. Common series patterns</h5>
+<ul><li>Constant difference: 4, 7, 10, 13 — add 3.</li><li>Constant multiplication: 3, 6, 12, 24 — multiply by 2.</li><li>Squares: 1, 4, 9, 16, 25.</li><li>Cubes: 1, 8, 27, 64, 125.</li><li>Alternating patterns: two different rules may operate in alternate positions.</li></ul>
+<h5>3. Letter series</h5>
+<p>Convert letters into their alphabet positions: A = 1, B = 2, continuing up to Z = 26. Check whether the letters move forward or backward by a fixed or changing number of positions.</p>
+<h5>4. Coding and decoding</h5>
+<p>Coding questions change letters, numbers or words according to a hidden rule. Compare the original and coded forms to identify the transformation.</p>
+<ul><li>Letter shifting: moving each letter a fixed number of places.</li><li>Reverse alphabet: matching A with Z, B with Y and so on.</li><li>Position coding: replacing letters with their alphabet numbers.</li><li>Rearrangement: changing the order of letters or symbols.</li></ul>
+<h5>5. Word and number relationships</h5>
+<p>Some questions use a relationship between words, letters or numbers. Identify the operation or rule using all the examples before applying it to the unknown term.</p>
+<h5>6. A step-by-step solving method</h5>
+<ol><li>Write down the differences between consecutive terms.</li><li>Check multiplication or division if differences do not reveal a pattern.</li><li>Inspect alternate terms separately.</li><li>For letter series, convert letters to positions.</li><li>Test the proposed rule against every given term.</li></ol>
+<h5>Common mistakes</h5>
+<ul><li>Assuming a pattern after checking only two terms.</li><li>Ignoring alternating sequences.</li><li>Making alphabet shifts without accounting for the end of the alphabet.</li><li>Spending too long on one difficult pattern instead of moving on and returning later.</li></ul></div>
+        </details>
+        <details class="exam-formula">
+            <summary>Important formulas and quick reference</summary>
+            <div class="exam-notes-body"><ul><li>Alphabet positions: A = 1 through Z = 26.</li><li>Square numbers: 1, 4, 9, 16, 25...</li><li>Cube numbers: 1, 8, 27, 64...</li><li>Constant difference: a, a+d, a+2d...</li></ul></div>
+        </details>
+        <details class="exam-solved">
+            <summary>Worked example</summary>
+            <div class="exam-notes-body"><p>Find the next term: 3, 6, 12, 24.</p><ol><li>Compare consecutive terms.</li><li>Each term is multiplied by 2.</li><li>Next term = 24 × 2 = <strong>48</strong>.</li></ol></div>
+        </details>
+        <div class="exam-practice-area">
+            <h5>Topic-wise practice</h5>
+            <p>Attempt the questions before revealing their solutions.</p>
+            <div class="exam-question-list">
+        <article class="exam-question-card">
+            <span class="exam-level exam-level-beginner">Beginner</span>
+            <h4>Question 1: Next term: 5, 10, 15, 20, __.</h4>
+            <ol class="exam-question-options" type="A"><li><strong>A.</strong> 22</li><li><strong>B.</strong> 24</li><li><strong>C.</strong> 25</li><li><strong>D.</strong> 30</li></ol>
+            <details class="exam-answer">
+                <summary>Reveal answer and explanation</summary>
+                <div><strong>Answer: 25</strong>
+                <p>Add 5 each time.</p></div>
+            </details>
+        </article>
+        <article class="exam-question-card">
+            <span class="exam-level exam-level-intermediate">Intermediate</span>
+            <h4>Question 2: Next term: 1, 4, 9, 16, __.</h4>
+            <ol class="exam-question-options" type="A"><li><strong>A.</strong> 20</li><li><strong>B.</strong> 24</li><li><strong>C.</strong> 25</li><li><strong>D.</strong> 36</li></ol>
+            <details class="exam-answer">
+                <summary>Reveal answer and explanation</summary>
+                <div><strong>Answer: 25</strong>
+                <p>These are consecutive squares.</p></div>
+            </details>
+        </article>
+        <article class="exam-question-card">
+            <span class="exam-level exam-level-advanced">Advanced</span>
+            <h4>Question 3: If CAT is coded as DBU by shifting each letter forward by one, DOG becomes:</h4>
+            <ol class="exam-question-options" type="A"><li><strong>A.</strong> EPH</li><li><strong>B.</strong> CNG</li><li><strong>C.</strong> FQI</li><li><strong>D.</strong> EOG</li></ol>
+            <details class="exam-answer">
+                <summary>Reveal answer and explanation</summary>
+                <div><strong>Answer: EPH</strong>
+                <p>D→E, O→P, G→H.</p></div>
+            </details>
+        </article>
+        <article class="exam-question-card">
+            <span class="exam-level exam-level-exam">Exam</span>
+            <h4>Question 4: Find the missing term: 2, 6, 18, 54, __.</h4>
+            <ol class="exam-question-options" type="A"><li><strong>A.</strong> 108</li><li><strong>B.</strong> 126</li><li><strong>C.</strong> 162</li><li><strong>D.</strong> 216</li></ol>
+            <details class="exam-answer">
+                <summary>Reveal answer and explanation</summary>
+                <div><strong>Answer: 162</strong>
+                <p>Each term is multiplied by 3.</p></div>
+            </details>
+        </article></div>
+        </div>
+    </article>
+    </details>
+
+    <div class="exam-pyq-panel" id="exam-pyq">
+        <span>PREVIOUS-YEAR PRACTICE</span>
+        <h3>Previous-Year Question Papers</h3>
+        <p>Use verified papers from the relevant examination authority. Add year-wise paper links, official answer keys and solutions here when the documents are available.</p>
+        <p><strong>Important:</strong> Questions in the learning modules above are original practice questions, not claimed official PYQs.</p>
+    </div>
+
+    <div class="exam-learning-disclaimer">
+        Learning material is provided for practice and concept building. Check the latest official examination notification, syllabus, marking scheme and paper pattern before preparing.
+    </div>
+</section>
+
+
+<section class="track-content-section starter-revision">
+    <div class="track-section-heading">
+        <div>
+            <span>07 · PLAN YOUR REVISION</span>
+            <h2>Study Session Checklist</h2>
+            <p>Use this checklist while completing a study session. Your selections are not saved.</p>
+        </div>
+        <span class="track-heading-icon">✅</span>
+    </div>
+    <div class="starter-checklist">
+        <label><input type="checkbox"> Read and understand the topic notes.</label>
+        <label><input type="checkbox"> Write down important concepts and formulas.</label>
+        <label><input type="checkbox"> Attempt practice questions independently.</label>
+        <label><input type="checkbox"> Review mistakes and unclear concepts.</label>
+        <label><input type="checkbox"> Identify the next topic to revise.</label>
+    </div>
+</section>
+<section class="track-study-banner">
+        <div><span>KEEP MOVING FORWARD</span><h2>Make every study session count.</h2><p>Connect your preparation with your AcedeX courses and library resources.</p></div>
+        <a href="../courses.html">Browse Courses →</a>
+    </section>
+
+    <div class="track-footer-navigation">
+        <a href="../exam-preparation.html">← All Preparation Tracks</a>
+        <a href="../digital-library.html">Digital Library →</a>
+    </div>
+
+</main>
+
+<footer class="library-footer">AcedeX · Learn, revise and prepare</footer>
+</body>
+</html>
+
+
+

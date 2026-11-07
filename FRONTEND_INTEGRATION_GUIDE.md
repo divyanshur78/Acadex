@@ -426,3 +426,256 @@ Do not duplicate the 288 HTML pages or replace the existing page structure when 
 
 The current semester count, subject list, course codes and syllabus files are placeholders until verified against the applicable programme curriculum. Do not present illustrative or unverified data as official LPU academic information.
 
+
+## Student Academic Personalisation System
+
+### 1. Main Requirement
+
+Implement a central academic personalisation system across AcedeX.
+
+When a student registers and logs in, the website must use the academic details saved in their profile to show the correct programme, course/branch, semester, subjects and matching learning resources.
+
+This is a website-wide requirement. Do not implement separate, unrelated filters on individual pages.
+
+The HTML/CSS member has prepared the interface and integration structures. The JavaScript member is responsible for connecting the interfaces to the backend and academic data.
+
+### 2. Student Registration and Academic Profile
+
+Registration must collect and save:
+
+- Student name
+- Email and authentication details
+- Programme/degree (B.Tech, M.Tech, etc.)
+- Branch/course (CSE, CSE AIML, ECE, etc.)
+- Specialisation, if applicable
+- Current semester
+- Admission batch or academic year, where required
+
+Requirements:
+
+- Validate required academic selections.
+- Populate dependent options logically. For example, available branches should depend on the selected programme.
+- Semester options must be appropriate for the selected programme.
+- Save the academic profile to the backend/database, not only browser storage.
+- Associate the profile with the authenticated student account.
+- Fetch the saved profile after login and page refresh.
+- Provide a profile option to update academic details when the student moves to another semester or changes programme/branch.
+- Do not trust academic details supplied by the browser without backend validation.
+
+### 3. Central Academic Data Structure
+
+Create or connect one central academic catalogue. Avoid hardcoding separate subject lists in individual page scripts.
+
+The data structure should support these relationships:
+
+Programme/Degree
+    -> Branch/Course
+        -> Academic Year / Batch
+            -> Semester
+                -> Subjects
+                    -> Units and Topics
+                    -> Notes
+                    -> Summaries
+                    -> Definitions and Formula Sheets
+                    -> Solved Examples
+                    -> Books and Library References
+                    -> Quizzes and Practice Questions
+                    -> Previous-Year Papers
+
+Every academic record should have stable identifiers and relationships, such as:
+
+- programme_id
+- branch_id
+- semester_id
+- subject_id
+- unit_id, where applicable
+- resource_id
+- resource_type
+- academic_year or curriculum_version, where applicable
+
+Do not rely only on display names for matching. Use IDs to avoid confusion between similarly named courses and subjects.
+
+Academic content must be verified before being presented as official university syllabus or material. Do not assume that all programmes or academic batches share the same curriculum.
+
+### 4. Website-Wide Personalisation
+
+After login, fetch the student's academic profile and use it consistently throughout the website.
+
+Connect the academic profile to:
+
+**Dashboard**
+- Display the student's programme, branch and semester.
+- Show relevant subjects and useful academic shortcuts.
+- Do not show unrelated semester-specific academic content.
+
+**Courses**
+- Show courses and subjects matching the student's programme and branch.
+- Show only subjects belonging to the student's selected semester where the page is semester-specific.
+- Keep subject details linked to their central subject IDs.
+
+**Digital Library**
+- Display books and study materials relevant to the student's subjects.
+- Show available book-location information, including building, floor, section and shelf.
+- Do not treat the library as an online shopping store.
+
+**Book Locator and Book Details**
+- Connect book records to relevant subjects and the central academic catalogue.
+- Preserve library location information.
+- Show matching books without removing the ability to access general library search, if provided.
+
+**Semester Preparation**
+- Automatically use the student's saved programme, branch and semester.
+- Display only the matching subjects and their relevant resources.
+- Do not ask the student to select the same academic details again when they are already saved in their profile.
+
+**Exam Preparation**
+- Display semester-specific preparation content matching the student's academic profile.
+- Keep general competitive-exam and placement preparation sections available where appropriate. Do not incorrectly filter GATE, CDS, AFCAT or placement content as if they were ordinary university-semester subjects.
+
+**Profile**
+- Display saved academic details.
+- Allow permitted academic profile updates.
+- Refresh the personalised content after a successful update.
+
+### 5. Semester Preparation: Four Resource Pages
+
+The following four pages have been created:
+
+- pages/exams/unit-wise-notes.html
+- pages/exams/concept-summaries.html
+- pages/exams/definitions-formulas.html
+- pages/exams/solved-examples.html
+
+The four cards on semester-preparation.html link to these pages.
+
+Connect all four pages to the same saved academic profile and central academic catalogue.
+
+Each page must:
+
+1. Fetch the student's programme, branch and semester.
+2. Identify the subjects belonging to that academic combination.
+3. Display only the matching subject resources.
+4. Organise content by subject and unit/topic where applicable.
+5. Display clear loading, unavailable-content and error states.
+6. Avoid showing another programme's or semester's resources.
+7. Preserve the existing HTML structure, CSS classes, IDs and data attributes wherever possible.
+
+The four resource types must remain distinct:
+
+- Unit-wise Notes: unit-wise lecture notes and topic explanations.
+- Concept Summaries: concise explanations and revision summaries.
+- Definitions and Formulas: important definitions, formula collections and related explanations.
+- Solved Examples: worked problems, derivations and step-by-step explanations.
+
+A subject may have resources in more than one category. Match resources using subject IDs and resource types rather than duplicating subject records.
+
+### 6. Backend and API Coordination
+
+Coordinate with the backend member before finalising API contracts.
+
+The following are suggested API responsibilities, not fixed existing routes:
+
+- Registration endpoint: create the student account and academic profile.
+- Login endpoint: authenticate the student.
+- Profile endpoint: retrieve the authenticated student's academic details.
+- Profile update endpoint: update permitted academic details.
+- Academic catalogue endpoint: retrieve available programmes, branches, semesters and subjects.
+- Subject resources endpoint: retrieve resources for a specified academic combination and subject.
+- Library endpoint: retrieve relevant books and their physical locations.
+
+The backend must enforce authentication and verify that requested academic data is valid.
+
+Do not expose private student information or rely on frontend-only checks for access control.
+
+### 7. Profile Changes and Semester Progression
+
+When a student updates their semester:
+
+- Save the new semester in the backend.
+- Fetch the new semester's subject list.
+- Refresh dashboard academic information.
+- Refresh course and subject listings.
+- Refresh Semester Preparation resources.
+- Refresh relevant Digital Library recommendations.
+- Ensure old semester-specific content is no longer shown as the student's current-semester content.
+
+Do not delete old academic records or progress unnecessarily. If the system supports previous-semester revision, keep that as a separate option rather than mixing it into current-semester resources.
+
+### 8. Loading, Empty and Error States
+
+Every personalised section should handle:
+
+- Loading academic profile.
+- Profile not completed.
+- No subjects mapped to the selected academic combination.
+- No resources currently available for a subject.
+- Network/API failure.
+- Expired login session.
+- Invalid or outdated academic profile.
+
+Never leave a blank page or silently display unrelated content when data is unavailable.
+
+Provide a clear message and an appropriate retry or profile-update action.
+
+### 9. JavaScript Integration Rules
+
+- Preserve the existing HTML/CSS work.
+- Reuse existing IDs, classes and data attributes.
+- Inspect FRONTEND_PAGE_MAP.md before connecting page elements.
+- Inspect all four semester resource pages before implementing their data binding.
+- Keep shared academic-profile and catalogue logic centralised and reusable.
+- Avoid writing four separate implementations for the four resource pages.
+- Do not duplicate academic data across multiple scripts.
+- Do not remove existing page content simply because dynamic data is being introduced.
+- Preserve existing working functionality and navigation.
+- Coordinate changes with the backend member.
+- Keep academic data separate from presentation logic.
+- Do not claim that content is official LPU curriculum unless verified against the applicable official curriculum.
+
+### 10. Acceptance Tests
+
+The implementation is complete only when these scenarios work:
+
+1. A new student can register with a valid programme, branch and semester.
+2. The profile is saved and remains available after logout and login.
+3. A student sees only the matching semester-specific subjects.
+4. Courses and Digital Library show relevant academic content.
+5. All four Semester Preparation pages show resources for the student's subjects.
+6. A student with no mapped resources sees a useful empty state, not unrelated content.
+7. Changing the student's semester updates all relevant sections.
+8. Two students from different branches or semesters receive the correct separate content.
+9. Refreshing a page does not lose the academic profile.
+10. Unauthenticated users cannot access protected student-specific data.
+11. General competitive-exam and placement preparation remains accessible where intended.
+12. Existing navigation and non-academic website features continue working.
+
+### 11. Division of Responsibilities
+
+HTML/CSS member:
+- Registration and profile interface structures.
+- Existing page layouts and resource containers.
+- IDs, classes, data attributes and integration placeholders.
+- Responsive and visual presentation.
+
+JavaScript member:
+- Registration and login interface integration.
+- Fetching and maintaining the authenticated academic profile.
+- Central academic data mapping and filtering.
+- Dynamic subject and resource rendering.
+- Profile updates and semester changes.
+- Loading, empty and error states.
+- Integration with backend APIs.
+
+Backend member:
+- Authentication and student records.
+- Academic profile persistence.
+- Academic catalogue and subject relationships.
+- Resource and library data.
+- Validation and access control.
+
+The three responsibilities must be coordinated. The JavaScript member must not assume that a frontend filter alone provides secure or persistent personalisation.
+
+
+## Student Academic Personalisation — JavaScript Handoff
+
+Before implementing student registration, academic profile loading, programme/branch/semester filtering or resource personalisation, read **[ACADEMIC_PERSONALISATION_JS_HANDOFF.md](ACADEMIC_PERSONALISATION_JS_HANDOFF.md)**. It documents the existing page integration hooks, recommended JavaScript architecture, backend data contract, page-by-page responsibilities, security requirements and acceptance tests.

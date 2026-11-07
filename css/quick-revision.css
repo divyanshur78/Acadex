@@ -1,0 +1,114 @@
+
+/* Quick Revision */
+.revision-page { --revision-accent: #b56a16; --revision-soft: #fff4df; }
+.revision-hero { background: linear-gradient(120deg, #fff0d5, #fff9ed 58%, #f8e5c4); }
+.revision-hero .track-hero-icon, .revision-hero .hero-side-icon { color: #a85d0c; }
+.revision-intro { display:flex; justify-content:space-between; align-items:center; gap:24px; margin:30px 0; padding:26px; border:1px solid #ead8b9; border-radius:18px; background:#fffaf1; }
+.revision-intro h2 { margin:8px 0; }
+.revision-tags { display:flex; flex-wrap:wrap; gap:8px; }
+.revision-tags span { padding:8px 12px; border-radius:20px; background:#f8e8cb; color:#805016; font-weight:700; font-size:.85rem; }
+.revision-subject { margin:16px 0; border:1px solid #ead7b8; border-radius:16px; background:#fff; overflow:hidden; box-shadow:0 5px 18px rgba(95,65,25,.05); }
+.revision-subject > summary { display:flex; align-items:center; gap:16px; padding:20px 22px; cursor:pointer; list-style:none; }
+.revision-subject > summary::-webkit-details-marker { display:none; }
+.revision-number { display:grid; place-items:center; min-width:42px; height:42px; border-radius:12px; background:#fff0d5; color:#96540c; font-weight:800; }
+.revision-subject-name { color:#352b20; font-weight:800; font-size:1.05rem; }
+.revision-subject-meta { margin-left:auto; color:#8b7962; font-size:.85rem; }
+.revision-plus { color:#a85d0c; font-size:1.4rem; font-weight:700; }
+.revision-subject[open] > summary { background:#fff7e9; border-bottom:1px solid #f0dfc4; }
+.revision-subject[open] .revision-plus { transform:rotate(45deg); }
+.revision-body { padding:24px; color:#51483d; line-height:1.75; }
+.revision-body h3 { margin:18px 0 8px; color:#79490f; }
+.revision-body ul { padding-left:24px; }
+.revision-body li { margin:5px 0; }
+.revision-example, .revision-question { margin:18px 0; padding:17px 19px; border-radius:12px; background:#fff8eb; border-left:4px solid #d49a43; }
+.revision-example p, .revision-question p { margin:7px 0; }
+.revision-question { background:#f7f7fb; border-left-color:#8b83b9; }
+.revision-question details { margin-top:10px; }
+.revision-question details summary { cursor:pointer; color:#594c91; font-weight:700; }
+.revision-question details p { padding:10px; background:#fff; border-radius:8px; }
+.revision-checklist { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.revision-checklist label { display:flex; gap:12px; align-items:flex-start; padding:16px; border:1px solid #eadfcf; border-radius:12px; background:#fffaf3; line-height:1.5; }
+.revision-checklist input { margin-top:4px; accent-color:#b56a16; }
+@media(max-width:700px) {
+ .revision-intro { display:block; }
+ .revision-tags { margin-top:18px; }
+ .revision-subject > summary { flex-wrap:wrap; gap:10px; padding:16px; }
+ .revision-subject-meta { width:100%; margin-left:52px; }
+ .revision-plus { margin-left:auto; }
+ .revision-body { padding:17px; }
+ .revision-checklist { grid-template-columns:1fr; }
+}
+
+/* Quick Revision hero text contrast fix */
+.revision-page .revision-hero {
+    color: #49351f;
+}
+
+.revision-page .revision-hero .track-eyebrow,
+.revision-page .revision-hero h1,
+.revision-page .revision-hero p,
+.revision-page .revision-hero .hero-side-label {
+    color: #49351f !important;
+}
+
+.revision-page .revision-hero .track-hero-icon,
+.revision-page .revision-hero .hero-side-icon {
+    color: #e77b32 !important;
+}
+
+.revision-page .revision-hero .track-primary-button {
+    background: #fff;
+    color: #263f79 !important;
+    border: 1px solid #ead8b9;
+}
+
+.revision-page .revision-hero .track-secondary-button {
+    background: #f5dfbd;
+    color: #704515 !important;
+    border: 1px solid #e6c99e;
+}
+
+.revision-page .revision-hero .track-secondary-button:hover {
+    background: #efd1a4;
+}
+
+
+/* Textbook-style mathematical notation */
+.book-math {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: 1.12em;
+    font-style: italic;
+    color: #26344b;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.book-math sup {
+    font-size: 0.68em;
+    line-height: 0;
+    position: relative;
+    top: -0.25em;
+}
+
+.book-fraction {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.15;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0.95em;
+}
+
+.book-fraction > span:first-child {
+    border-bottom: 1px solid currentColor;
+    padding: 0 5px 2px;
+}
+
+.book-fraction > span:last-child {
+    padding: 2px 5px 0;
+}

@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore academic fields, programmes, semesters and subjects on AcedeX.">
+    <title>Explore Courses | AcedeX</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/course-pages.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="course-page-body">
+<a class="page-back-button" href="../index.html" data-action="history-back" aria-label="Go back to previous page" title="Go back">
+    <span class="page-back-icon" aria-hidden="true">←</span>
+    <span>Back</span>
+</a>
+    <main class="course-workspace">
+        <header class="course-topbar">
+            <a class="course-brand" href="../index.html">Acede<span>X</span></a>
+            <nav class="course-top-links">
+                <a href="../index.html">Dashboard</a>
+                <a href="digital-library.html">Digital Library</a>
+                <a href="exam-preparation.html">Exam Preparation</a>
+            </nav>
+        </header>
+
+        <section class="course-hero">
+            <div class="course-eyebrow">YOUR ACADEMIC JOURNEY</div>
+            <h1>Explore your courses.</h1>
+            <p>
+                Find your academic field, explore programmes, move through
+                semesters and access subject-wise learning resources—all in one place.
+            </p>
+            <input id="courseSearch" class="course-search" type="search"
+                   placeholder="Search academic fields or programmes..."
+                   aria-label="Search courses">
+        </section>
+
+        <nav class="course-breadcrumbs" id="courseBreadcrumbs" aria-label="Course navigation">
+            <span>Academic Fields</span>
+        </nav>
+
+        <section>
+            <div class="course-section-heading">
+                <div>
+                    <h2 id="courseSectionTitle">Choose your academic field</h2>
+                    <p id="courseSectionDescription">Explore the six academic domains available on AcedeX.</p>
+                </div>
+            </div>
+
+            <div id="courseContent" aria-live="polite">
+                <div class="course-empty">
+                    <div class="course-empty-icon">⌛</div>
+                    <h3>Loading academic fields...</h3>
+                    <p>Your course catalogue is being prepared.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="course-footer">
+            © 2026 AcedeX · One space for your academic journey.
+        </footer>
+    </main>
+</body>
+</html>
+
+
+
+
+
+
