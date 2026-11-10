@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Acadex | PDF Reader</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#101827;color:white;font-family:Arial,sans-serif}
+header{height:65px;padding:12px 20px;background:#172337;display:flex;align-items:center;justify-content:space-between;gap:12px}
+header a{color:white;text-decoration:none}
+#status{padding:25px;text-align:center}
+iframe{width:100%;height:calc(100vh - 65px);border:0;background:white}
+.actions{display:flex;gap:18px}
+.actions a{color:white}
+</style>
+</head>
+<body>
+<header>
+<strong>ACADEX | PDF READER</strong>
+<div class="actions">
+<a href="javascript:history.back()">← Back</a>
+<a id="download" hidden>Download PDF ↓</a>
+</div>
+</header>
+<div id="status">Fetching PDF from Acadex repository. Please wait...</div>
+<script>
+(async()=>{
+ const params=new URLSearchParams(location.search);
+ const url=params.get("file");
+ const status=document.getElementById("status");
+ const download=document.getElementById("download");
+
+ if(!url || !url.startsWith("https://media.githubusercontent.com/media/")){
+   status.textContent="Invalid PDF URL.";
+   return;
+ }
+
+ try{
+   const response=await fetch(url);
+   if(!response.ok) throw new Error("HTTP "+response.status);
+
+   const data=await response.blob();
+   if(data.size<1000) throw new Error("Invalid or incomplete PDF file.");
+
+   const pdf=new Blob([data],{type:"application/pdf"});
+   const blobUrl=URL.createObjectURL(pdf);
+
+   const frame=document.createElement("iframe");
+   frame.title="Acadex PDF Reader";
+   frame.src=blobUrl;
+
+   status.remove();
+   document.body.appendChild(frame);
+
+   download.href=blobUrl;
+   download.download=decodeURIComponent(url.split("/").pop());
+   download.hidden=false;
+
+   console.log("Acadex PDF loaded:",data.size,"bytes");
+ }catch(error){
+   status.textContent="Unable to load PDF: "+error.message;
+   console.error(error);
+ }
+})();
+</script>
+</body>
+</html>

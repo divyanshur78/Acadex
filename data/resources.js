@@ -1,4 +1,4 @@
-/*
+﻿/*
  ACADEX - ACADEMIC RESOURCE DATABASE
 
 Programmes:
@@ -26,13 +26,13 @@ export const academicResources = {
     { id: "bba", fieldId: "field-management", name: "BBA" },
     { id: "mba", fieldId: "field-management", name: "MBA" },
 
-    { id: "btech-cse-ai-ml", fieldId: "field-engineering", name: "B.Tech CSE – Artificial Intelligence and Machine Learning" },
-    { id: "btech-cse-cloud", fieldId: "field-engineering", name: "B.Tech CSE – Cloud Computing" },
-    { id: "btech-cse-core", fieldId: "field-engineering", name: "B.Tech CSE – Core" },
-    { id: "btech-cse-cybersecurity", fieldId: "field-engineering", name: "B.Tech CSE – Cybersecurity" },
-    { id: "btech-cse-data-science", fieldId: "field-engineering", name: "B.Tech CSE – Data Science" },
-    { id: "btech-cse-iot", fieldId: "field-engineering", name: "B.Tech CSE – Internet of Things" },
-    { id: "btech-cse-software-engineering", fieldId: "field-engineering", name: "B.Tech CSE – Software Engineering" },
+    { id: "btech-cse-ai-ml", fieldId: "field-engineering", name: "B.Tech CSE ΓÇô Artificial Intelligence and Machine Learning" },
+    { id: "btech-cse-cloud", fieldId: "field-engineering", name: "B.Tech CSE ΓÇô Cloud Computing" },
+    { id: "btech-cse-core", fieldId: "field-engineering", name: "B.Tech CSE ΓÇô Core" },
+    { id: "btech-cse-cybersecurity", fieldId: "field-engineering", name: "B.Tech CSE ΓÇô Cybersecurity" },
+    { id: "btech-cse-data-science", fieldId: "field-engineering", name: "B.Tech CSE ΓÇô Data Science" },
+    { id: "btech-cse-iot", fieldId: "field-engineering", name: "B.Tech CSE ΓÇô Internet of Things" },
+    { id: "btech-cse-software-engineering", fieldId: "field-engineering", name: "B.Tech CSE ΓÇô Software Engineering" },
     { id: "btech-civil", fieldId: "field-engineering", name: "B.Tech Civil Engineering" },
     { id: "btech-electrical", fieldId: "field-engineering", name: "B.Tech Electrical Engineering" },
     { id: "btech-mechanical", fieldId: "field-engineering", name: "B.Tech Mechanical Engineering" }
@@ -143,7 +143,7 @@ addSemesterResources("agriculture", 3, [
 ]);
 
 addSemesterResources("agriculture", 4, [
-  ["B.Sc. Agriculture Lab Manual – 4th Semester", null],
+  ["B.Sc. Agriculture Lab Manual ΓÇô 4th Semester", null],
   ["Problematic Soils and Their Management", null],
   ["Water Management Handbook", null],
   ["Artificial Intelligence in Agriculture", null],
@@ -151,8 +151,8 @@ addSemesterResources("agriculture", 4, [
 ]);
 
 addSemesterResources("agriculture", 5, [
-  ["B.Sc. Agriculture Lab Manual – Crop Production Technology-I (Kharif Crops)", null],
-  ["Practical Manual – Pests of Crops and Stored Grain and Their Management", null],
+  ["B.Sc. Agriculture Lab Manual ΓÇô Crop Production Technology-I (Kharif Crops)", null],
+  ["Practical Manual ΓÇô Pests of Crops and Stored Grain and Their Management", null],
   ["Weed Management (ICAR Syllabus)", null],
   ["Agricultural Marketing, Trade and Prices", null],
   ["Textbook of Agricultural Meteorology", null]
@@ -162,7 +162,7 @@ addSemesterResources("agriculture", 6, [
   ["Renewable Energy in Agriculture", null],
   ["Seed Science and Technology: Biology, Production, Quality", null],
   ["Essentials of Statistics in Agricultural Sciences", null],
-  ["Biotechnology Fundamentals – 3rd Edition", null],
+  ["Biotechnology Fundamentals ΓÇô 3rd Edition", null],
   ["Practical Manual on Crop Improvement II (Rabi Crops)", null]
 ]);
 
@@ -175,33 +175,33 @@ addSemesterResources("pharmacy", 1, [
 ]);
 
 addSemesterResources("pharmacy", 2, [
-  ["Textbook of Biochemistry for Medical Students – D. M. Vasudevan", null],
-  ["Introductory Biostatistics – Chap T. Le", null],
-  ["Pharmaceutical Organic Chemistry – Dr. V. Alagarsamy", null]
+  ["Textbook of Biochemistry for Medical Students ΓÇô D. M. Vasudevan", null],
+  ["Introductory Biostatistics ΓÇô Chap T. Le", null],
+  ["Pharmaceutical Organic Chemistry ΓÇô Dr. V. Alagarsamy", null]
 ]);
 
 addSemesterResources("pharmacy", 3, [
   ["Pharmaceutical Engineering", null],
-  ["Pharmaceutical Microbiology – Tim Sandle", null],
+  ["Pharmaceutical Microbiology ΓÇô Tim Sandle", null],
   ["Environmental Science (AECC)", null],
-  ["A Textbook on Heterocyclic Compounds – Mahesh B. Swami", null],
-  ["Human Values and Professional Ethics – R. R. Gaur et al.", null]
+  ["A Textbook on Heterocyclic Compounds ΓÇô Mahesh B. Swami", null],
+  ["Human Values and Professional Ethics ΓÇô R. R. Gaur et al.", null]
 ]);
 
 addSemesterResources("pharmacy", 4, [
-  ["Basic & Clinical Pharmacology – 14th Edition", null],
+  ["Basic & Clinical Pharmacology ΓÇô 14th Edition", null],
   ["Textbook of Herbal Drug Technology", null]
 ]);
 
 addSemesterResources("pharmacy", 5, [
-  ["Textbook of Industrial Pharmacognosy – A. N. Kalia", null],
-  ["Textbook of Biochemistry for Medical Students – 6th Edition", null],
-  ["Innovation, Startups and Entrepreneurship – MRCET Lecture Notes", null]
+  ["Textbook of Industrial Pharmacognosy ΓÇô A. N. Kalia", null],
+  ["Textbook of Biochemistry for Medical Students ΓÇô 6th Edition", null],
+  ["Innovation, Startups and Entrepreneurship ΓÇô MRCET Lecture Notes", null]
 ]);
 
 addSemesterResources("pharmacy", 6, [
   ["Pharmaceutical Jurisprudence and Regulatory Affairs", null],
-  ["Advanced Pharmacognosy and Pharmacobiotechnology – Ashutosh Kar", null],
+  ["Advanced Pharmacognosy and Pharmacobiotechnology ΓÇô Ashutosh Kar", null],
   ["Role of Artificial Intelligence in Pharmaceutical Sciences", null]
 ]);
 

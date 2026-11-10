@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,6 +23,8 @@
     </header>
 
     <main class="semester-page-main"
+          data-programme="BTech"
+          data-branch="CSE"
           data-specialisation-id="artificial-intelligence-machine-learning"
           data-academic-field="computer-science-it"
           data-semester-number="1"
@@ -30,16 +32,16 @@
 
         <nav class="semester-breadcrumb" aria-label="Breadcrumb">
             <a href="../../../index.html">Home</a>
-            <span aria-hidden="true">›</span>
+            <span aria-hidden="true">â€º</span>
             <a href="../../academic-fields/computer-science-it.html">Computer Science &amp; IT</a>
-            <span aria-hidden="true">›</span>
+            <span aria-hidden="true">â€º</span>
             <a href="../../specialisations/artificial-intelligence-machine-learning.html">Artificial Intelligence &amp; Machine Learning</a>
-            <span aria-hidden="true">›</span>
+            <span aria-hidden="true">â€º</span>
             <span>Semester 1</span>
         </nav>
 
         <section class="semester-hero">
-            <div class="semester-hero-icon" aria-hidden="true">🤖</div>
+            <div class="semester-hero-icon" aria-hidden="true">ðŸ¤–</div>
             <div class="semester-hero-copy">
                 <span class="semester-eyebrow">YOUR LEARNING WORKSPACE</span>
                 <h1>Semester 1</h1>
@@ -61,7 +63,7 @@
             <article class="semester-syllabus-card"
                      data-content-container="semester-syllabus"
                      data-download-slot="syllabus-pdf">
-                <div class="semester-syllabus-icon" aria-hidden="true">📑</div>
+                <div class="semester-syllabus-icon" aria-hidden="true">ðŸ“‘</div>
                 <div class="semester-syllabus-copy">
                     <h3>Semester 1 Syllabus PDF</h3>
                     <p>The official syllabus PDF will be added after the programme curriculum has been verified.</p>
@@ -79,7 +81,7 @@
             </div>
             <div class="semester-subject-placeholder"
                  data-content-container="semester-subjects">
-                <span aria-hidden="true">▤</span>
+                <span aria-hidden="true">â–¤</span>
                 <h3>Subject list is being prepared</h3>
                 <p>Verified subject names, course codes, credits and subject-wise resource links will appear here.</p>
             </div>
@@ -94,7 +96,7 @@
             <div class="semester-resource-grid">
                 
             <article class="semester-resource-card" data-resource-category="semester-notes">
-                <span class="semester-resource-icon" aria-hidden="true">📘</span>
+                <span class="semester-resource-icon" aria-hidden="true">ðŸ“˜</span>
                 <h3>Subject Notes</h3>
                 <p>Unit-wise notes, summaries, lecture material and presentations.</p>
                 <div class="semester-resource-content" data-content-container="semester-notes">
@@ -103,7 +105,7 @@
             </article>
 
             <article class="semester-resource-card" data-resource-category="semester-books">
-                <span class="semester-resource-icon" aria-hidden="true">📚</span>
+                <span class="semester-resource-icon" aria-hidden="true">ðŸ“š</span>
                 <h3>Books &amp; References</h3>
                 <p>Recommended textbooks, reference material and reading lists.</p>
                 <div class="semester-resource-content" data-content-container="semester-books">
@@ -112,7 +114,7 @@
             </article>
 
             <article class="semester-resource-card" data-resource-category="semester-assignments">
-                <span class="semester-resource-icon" aria-hidden="true">✍️</span>
+                <span class="semester-resource-icon" aria-hidden="true">âœï¸</span>
                 <h3>Assignments &amp; Practice</h3>
                 <p>Assignments, worksheets, case studies and practice sets.</p>
                 <div class="semester-resource-content" data-content-container="semester-assignments">
@@ -121,7 +123,7 @@
             </article>
 
             <article class="semester-resource-card" data-resource-category="semester-practicals">
-                <span class="semester-resource-icon" aria-hidden="true">🧪</span>
+                <span class="semester-resource-icon" aria-hidden="true">ðŸ§ª</span>
                 <h3>Practical Files</h3>
                 <p>Laboratory manuals, practical files and experiment records.</p>
                 <div class="semester-resource-content" data-content-container="semester-practicals">
@@ -130,7 +132,7 @@
             </article>
 
             <article class="semester-resource-card" data-resource-category="semester-projects">
-                <span class="semester-resource-icon" aria-hidden="true">🛠️</span>
+                <span class="semester-resource-icon" aria-hidden="true">ðŸ› ï¸</span>
                 <h3>Projects</h3>
                 <p>Mini-projects, project guidelines, reports and supporting material.</p>
                 <div class="semester-resource-content" data-content-container="semester-projects">
@@ -139,7 +141,7 @@
             </article>
 
             <article class="semester-resource-card" data-resource-category="semester-pyqs">
-                <span class="semester-resource-icon" aria-hidden="true">📄</span>
+                <span class="semester-resource-icon" aria-hidden="true">ðŸ“„</span>
                 <h3>Previous-Year Questions</h3>
                 <p>Subject-wise previous-year question papers and solutions.</p>
                 <div class="semester-resource-content" data-content-container="semester-pyqs">
@@ -148,7 +150,7 @@
             </article>
 
             <article class="semester-resource-card" data-resource-category="semester-revision">
-                <span class="semester-resource-icon" aria-hidden="true">🎯</span>
+                <span class="semester-resource-icon" aria-hidden="true">ðŸŽ¯</span>
                 <h3>Revision &amp; Assessments</h3>
                 <p>Revision sheets, important questions and assessment material.</p>
                 <div class="semester-resource-content" data-content-container="semester-revision">
@@ -158,19 +160,30 @@
             </div>
         </section>
 
-        <section class="library-discovery-promo" aria-labelledby="libraryDiscoveryTitle">
+        <section class="semester-content-section" id="available-pdf-resources">
+    <div class="semester-section-heading">
+        <span class="semester-eyebrow">AVAILABLE MATERIAL</span>
+        <h2>Available Semester PDFs</h2>
+        <p>PDF files available in the academic resource library.</p>
+        <p id="semesterPdfCount"></p>
+    </div>
+    <div class="semester-resource-grid" id="availableSemesterPdfs">
+        <p>Loading semester resources...</p>
+    </div>
+</section>
+<section class="library-discovery-promo" aria-labelledby="libraryDiscoveryTitle">
     <div class="library-discovery-copy">
-        <span class="library-discovery-eyebrow">ACEDEx LIBRARY · DIGITAL + CAMPUS ACCESS</span>
+        <span class="library-discovery-eyebrow">ACEDEx LIBRARY Â· DIGITAL + CAMPUS ACCESS</span>
         <h2 id="libraryDiscoveryTitle">Discover Online. Find It on Campus.</h2>
         <p>Your academic library, connected. Explore digital study materials, discover useful references and locate their physical copies on campus with ease.</p>
         <a class="library-discovery-button" href="../../digital-library.html">
-            Explore Digital Library <span aria-hidden="true">→</span>
+            Explore Digital Library <span aria-hidden="true">â†’</span>
         </a>
     </div>
     <div class="library-discovery-mark" aria-hidden="true">
-        <span class="library-discovery-book">▤</span>
+        <span class="library-discovery-book">â–¤</span>
         <span class="library-discovery-plus">+</span>
-        <span class="library-discovery-pin">⌖</span>
+        <span class="library-discovery-pin">âŒ–</span>
     </div>
     <div class="library-discovery-footer">
         <span>ACEDEx</span>
@@ -179,8 +192,8 @@
 </section>
 
 <section class="semester-bottom-navigation">
-            <a data-action="history-back" href="../../specialisations/artificial-intelligence-machine-learning.html">← Back to Artificial Intelligence &amp; Machine Learning</a>
-            <a href="../../digital-library.html">Explore Digital Library →</a>
+            <a data-action="history-back" href="../../specialisations/artificial-intelligence-machine-learning.html">â† Back to Artificial Intelligence &amp; Machine Learning</a>
+            <a href="../../digital-library.html">Explore Digital Library â†’</a>
         </section>
 
         <p class="semester-disclaimer">
@@ -189,5 +202,9 @@
             presented as official academic information.
         </p>
     </main>
+<script src="../../../data/resource-index.js"></script>
+<script src="../../../js/semester-resources.js"></script>
 </body>
 </html>
+
+

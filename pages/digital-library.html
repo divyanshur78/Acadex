@@ -86,10 +86,51 @@
 <article class="library-card"><h3>Law</h3><p>Legal studies, legislation and case-related resources.</p><a class="library-card-link" href="courses.html">View courses →</a></article>
 </div>
 </section>
+
+<section class="library-section" id="academic-resource-browser">
+  <div class="library-section-heading">
+    <div>
+      <h2>Academic Study Resources</h2>
+      <p>Find books and PDFs by programme, branch and semester.</p>
+    </div>
+    <span id="resource-count">Loading resources...</span>
+  </div>
+
+  <div class="resource-filter-panel">
+    <input
+      id="resource-search"
+      type="search"
+      placeholder="Search PDF filename..."
+      aria-label="Search resources"
+    />
+
+    <select id="resource-programme">
+      <option value="">All programmes</option>
+    </select>
+
+    <select id="resource-branch">
+      <option value="">All branches</option>
+    </select>
+
+    <select id="resource-semester">
+      <option value="">All semesters</option>
+    </select>
+  </div>
+
+  <div id="resource-results" class="library-resource-grid">
+    <p>Loading academic resources...</p>
+  </div>
+</section>
+
 </main>
 <footer class="library-footer">AcedeX · Academic resources and learning</footer>
+
+<script src="../data/resource-index.js"></script>
+<script src="../js/library.js"></script>
+
 </body>
 </html>
+
 
 
 
