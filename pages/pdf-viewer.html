@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -59,8 +59,24 @@ iframe{width:100%;height:calc(100vh - 65px);border:0;background:white}
 
    console.log("Acadex PDF loaded:",data.size,"bytes");
  }catch(error){
-   status.textContent="Unable to load PDF: "+error.message;
-   console.error(error);
+   console.warn("Media fetch failed or offline, attempting local repository fallback:", error.message);
+   const relMatch = url.match(/(Acadex_Resources\/.*)/);
+   if (relMatch) {
+     const relPath = "../" + decodeURIComponent(relMatch[1]);
+     const frame = document.createElement("iframe");
+     frame.title = "Acadex PDF Reader";
+     frame.src = relPath;
+     status.remove();
+     document.body.appendChild(frame);
+
+     download.href = relPath;
+     download.download = decodeURIComponent(url.split("/").pop());
+     download.hidden = false;
+     console.log("Acadex PDF loaded from local fallback:", relPath);
+   } else {
+     status.innerHTML = `Unable to load PDF: ${error.message}. <br><br><a href="${url}" target="_blank" style="color: #60a5fa; text-decoration: underline;">Open original GitHub repository link ↗</a>`;
+     console.error(error);
+   }
  }
 })();
 </script>

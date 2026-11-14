@@ -1,139 +1,255 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Digital Library | AcedeX</title>
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/components.css">
-<link rel="stylesheet" href="../css/library-pages.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Library | AcedeX</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/academic-personalisation.css">
+    <link rel="stylesheet" href="../css/library-pages.css">
+    <link rel="stylesheet" href="../css/app-layout.css">
+
+    <script src="../js/app.js" defer></script>
 </head>
+
 <body class="library-page">
-<a class="page-back-button" href="../index.html" data-action="history-back" aria-label="Go back to previous page" title="Go back">
-    <span class="page-back-icon" aria-hidden="true">←</span>
-    <span>Back</span>
-</a>
-<header class="library-header">
-<a class="library-brand" href="../index.html">Acede<span>X</span></a>
-<nav class="library-nav">
-<a href="../index.html">Dashboard</a>
-<a href="courses.html">Courses</a>
-<a class="active" href="digital-library.html">Digital Library</a>
-<a href="book-locator.html">Book Locator</a>
-<a href="exam-preparation.html">Exam Prep</a>
-</nav>
-</header>
-<main class="library-container">
-<section class="academic-context-strip" data-academic-context
-         aria-label="Your academic profile">
-    <div class="academic-context-heading">
-        <span class="academic-context-icon">🎓</span>
-        <div>
-            <strong>Your Academic Context</strong>
-            <small>Learning resources linked to your student profile</small>
-        </div>
+    <div class="app-shell">
+
+        <!-- GLOBAL HORIZONTAL TOP NAVIGATION BAR -->
+        <header class="app-topbar">
+            <div class="topbar-inner">
+                <a href="../index.html" class="topbar-brand" aria-label="AcedeX Home">
+                    <span class="brand-mark">A</span>
+                    <span class="brand-name">Acede<span>X</span></span>
+                </a>
+
+                <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+                    ☰
+                </button>
+
+                <nav class="topbar-nav" id="topbarNav" aria-label="Main navigation">
+                    <a href="../index.html" class="nav-link" data-page="overview">Overview</a>
+                    <a href="courses.html" class="nav-link" data-page="courses">My Courses</a>
+                    <a href="digital-library.html" class="nav-link active" data-page="digital-library">Digital Library</a>
+                    <a href="book-locator.html" class="nav-link" data-page="book-locator">Book Locator</a>
+                    <a href="exam-preparation.html" class="nav-link" data-page="exam-preparation">Exam Preparation</a>
+                    <a href="profile.html" class="nav-link" data-page="profile">My Profile</a>
+                </nav>
+
+                <a href="profile.html" class="topbar-user" id="topbarUser" title="View Student Profile">
+                    <span class="avatar avatar-blue" id="topbarUserAvatar" data-user-initials>ST</span>
+                    <span class="topbar-user-name" id="topbarUserName" data-user-name>Student</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- MAIN LIBRARY CONTAINER -->
+        <main class="library-container">
+            <div class="page-container">
+
+                <!-- ACADEMIC CONTEXT STRIP -->
+                <section class="academic-context-strip" data-academic-context aria-label="Your academic profile">
+                    <div class="academic-context-heading">
+                        <span class="academic-context-icon">🎓</span>
+                        <div>
+                            <strong>Your Academic Context</strong>
+                            <small>Learning resources linked to your student profile</small>
+                        </div>
+                    </div>
+                    <div class="academic-context-details">
+                        <div class="academic-context-item">
+                            <span>Programme</span>
+                            <strong data-academic-programme>Not added</strong>
+                        </div>
+                        <div class="academic-context-item">
+                            <span>Academic Field</span>
+                            <strong data-academic-field>Not added</strong>
+                        </div>
+                        <div class="academic-context-item">
+                            <span>Semester</span>
+                            <strong data-academic-semester>Not added</strong>
+                        </div>
+                        <div class="academic-context-item">
+                            <span>Academic Year</span>
+                            <strong data-academic-year>Not added</strong>
+                        </div>
+                    </div>
+                    <a href="profile.html" class="academic-context-edit">Edit Profile</a>
+                </section>
+
+                <!-- LIBRARY HERO -->
+                <section class="library-hero">
+                    <div class="library-eyebrow">Knowledge at your fingertips</div>
+                    <h1>Your Academic<br>Digital Library.</h1>
+                    <p>
+                        Explore academic books, lecture notes, journals, research papers and
+                        reference materials organized around your academic field and semester.
+                    </p>
+                </section>
+
+                <!-- EXPLORE COLLECTIONS -->
+                <section class="library-section">
+                    <div class="library-section-heading">
+                        <div>
+                            <h2>Explore Collections</h2>
+                            <p>Browse resources by category.</p>
+                        </div>
+                    </div>
+
+                    <div class="library-grid">
+                        <!-- Academic Books -->
+                        <article class="library-card">
+                            <div class="library-icon">▤</div>
+                            <h3>Academic Books</h3>
+                            <p>Core textbooks and recommended reading for university subjects across engineering, sciences and management.</p>
+                            <div class="library-meta">
+                                <span class="library-tag">Textbooks</span>
+                                <span class="library-tag">References</span>
+                            </div>
+                            <a class="library-card-link" href="book-locator.html">Explore Books &amp; Copies →</a>
+                        </article>
+
+                        <!-- Lecture Notes -->
+                        <article class="library-card">
+                            <div class="library-icon">▧</div>
+                            <h3>Lecture Notes</h3>
+                            <p>Study material and topic-wise notes organised semester-by-semester in your course tracks.</p>
+                            <div class="library-meta">
+                                <span class="library-tag">Notes</span>
+                                <span class="library-tag">Semester-wise</span>
+                            </div>
+                            <a class="library-card-link" href="courses.html">Browse in Courses →</a>
+                        </article>
+
+                        <!-- Research Papers -->
+                        <article class="library-card">
+                            <div class="library-icon">◎</div>
+                            <h3>Research Papers</h3>
+                            <p>Academic publications, IEEE conference papers and foundational literature for deeper research.</p>
+                            <div class="library-meta">
+                                <span class="library-tag">Research</span>
+                                <span class="library-tag">Papers</span>
+                            </div>
+                            <span class="library-card-link" style="color: var(--color-text-secondary); cursor: default;">Collection active in tracks</span>
+                        </article>
+
+                        <!-- Journals -->
+                        <article class="library-card">
+                            <div class="library-icon">▱</div>
+                            <h3>Journals</h3>
+                            <p>Scholarly publications, peer-reviewed journals and domain periodicals across technical disciplines.</p>
+                            <div class="library-meta">
+                                <span class="library-tag">Academic</span>
+                                <span class="library-tag">Publications</span>
+                            </div>
+                            <span class="library-card-link" style="color: var(--color-text-secondary); cursor: default;">Peer-reviewed indexed</span>
+                        </article>
+
+                        <!-- PYQs -->
+                        <article class="library-card">
+                            <div class="library-icon">▣</div>
+                            <h3>PYQs</h3>
+                            <p>Previous year question papers, mid-term model papers and competitive examination solved sets.</p>
+                            <div class="library-meta">
+                                <span class="library-tag">PYQs</span>
+                                <span class="library-tag">Practice</span>
+                            </div>
+                            <a class="library-card-link" href="exam-preparation.html">View Exam Prep →</a>
+                        </article>
+
+                        <!-- Reference Materials -->
+                        <article class="library-card">
+                            <div class="library-icon">✦</div>
+                            <h3>Reference Materials</h3>
+                            <p>Handbook manuals, industry documentation, standard code references and analytical guides.</p>
+                            <div class="library-meta">
+                                <span class="library-tag">Guides</span>
+                                <span class="library-tag">Handbooks</span>
+                            </div>
+                            <a class="library-card-link" href="courses.html">Explore Subject Resources →</a>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- FIND RESOURCES BY PROGRAM -->
+                <section class="library-section">
+                    <div class="library-section-heading">
+                        <div>
+                            <h2>Find Resources by Program</h2>
+                            <p>Choose an academic program or field to open its dedicated study material and course tracks.</p>
+                        </div>
+                    </div>
+
+                    <div class="digital-program-grid">
+                        <a href="courses.html?field=computer-science-it" class="digital-program-card">
+                            <div>
+                                <strong>Computer Science &amp; IT</strong>
+                                <p>Computing, AI-ML, data science, cybersecurity, cloud and software engineering.</p>
+                            </div>
+                            <span class="program-card-link">Open field &amp; study areas →</span>
+                        </a>
+
+                        <a href="courses.html?field=engineering-technology" class="digital-program-card">
+                            <div>
+                                <strong>Engineering &amp; Technology</strong>
+                                <p>Civil, mechanical, electrical and core applied engineering disciplines.</p>
+                            </div>
+                            <span class="program-card-link">Open field &amp; branches →</span>
+                        </a>
+
+                        <a href="courses.html?field=management-commerce" class="digital-program-card">
+                            <div>
+                                <strong>Management &amp; Commerce</strong>
+                                <p>BBA and MBA programmes, corporate finance, marketing and strategy.</p>
+                            </div>
+                            <span class="program-card-link">Open management programmes →</span>
+                        </a>
+
+                        <a href="courses.html?field=pharmaceutical-sciences" class="digital-program-card">
+                            <div>
+                                <strong>Pharmaceutical Sciences</strong>
+                                <p>Pharmacy, pharmacology, pharmaceutics and medicinal sciences.</p>
+                            </div>
+                            <span class="program-card-link">Open pharmacy semesters →</span>
+                        </a>
+
+                        <a href="courses.html?field=agriculture" class="digital-program-card">
+                            <div>
+                                <strong>Agriculture</strong>
+                                <p>Agronomy, soil science, crop cultivation systems and sustainability.</p>
+                            </div>
+                            <span class="program-card-link">Open agriculture semesters →</span>
+                        </a>
+
+                        <a href="courses.html?field=law" class="digital-program-card">
+                            <div>
+                                <strong>Law</strong>
+                                <p>Constitutional, criminal, commercial, intellectual property and international law.</p>
+                            </div>
+                            <span class="program-card-link">Open law semesters →</span>
+                        </a>
+                    </div>
+                </section>
+
+                <footer class="main-footer" style="margin-top: 48px;">
+                    <a href="../index.html" class="footer-brand" aria-label="AcedeX Home">
+                        <span class="brand-mark brand-mark-small">A</span>
+                        <strong>Acede<span>X</span></strong>
+                    </a>
+                    <p>One unified space for your academic journey.</p>
+                    <span class="footer-copyright">
+                        © 2026 AcedeX · Academic learning, made simpler.
+                    </span>
+                </footer>
+            </div>
+        </main>
     </div>
-    <div class="academic-context-details">
-        <div class="academic-context-item">
-            <span>Programme</span>
-            <strong data-academic-programme>Loading programme</strong>
-        </div>
-        <div class="academic-context-item">
-            <span>Academic Field</span>
-            <strong data-academic-field>Loading academic field</strong>
-        </div>
-        <div class="academic-context-item">
-            <span>Semester</span>
-            <strong data-academic-semester>Loading semester</strong>
-        </div>
-        <div class="academic-context-item">
-            <span>Academic Year</span>
-            <strong data-academic-year>Loading academic year</strong>
-        </div>
-    </div>
-    <a href="profile.html" class="academic-context-edit">View Profile</a>
-</section>
-<section class="library-hero">
-<div class="library-eyebrow">Knowledge at your fingertips</div>
-<h1>Your Academic<br>Digital Library.</h1>
-<p>Explore academic books, lecture notes, journals, research papers and reference materials organised around your programme and semester.</p>
-<form class="library-search" role="search">
-<input type="search" name="q" placeholder="Search books, subjects, authors or resources..." aria-label="Search library resources">
-<button type="submit">Search Library</button>
-</form>
-</section>
-<section class="library-section">
-<div class="library-section-heading"><div><h2>Explore Collections</h2><p>Browse resources by category.</p></div></div>
-<div class="library-grid">
-<article class="library-card"><div class="library-icon">▤</div><h3>Academic Books</h3><p>Core textbooks and recommended reading for university subjects.</p><div class="library-meta"><span class="library-tag">Textbooks</span><span class="library-tag">References</span></div><a class="library-card-link" href="book-details.html">Explore books →</a></article>
-<article class="library-card"><div class="library-icon">▧</div><h3>Lecture Notes</h3><p>Study material and topic-wise notes organised by semester.</p><div class="library-meta"><span class="library-tag">Notes</span><span class="library-tag">PDF</span></div><a class="library-card-link" href="courses.html">Browse subjects →</a></article>
-<article class="library-card"><div class="library-icon">◎</div><h3>Research Papers</h3><p>Academic publications and research material for deeper learning.</p><div class="library-meta"><span class="library-tag">Research</span><span class="library-tag">Papers</span></div><span class="library-card-link library-link-disabled" aria-disabled="true">Collection coming soon</span></article>
-<article class="library-card"><div class="library-icon">▱</div><h3>Journals</h3><p>Scholarly journals and publications across academic disciplines.</p><div class="library-meta"><span class="library-tag">Academic</span><span class="library-tag">Publications</span></div><span class="library-card-link library-link-disabled" aria-disabled="true">Collection coming soon</span></article>
-<article class="library-card"><div class="library-icon">▣</div><h3>Previous Year Papers</h3><p>Past examination papers arranged by course and examination.</p><div class="library-meta"><span class="library-tag">PYQs</span><span class="library-tag">Practice</span></div><a class="library-card-link" href="exam-preparation.html">View exam prep →</a></article>
-<article class="library-card"><div class="library-icon">✦</div><h3>Reference Materials</h3><p>Additional learning resources, guides and subject references.</p><div class="library-meta"><span class="library-tag">Guides</span><span class="library-tag">Study aids</span></div><span class="library-card-link library-link-disabled" aria-disabled="true">Collection coming soon</span></article>
-</div>
-</section>
-<section class="library-section">
-<div class="library-section-heading"><div><h2>Find Resources by Programme</h2><p>Choose an academic area to narrow your library browsing.</p></div></div>
-<div class="library-grid">
-<article class="library-card"><h3>Computer Science & IT</h3><p>Programming, computing, AI and information technology.</p><a class="library-card-link" href="courses.html">View courses →</a></article>
-<article class="library-card"><h3>Engineering & Technology</h3><p>Engineering fundamentals and specialised technical subjects.</p><a class="library-card-link" href="courses.html">View courses →</a></article>
-<article class="library-card"><h3>Management & Commerce</h3><p>Business, finance, accounting and management resources.</p><a class="library-card-link" href="courses.html">View courses →</a></article>
-<article class="library-card"><h3>Pharmaceutical Sciences</h3><p>Pharmacy, pharmaceutical studies and related disciplines.</p><a class="library-card-link" href="courses.html">View courses →</a></article>
-<article class="library-card"><h3>Agriculture</h3><p>Agricultural sciences, farming systems and related subjects.</p><a class="library-card-link" href="courses.html">View courses →</a></article>
-<article class="library-card"><h3>Law</h3><p>Legal studies, legislation and case-related resources.</p><a class="library-card-link" href="courses.html">View courses →</a></article>
-</div>
-</section>
-
-<section class="library-section" id="academic-resource-browser">
-  <div class="library-section-heading">
-    <div>
-      <h2>Academic Study Resources</h2>
-      <p>Find books and PDFs by programme, branch and semester.</p>
-    </div>
-    <span id="resource-count">Loading resources...</span>
-  </div>
-
-  <div class="resource-filter-panel">
-    <input
-      id="resource-search"
-      type="search"
-      placeholder="Search PDF filename..."
-      aria-label="Search resources"
-    />
-
-    <select id="resource-programme">
-      <option value="">All programmes</option>
-    </select>
-
-    <select id="resource-branch">
-      <option value="">All branches</option>
-    </select>
-
-    <select id="resource-semester">
-      <option value="">All semesters</option>
-    </select>
-  </div>
-
-  <div id="resource-results" class="library-resource-grid">
-    <p>Loading academic resources...</p>
-  </div>
-</section>
-
-</main>
-<footer class="library-footer">AcedeX · Academic resources and learning</footer>
-
-<script src="../data/resource-index.js"></script>
-<script src="../js/library.js"></script>
-
 </body>
 </html>
-
-
-
-
-
-
-

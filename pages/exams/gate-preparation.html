@@ -10,24 +10,41 @@
     <link rel="stylesheet" href="../../css/responsive.css">
     <link rel="stylesheet" href="../../css/exam-preparation.css">
     <link rel="stylesheet" href="../../css/exam-track-pages.css">
+    <link rel="stylesheet" href="../../css/app-layout.css">
+    <script src="../../js/app.js" defer></script>
 </head>
 <body class="library-page exam-track-page theme-gate" data-exam-category="gate">
-<a class="exam-back-link" href="../exam-preparation.html">← Back to Exam Preparation</a>
 
-<a class="page-back-button" href="../exam-preparation.html" aria-label="Back to exam preparation" data-action="history-back">
-    <span class="page-back-icon">←</span><span>Back</span>
-</a>
+<header class="app-topbar">
+    <div class="topbar-inner">
+        <a href="../../index.html" class="topbar-brand" aria-label="AcedeX Home">
+            <span class="brand-mark">A</span>
+            <span class="brand-name">Acede<span>X</span></span>
+        </a>
 
-<header class="library-header">
-    <a class="library-brand" href="../../index.html">Acede<span>X</span></a>
-    <nav class="library-nav">
-        <a href="../../index.html">Dashboard</a>
-        <a href="../courses.html">Courses</a>
-        <a href="../digital-library.html">Digital Library</a>
-        <a href="../book-locator.html">Book Locator</a>
-        <a class="active" href="../exam-preparation.html">Exam Prep</a>
-    </nav>
+        <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="topbar-nav" id="topbarNav" aria-label="Main navigation">
+            <a href="../../index.html" class="nav-link" data-page="overview">Overview</a>
+            <a href="../courses.html" class="nav-link" data-page="courses">My Courses</a>
+            <a href="../digital-library.html" class="nav-link" data-page="digital-library">Digital Library</a>
+            <a href="../book-locator.html" class="nav-link" data-page="book-locator">Book Locator</a>
+            <a href="../exam-preparation.html" class="nav-link active" data-page="exam-preparation">Exam Preparation</a>
+            <a href="../profile.html" class="nav-link" data-page="profile">My Profile</a>
+        </nav>
+
+        <a href="../profile.html" class="topbar-user" id="topbarUser" title="View Student Profile">
+            <span class="avatar avatar-blue" id="topbarUserAvatar" data-user-initials>ST</span>
+            <span class="topbar-user-name" id="topbarUserName" data-user-name>Student</span>
+        </a>
+    </div>
 </header>
+
+<div style="padding: 16px 24px 0; max-width: 1440px; margin: 0 auto;">
+    <a class="exam-back-link" href="../exam-preparation.html" style="position: static; margin-bottom: 12px; display: inline-flex;">← Back to Exam Preparation</a>
+</div>
 
 <main class="library-container track-container">
 

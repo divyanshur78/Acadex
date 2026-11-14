@@ -1,105 +1,196 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore academic fields, programmes, semesters and subjects on AcedeX.">
-    <title>Explore Courses | AcedeX</title>
+    <title>My Courses | AcedeX</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/components.css">
-    <link rel="stylesheet" href="../css/course-pages.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/academic-personalisation.css">
+    <link rel="stylesheet" href="../css/course-pages.css">
+    <link rel="stylesheet" href="../css/app-layout.css">
+
+    <script src="../data/resource-index.js" defer></script>
+    <script src="../js/app.js" defer></script>
+    <script src="../js/academic-navigator.js" defer></script>
 </head>
+
 <body class="course-page-body">
-<a class="page-back-button" href="../index.html" data-action="history-back" aria-label="Go back to previous page" title="Go back">
-    <span class="page-back-icon" aria-hidden="true">←</span>
-    <span>Back</span>
-</a>
-    <main class="course-workspace">
-<section class="academic-context-strip" data-academic-context
-         aria-label="Your academic profile">
-    <div class="academic-context-heading">
-        <span class="academic-context-icon">🎓</span>
-        <div>
-            <strong>Your Academic Context</strong>
-            <small>Learning resources linked to your student profile</small>
-        </div>
-    </div>
-    <div class="academic-context-details">
-        <div class="academic-context-item">
-            <span>Programme</span>
-            <strong data-academic-programme>Loading programme</strong>
-        </div>
-        <div class="academic-context-item">
-            <span>Academic Field</span>
-            <strong data-academic-field>Loading academic field</strong>
-        </div>
-        <div class="academic-context-item">
-            <span>Semester</span>
-            <strong data-academic-semester>Loading semester</strong>
-        </div>
-        <div class="academic-context-item">
-            <span>Academic Year</span>
-            <strong data-academic-year>Loading academic year</strong>
-        </div>
-    </div>
-    <a href="profile.html" class="academic-context-edit">View Profile</a>
-</section>
-        <header class="course-topbar">
-            <a class="course-brand" href="../index.html">Acede<span>X</span></a>
-            <nav class="course-top-links">
-                <a href="../index.html">Dashboard</a>
-                <a href="digital-library.html">Digital Library</a>
-                <a href="exam-preparation.html">Exam Preparation</a>
-            </nav>
+    <div class="app-shell">
+
+        <!-- GLOBAL HORIZONTAL TOP NAVIGATION BAR -->
+        <header class="app-topbar">
+            <div class="topbar-inner">
+                <a href="../index.html" class="topbar-brand" aria-label="AcedeX Home">
+                    <span class="brand-mark">A</span>
+                    <span class="brand-name">Acede<span>X</span></span>
+                </a>
+
+                <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+                    ☰
+                </button>
+
+                <nav class="topbar-nav" id="topbarNav" aria-label="Main navigation">
+                    <a href="../index.html" class="nav-link" data-page="overview">Overview</a>
+                    <a href="courses.html" class="nav-link active" data-page="courses">My Courses</a>
+                    <a href="digital-library.html" class="nav-link" data-page="digital-library">Digital Library</a>
+                    <a href="book-locator.html" class="nav-link" data-page="book-locator">Book Locator</a>
+                    <a href="exam-preparation.html" class="nav-link" data-page="exam-preparation">Exam Preparation</a>
+                    <a href="profile.html" class="nav-link" data-page="profile">My Profile</a>
+                </nav>
+
+                <a href="profile.html" class="topbar-user" id="topbarUser" title="View Student Profile">
+                    <span class="avatar avatar-blue" id="topbarUserAvatar" data-user-initials>ST</span>
+                    <span class="topbar-user-name" id="topbarUserName" data-user-name>Student</span>
+                </a>
+            </div>
         </header>
 
-        <section class="course-hero">
-            <div class="course-eyebrow">YOUR ACADEMIC JOURNEY</div>
-            <h1>Explore your courses.</h1>
-            <p>
-                Find your academic field, explore programmes, move through
-                semesters and access subject-wise learning resources—all in one place.
-            </p>
-            <input id="courseSearch" class="course-search" type="search"
-                   placeholder="Search academic fields or programmes..."
-                   aria-label="Search courses">
-        </section>
+        <!-- MAIN COURSE WORKSPACE -->
+        <main class="course-workspace">
+            <div class="page-container">
 
-        <nav class="course-breadcrumbs" id="courseBreadcrumbs" aria-label="Course navigation">
-            <span>Academic Fields</span>
-        </nav>
+                <!-- ACADEMIC CONTEXT STRIP -->
+                <section class="academic-context-strip" data-academic-context aria-label="Your academic profile">
+                    <div class="academic-context-heading">
+                        <span class="academic-context-icon">🎓</span>
+                        <div>
+                            <strong>Your Academic Context</strong>
+                            <small>Based on your saved student profile</small>
+                        </div>
+                    </div>
+                    <div class="academic-context-details">
+                        <div class="academic-context-item">
+                            <span>Program</span>
+                            <strong data-academic-programme>Not added</strong>
+                        </div>
+                        <div class="academic-context-item">
+                            <span>Academic Field</span>
+                            <strong data-academic-field>Not added</strong>
+                        </div>
+                        <div class="academic-context-item">
+                            <span>Current Semester</span>
+                            <strong data-academic-semester>Not added</strong>
+                        </div>
+                        <div class="academic-context-item">
+                            <span>Academic Year</span>
+                            <strong data-academic-year>Not added</strong>
+                        </div>
+                    </div>
+                    <a href="profile.html" class="academic-context-edit">Edit Profile</a>
+                </section>
 
-        <section>
-            <div class="course-section-heading">
-                <div>
-                    <h2 id="courseSectionTitle">Choose your academic field</h2>
-                    <p id="courseSectionDescription">Explore the six academic domains available on AcedeX.</p>
-                </div>
+                <!-- COURSE HERO -->
+                <section class="course-hero">
+                    <div class="course-eyebrow">YOUR ACADEMIC JOURNEY</div>
+                    <h1>Explore your courses.</h1>
+                    <p>
+                        Find your academic field, explore programmes, move through
+                        semesters and access subject-wise learning resources—all in one place.
+                    </p>
+                </section>
+
+                <!-- COURSE DISCOVERY / ACADEMIC FIELDS -->
+                <section class="content-section" id="academicFieldsSection">
+                    <div class="section-heading">
+                        <div>
+                            <div class="section-kicker">COURSE DISCOVERY</div>
+                            <h2>Choose Your Academic Field</h2>
+                            <p>Explore the six academic domains with their verified branches, specialisations and semester-wise materials.</p>
+                        </div>
+                    </div>
+
+                    <div class="academic-field-grid" id="academicFieldGrid">
+                        <!-- CS & IT -->
+                        <button type="button" class="field-card field-blue" data-field="computer-science-it">
+                            <div class="field-card-top">
+                                <span class="field-icon">⌘</span>
+                                <span class="field-arrow">↗</span>
+                            </div>
+                            <h3>Computer Science &amp; IT</h3>
+                            <p>Computing, software, data science, cybersecurity and information technology.</p>
+                            <span class="field-card-footer">Explore field <span>→</span></span>
+                        </button>
+
+                        <!-- Engineering & Technology -->
+                        <button type="button" class="field-card field-purple" data-field="engineering-technology">
+                            <div class="field-card-top">
+                                <span class="field-icon">⌁</span>
+                                <span class="field-arrow">↗</span>
+                            </div>
+                            <h3>Engineering &amp; Technology</h3>
+                            <p>Engineering disciplines, innovation, applied sciences and core branches.</p>
+                            <span class="field-card-footer">Explore field <span>→</span></span>
+                        </button>
+
+                        <!-- Management & Commerce -->
+                        <button type="button" class="field-card field-orange" data-field="management-commerce">
+                            <div class="field-card-top">
+                                <span class="field-icon">▥</span>
+                                <span class="field-arrow">↗</span>
+                            </div>
+                            <h3>Management &amp; Commerce</h3>
+                            <p>Business administration, management strategy, finance, accounting and marketing.</p>
+                            <span class="field-card-footer">Explore field <span>→</span></span>
+                        </button>
+
+                        <!-- Pharmaceutical Sciences -->
+                        <button type="button" class="field-card field-green" data-field="pharmaceutical-sciences">
+                            <div class="field-card-top">
+                                <span class="field-icon">✚</span>
+                                <span class="field-arrow">↗</span>
+                            </div>
+                            <h3>Pharmaceutical Sciences</h3>
+                            <p>Pharmacy, medicinal chemistry, pharmaceutics, pharmacology and drug research.</p>
+                            <span class="field-card-footer">Explore field <span>→</span></span>
+                        </button>
+
+                        <!-- Agriculture -->
+                        <button type="button" class="field-card field-lime" data-field="agriculture">
+                            <div class="field-card-top">
+                                <span class="field-icon">❋</span>
+                                <span class="field-arrow">↗</span>
+                            </div>
+                            <h3>Agriculture</h3>
+                            <p>Agricultural science, agronomy, soil management, crop systems and sustainability.</p>
+                            <span class="field-card-footer">Explore field <span>→</span></span>
+                        </button>
+
+                        <!-- Law -->
+                        <button type="button" class="field-card field-rose" data-field="law">
+                            <div class="field-card-top">
+                                <span class="field-icon">⚖</span>
+                                <span class="field-arrow">↗</span>
+                            </div>
+                            <h3>Law</h3>
+                            <p>Legal studies, constitutional legislation, criminal law, jurisprudence and justice systems.</p>
+                            <span class="field-card-footer">Explore field <span>→</span></span>
+                        </button>
+                    </div>
+
+                    <!-- Dynamic Academic Navigation Panel -->
+                    <div class="academic-navigator-panel" id="academicNavigatorPanel" hidden></div>
+                </section>
+
+                <footer class="main-footer" style="margin-top: 48px;">
+                    <a href="../index.html" class="footer-brand" aria-label="AcedeX Home">
+                        <span class="brand-mark brand-mark-small">A</span>
+                        <strong>Acede<span>X</span></strong>
+                    </a>
+                    <p>One unified space for your academic journey.</p>
+                    <span class="footer-copyright">
+                        © 2026 AcedeX · Academic learning, made simpler.
+                    </span>
+                </footer>
             </div>
-
-            <div id="courseContent" aria-live="polite">
-                <div class="course-empty">
-                    <div class="course-empty-icon">⌛</div>
-                    <h3>Loading academic fields...</h3>
-                    <p>Your course catalogue is being prepared.</p>
-                </div>
-            </div>
-        </section>
-
-        <footer class="course-footer">
-            © 2026 AcedeX · One space for your academic journey.
-        </footer>
-    </main>
-    <script src="../data/resource-index.js"></script>
+        </main>
+    </div>
 </body>
 </html>
-
-
-
-
-
-
-
-

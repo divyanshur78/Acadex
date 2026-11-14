@@ -1,93 +1,203 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Book Locator | AcedeX</title>
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/components.css">
-<link rel="stylesheet" href="../css/library-pages.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Locator | AcedeX</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/academic-personalisation.css">
+    <link rel="stylesheet" href="../css/library-pages.css">
+    <link rel="stylesheet" href="../css/app-layout.css">
+
+    <script src="../data/resource-index.js" defer></script>
+    <script src="../js/app.js" defer></script>
+    <script src="../js/book-locator.js" defer></script>
 </head>
+
 <body class="library-page">
-<a class="page-back-button" href="../index.html" data-action="history-back" aria-label="Go back to previous page" title="Go back">
-    <span class="page-back-icon" aria-hidden="true">←</span>
-    <span>Back</span>
-</a>
-<header class="library-header">
-<a class="library-brand" href="../index.html">Acede<span>X</span></a>
-<nav class="library-nav">
-<a href="../index.html">Dashboard</a><a href="courses.html">Courses</a><a href="digital-library.html">Digital Library</a><a class="active" href="book-locator.html">Book Locator</a><a href="exam-preparation.html">Exam Prep</a>
-</nav>
-</header>
-<main class="library-container">
-<section class="academic-context-strip" data-academic-context
-         aria-label="Your academic profile">
-    <div class="academic-context-heading">
-        <span class="academic-context-icon">🎓</span>
-        <div>
-            <strong>Your Academic Context</strong>
-            <small>Learning resources linked to your student profile</small>
-        </div>
+    <div class="app-shell">
+
+        <!-- GLOBAL HORIZONTAL TOP NAVIGATION BAR -->
+        <header class="app-topbar">
+            <div class="topbar-inner">
+                <a href="../index.html" class="topbar-brand" aria-label="AcedeX Home">
+                    <span class="brand-mark">A</span>
+                    <span class="brand-name">Acede<span>X</span></span>
+                </a>
+
+                <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+                    ☰
+                </button>
+
+                <nav class="topbar-nav" id="topbarNav" aria-label="Main navigation">
+                    <a href="../index.html" class="nav-link" data-page="overview">Overview</a>
+                    <a href="courses.html" class="nav-link" data-page="courses">My Courses</a>
+                    <a href="digital-library.html" class="nav-link" data-page="digital-library">Digital Library</a>
+                    <a href="book-locator.html" class="nav-link active" data-page="book-locator">Book Locator</a>
+                    <a href="exam-preparation.html" class="nav-link" data-page="exam-preparation">Exam Preparation</a>
+                    <a href="profile.html" class="nav-link" data-page="profile">My Profile</a>
+                </nav>
+
+                <a href="profile.html" class="topbar-user" id="topbarUser" title="View Student Profile">
+                    <span class="avatar avatar-blue" id="topbarUserAvatar" data-user-initials>ST</span>
+                    <span class="topbar-user-name" id="topbarUserName" data-user-name>Student</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- MAIN BOOK LOCATOR CONTAINER -->
+        <main class="library-container">
+            <div class="page-container">
+
+                <!-- ACADEMIC CONTEXT STRIP -->
+                <section class="academic-context-strip" data-academic-context aria-label="Your academic profile">
+                    <div class="academic-context-heading">
+                        <span class="academic-context-icon">🎓</span>
+                        <div>
+                            <strong>Your Academic Context</strong>
+                            <small>Physical shelf availability mapped to your student profile</small>
+                        </div>
+                    </div>
+                    <div class="academic-context-details">
+                        <div class="academic-context-item">
+                            <span>Programme</span>
+                            <strong data-academic-programme>Not added</strong>
+                        </div>
+                        <div class="academic-context-item">
+                            <span>Academic Field</span>
+                            <strong data-academic-field>Not added</strong>
+                        </div>
+                        <div class="academic-context-item">
+                            <span>Semester</span>
+                            <strong data-academic-semester>Not added</strong>
+                        </div>
+                        <div class="academic-context-item">
+                            <span>Academic Year</span>
+                            <strong data-academic-year>Not added</strong>
+                        </div>
+                    </div>
+                    <a href="profile.html" class="academic-context-edit">Edit Profile</a>
+                </section>
+
+                <!-- HERO SECTION -->
+                <section class="library-hero">
+                    <div class="library-eyebrow">Your campus library companion</div>
+                    <h1>Find your book.<br>Know where it is.</h1>
+                    <p>
+                        Locate physical books in the university library using catalogue information,
+                        shelf details and real-time availability records.
+                    </p>
+                    <form class="library-search" role="search">
+                        <input type="search" placeholder="Enter book title, author, subject or catalogue ID..." aria-label="Find a physical book" autocomplete="off">
+                        <button type="submit">Find Book</button>
+                    </form>
+                </section>
+
+                <!-- LOCATION DETAILS PANEL -->
+                <section class="library-section">
+                    <div class="library-section-heading">
+                        <div>
+                            <h2>Book Location Details</h2>
+                            <p>Live campus library shelf coordinates and copy availability.</p>
+                        </div>
+                    </div>
+
+                    <div class="location-panel">
+                        <div class="location-item">
+                            <small>Building</small>
+                            <strong>Central Library Block 34</strong>
+                        </div>
+                        <div class="location-item">
+                            <small>Floor</small>
+                            <strong>2nd Floor</strong>
+                        </div>
+                        <div class="location-item">
+                            <small>Section</small>
+                            <strong>Mathematics (Section M)</strong>
+                        </div>
+                        <div class="location-item">
+                            <small>Rack / Shelf</small>
+                            <strong>Rack 04 / Shelf B</strong>
+                        </div>
+                        <div class="location-item">
+                            <small>Call Number</small>
+                            <strong>QA303.2 .H47 2024</strong>
+                        </div>
+                        <div class="location-item">
+                            <small>Availability</small>
+                            <strong>4 copies available (2 on loan)</strong>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SEARCH RESULTS CATALOG -->
+                <section class="library-section">
+                    <div class="library-section-heading">
+                        <div>
+                            <h2>Library Catalogue Results</h2>
+                            <p>Select any book to see its exact shelf location and campus availability.</p>
+                        </div>
+                    </div>
+
+                    <div class="book-locator-results" id="bookLocatorResults"></div>
+                </section>
+
+                <!-- HOW BOOK LOCATION WORKS -->
+                <section class="library-section">
+                    <div class="library-section-heading">
+                        <div>
+                            <h2>How Book Location Works</h2>
+                            <p>A simple path from catalogue search to the library shelf.</p>
+                        </div>
+                    </div>
+
+                    <div class="library-grid">
+                        <article class="library-card">
+                            <div class="library-icon">⌕</div>
+                            <h3>01. Search</h3>
+                            <p>Look up a book by its title, author, subject or catalogue number.</p>
+                        </article>
+                        <article class="library-card">
+                            <div class="library-icon">⌖</div>
+                            <h3>02. View Location</h3>
+                            <p>Check its recorded building, floor, section, rack and shelf coordinates.</p>
+                        </article>
+                        <article class="library-card">
+                            <div class="library-icon">✓</div>
+                            <h3>03. Check Availability</h3>
+                            <p>Review the latest available copy counts before visiting the stacks.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- CROSS-PROMO -->
+                <section class="library-section">
+                    <div class="location-banner">
+                        <h2>Digital discovery. Physical access.</h2>
+                        <p>Use the Digital Library to explore academic resources online, then use the Book Locator to find physical copies in the campus library.</p>
+                        <a class="library-button" href="digital-library.html">Explore Digital Library</a>
+                    </div>
+                </section>
+
+                <footer class="main-footer" style="margin-top: 48px;">
+                    <a href="../index.html" class="footer-brand" aria-label="AcedeX Home">
+                        <span class="brand-mark brand-mark-small">A</span>
+                        <strong>Acede<span>X</span></strong>
+                    </a>
+                    <p>One unified space for your academic journey.</p>
+                    <span class="footer-copyright">
+                        © 2026 AcedeX · Academic learning, made simpler.
+                    </span>
+                </footer>
+            </div>
+        </main>
     </div>
-    <div class="academic-context-details">
-        <div class="academic-context-item">
-            <span>Programme</span>
-            <strong data-academic-programme>Loading programme</strong>
-        </div>
-        <div class="academic-context-item">
-            <span>Academic Field</span>
-            <strong data-academic-field>Loading academic field</strong>
-        </div>
-        <div class="academic-context-item">
-            <span>Semester</span>
-            <strong data-academic-semester>Loading semester</strong>
-        </div>
-        <div class="academic-context-item">
-            <span>Academic Year</span>
-            <strong data-academic-year>Loading academic year</strong>
-        </div>
-    </div>
-    <a href="profile.html" class="academic-context-edit">View Profile</a>
-</section>
-<section class="library-hero">
-<div class="library-eyebrow">Your campus library companion</div>
-<h1>Find your book.<br>Know where it is.</h1>
-<p>Locate physical books in the university library using catalogue information, shelf details and availability records.</p>
-<form class="library-search" role="search">
-<input type="search" placeholder="Enter book title, author or catalogue ID..." aria-label="Find a physical book">
-<button type="submit">Find Book</button>
-</form>
-</section>
-<section class="library-section">
-<div class="library-section-heading"><div><h2>Book Location Details</h2><p>Location information will be displayed when verified library records are connected.</p></div></div>
-<div class="location-panel">
-<div class="location-item"><small>Building</small><strong>Library building</strong></div>
-<div class="location-item"><small>Floor</small><strong>Floor information</strong></div>
-<div class="location-item"><small>Section</small><strong>Section information</strong></div>
-<div class="location-item"><small>Rack / Shelf</small><strong>Rack and shelf information</strong></div>
-<div class="location-item"><small>Call Number</small><strong>Catalogue reference</strong></div>
-<div class="location-item"><small>Availability</small><strong>Availability record</strong></div>
-</div>
-</section>
-<section class="library-section">
-<div class="library-section-heading"><div><h2>How Book Location Works</h2><p>A simple path from catalogue search to the library shelf.</p></div></div>
-<div class="library-grid">
-<article class="library-card"><div class="library-icon">⌕</div><h3>01. Search</h3><p>Look up a book by its title, author, subject or catalogue number.</p></article>
-<article class="library-card"><div class="library-icon">⌖</div><h3>02. View Location</h3><p>Check its recorded building, floor, section, rack and shelf.</p></article>
-<article class="library-card"><div class="library-icon">✓</div><h3>03. Check Availability</h3><p>Review the latest available-copy information before visiting.</p></article>
-</div>
-</section>
-<section class="library-section">
-<div class="location-banner"><h2>Digital discovery. Physical access.</h2><p>Use the Digital Library to explore academic resources, then use the Book Locator to find physical copies in the campus library.</p><a class="library-button" href="digital-library.html">Explore Digital Library</a></div>
-</section>
-</main>
-<footer class="library-footer">AcedeX · Campus book discovery</footer>
 </body>
 </html>
-
-
-
-
-

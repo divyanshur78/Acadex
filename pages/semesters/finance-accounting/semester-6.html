@@ -10,19 +10,39 @@
     <link rel="stylesheet" href="../../../css/responsive.css">
     <link rel="stylesheet" href="../../../css/specialisation-pages.css">
     <link rel="stylesheet" href="../../../css/semester-pages.css">
+    <link rel="stylesheet" href="../../../css/app-layout.css">
+    <script src="../../../js/app.js" defer></script>
 </head>
 <body class="semester-learning-page">
-    <header class="specialisation-site-header">
-        <a class="specialisation-brand" href="../../../index.html">AcedeX</a>
-        <nav class="specialisation-main-nav" aria-label="Main navigation">
-            <a href="../../../index.html">Home</a>
-            <a href="../../academic-fields/management-commerce.html">Academic Fields</a>
-            <a href="../../digital-library.html">Digital Library</a>
-            <a href="../../exam-preparation.html">Exam Preparation</a>
-        </nav>
-    </header>
 
-    <main class="semester-page-main"
+<header class="app-topbar">
+    <div class="topbar-inner">
+        <a href="../../../index.html" class="topbar-brand" aria-label="AcedeX Home">
+            <span class="brand-mark">A</span>
+            <span class="brand-name">Acede<span>X</span></span>
+        </a>
+
+        <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="topbar-nav" id="topbarNav" aria-label="Main navigation">
+            <a href="../../../index.html" class="nav-link" data-page="overview">Overview</a>
+            <a href="../../../pages/courses.html" class="nav-link active" data-page="courses">My Courses</a>
+            <a href="../../../pages/digital-library.html" class="nav-link" data-page="digital-library">Digital Library</a>
+            <a href="../../../pages/book-locator.html" class="nav-link" data-page="book-locator">Book Locator</a>
+            <a href="../../../pages/exam-preparation.html" class="nav-link" data-page="exam-preparation">Exam Preparation</a>
+            <a href="../../../pages/profile.html" class="nav-link" data-page="profile">My Profile</a>
+        </nav>
+
+        <a href="../../../pages/profile.html" class="topbar-user" id="topbarUser" title="View Student Profile">
+            <span class="avatar avatar-blue" id="topbarUserAvatar" data-user-initials>ST</span>
+            <span class="topbar-user-name" id="topbarUserName" data-user-name>Student</span>
+        </a>
+    </div>
+</header>
+
+<main class="semester-page-main"
           data-specialisation-id="finance-accounting"
           data-academic-field="management-commerce"
           data-semester-number="6"

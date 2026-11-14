@@ -1,99 +1,228 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Profile | AcedeX</title>
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/components.css">
-<link rel="stylesheet" href="../css/library-pages.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | AcedeX</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/responsive.css">
-    <link rel="stylesheet" href="../css/profile-pages.css">
     <link rel="stylesheet" href="../css/academic-personalisation.css">
+    <link rel="stylesheet" href="../css/library-pages.css">
+    <link rel="stylesheet" href="../css/app-layout.css">
+
+    <script src="../js/app.js" defer></script>
+    <script src="../js/profile.js" defer></script>
 </head>
-<body class="library-page">
-<a class="page-back-button" href="../index.html" data-action="history-back" aria-label="Go back to previous page" title="Go back">
-    <span class="page-back-icon" aria-hidden="true">←</span>
-    <span>Back</span>
-</a>
-<header class="library-header">
-<a class="library-brand" href="../index.html">Acede<span>X</span></a>
-<nav class="library-nav">
-<a href="../index.html">Dashboard</a><a href="courses.html">Courses</a><a href="digital-library.html">Digital Library</a><a href="book-locator.html">Book Locator</a><a href="exam-preparation.html">Exam Prep</a>
-</nav>
-</header>
-<main class="library-container">
-<section class="academic-context-strip" data-academic-context
-         aria-label="Your academic profile">
-    <div class="academic-context-heading">
-        <span class="academic-context-icon">🎓</span>
-        <div>
-            <strong>Your Academic Context</strong>
-            <small>Learning resources linked to your student profile</small>
-        </div>
+
+<body class="library-page profile-page">
+    <div class="app-shell">
+
+        <!-- GLOBAL HORIZONTAL TOP NAVIGATION BAR -->
+        <header class="app-topbar">
+            <div class="topbar-inner">
+                <a href="../index.html" class="topbar-brand" aria-label="AcedeX Home">
+                    <span class="brand-mark">A</span>
+                    <span class="brand-name">Acede<span>X</span></span>
+                </a>
+
+                <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+                    ☰
+                </button>
+
+                <nav class="topbar-nav" id="topbarNav" aria-label="Main navigation">
+                    <a href="../index.html" class="nav-link" data-page="overview">Overview</a>
+                    <a href="courses.html" class="nav-link" data-page="courses">My Courses</a>
+                    <a href="digital-library.html" class="nav-link" data-page="digital-library">Digital Library</a>
+                    <a href="book-locator.html" class="nav-link" data-page="book-locator">Book Locator</a>
+                    <a href="exam-preparation.html" class="nav-link" data-page="exam-preparation">Exam Preparation</a>
+                    <a href="profile.html" class="nav-link active" data-page="profile">My Profile</a>
+                </nav>
+
+                <a href="profile.html" class="topbar-user" id="topbarUser" title="View Student Profile">
+                    <span class="avatar avatar-blue" id="topbarUserAvatar" data-user-initials>ST</span>
+                    <span class="topbar-user-name" id="topbarUserName" data-user-name>Student</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- MAIN PROFILE CONTAINER -->
+        <main class="library-container">
+            <div class="page-container">
+
+                <!-- PROFILE HERO -->
+                <section class="library-hero">
+                    <div class="library-eyebrow">Personal academic space</div>
+                    <h1>Student Profile</h1>
+                    <p>Enter your details once to personalise your courses, digital library context and academic recommendations.</p>
+                </section>
+
+                <!-- PROFILE FORM AND SUMMARY LAYOUT -->
+                <div class="profile-layout-grid">
+
+                    <!-- STUDENT PROFILE FORM -->
+                    <form class="profile-card-panel" id="profileForm">
+                        <div class="section-heading">
+                            <div>
+                                <div class="section-kicker">ACADEMIC IDENTITY</div>
+                                <h2>Your Information</h2>
+                                <p>All details are saved securely in your browser and used to customize your workspace.</p>
+                            </div>
+                        </div>
+
+                        <div class="profile-form-grid">
+                            <!-- 1. Student Name -->
+                            <label>
+                                Student Name *
+                                <input type="text" name="name" required placeholder="Enter your full name" autocomplete="name">
+                            </label>
+
+                            <!-- 2. Registration Number -->
+                            <label>
+                                Registration Number
+                                <input type="text" name="registration" placeholder="e.g. 12204859" autocomplete="off">
+                            </label>
+
+                            <!-- 3. Program -->
+                            <label>
+                                Program
+                                <input type="text" name="program" placeholder="e.g. B.Tech, BBA, MBA, B.Pharm">
+                            </label>
+
+                            <!-- 4. Academic Field -->
+                            <label>
+                                Academic Field
+                                <select name="field">
+                                    <option value="">Select academic field</option>
+                                    <option value="Computer Science & IT">Computer Science &amp; IT</option>
+                                    <option value="Engineering & Technology">Engineering &amp; Technology</option>
+                                    <option value="Management & Commerce">Management &amp; Commerce</option>
+                                    <option value="Pharmaceutical Sciences">Pharmaceutical Sciences</option>
+                                    <option value="Agriculture">Agriculture</option>
+                                    <option value="Law">Law</option>
+                                </select>
+                            </label>
+
+                            <!-- 5. Current Semester -->
+                            <label>
+                                Current Semester
+                                <select name="semester">
+                                    <option value="">Select semester</option>
+                                    <option value="Semester 1">Semester 1</option>
+                                    <option value="Semester 2">Semester 2</option>
+                                    <option value="Semester 3">Semester 3</option>
+                                    <option value="Semester 4">Semester 4</option>
+                                    <option value="Semester 5">Semester 5</option>
+                                    <option value="Semester 6">Semester 6</option>
+                                    <option value="Semester 7">Semester 7</option>
+                                    <option value="Semester 8">Semester 8</option>
+                                    <option value="Semester 9">Semester 9</option>
+                                    <option value="Semester 10">Semester 10</option>
+                                </select>
+                            </label>
+
+                            <!-- 6. School Name -->
+                            <label>
+                                School Name
+                                <input type="text" name="school" placeholder="e.g. School of Computer Science & Engineering">
+                            </label>
+
+                            <!-- 7. Academic Year -->
+                            <label>
+                                Academic Year
+                                <input type="text" name="year" placeholder="e.g. 2026–2027">
+                            </label>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+                            <button class="button button-primary" type="submit">Save Profile</button>
+                            <span class="profile-save-status" id="profileStatus" aria-live="polite"></span>
+                        </div>
+                    </form>
+
+                    <!-- ASIDE PROFILE CARD -->
+                    <aside class="profile-aside">
+                        <div class="profile-avatar-large" id="profileAvatar">ST</div>
+                        <h2 id="profileDisplayName">Student Name</h2>
+                        <p id="profileDisplayProgram">Your academic profile</p>
+
+                        <div class="profile-summary-table">
+                            <div class="profile-summary-row">
+                                <span>Program</span>
+                                <strong data-profile-program>Not added</strong>
+                            </div>
+                            <div class="profile-summary-row">
+                                <span>Academic Field</span>
+                                <strong data-profile-field>Not added</strong>
+                            </div>
+                            <div class="profile-summary-row">
+                                <span>Semester</span>
+                                <strong data-profile-semester>Not added</strong>
+                            </div>
+                            <div class="profile-summary-row">
+                                <span>Academic Year</span>
+                                <strong data-profile-year>Not added</strong>
+                            </div>
+                        </div>
+                    </aside>
+
+                </div>
+
+                <!-- MY LEARNING SPACES -->
+                <section class="content-section" style="margin-top: 48px;">
+                    <div class="section-heading">
+                        <div>
+                            <div class="section-kicker">YOUR PERSONAL SPACE</div>
+                            <h2>My Learning Spaces</h2>
+                            <p>Direct shortcuts to your connected academic tools and preparation trackers.</p>
+                        </div>
+                    </div>
+
+                    <div class="toolkit-quick-links">
+                        <a href="courses.html" class="toolkit-card">
+                            <span class="toolkit-icon">▤</span>
+                            <span class="toolkit-title">My Courses</span>
+                            <b>→</b>
+                        </a>
+
+                        <a href="digital-library.html" class="toolkit-card">
+                            <span class="toolkit-icon">▥</span>
+                            <span class="toolkit-title">Digital Library</span>
+                            <b>→</b>
+                        </a>
+
+                        <a href="exam-preparation.html" class="toolkit-card">
+                            <span class="toolkit-icon">✎</span>
+                            <span class="toolkit-title">Exam Preparation</span>
+                            <b>→</b>
+                        </a>
+
+                        <a href="book-locator.html" class="toolkit-card">
+                            <span class="toolkit-icon">⌖</span>
+                            <span class="toolkit-title">Book Locator</span>
+                            <b>→</b>
+                        </a>
+                    </div>
+                </section>
+
+                <footer class="main-footer" style="margin-top: 48px;">
+                    <a href="../index.html" class="footer-brand" aria-label="AcedeX Home">
+                        <span class="brand-mark brand-mark-small">A</span>
+                        <strong>Acede<span>X</span></strong>
+                    </a>
+                    <p>One unified space for your academic journey.</p>
+                    <span class="footer-copyright">
+                        © 2026 AcedeX · Academic learning, made simpler.
+                    </span>
+                </footer>
+
+            </div>
+        </main>
     </div>
-    <div class="academic-context-details">
-        <div class="academic-context-item">
-            <span>Programme</span>
-            <strong data-academic-programme>Loading programme</strong>
-        </div>
-        <div class="academic-context-item">
-            <span>Academic Field</span>
-            <strong data-academic-field>Loading academic field</strong>
-        </div>
-        <div class="academic-context-item">
-            <span>Semester</span>
-            <strong data-academic-semester>Loading semester</strong>
-        </div>
-        <div class="academic-context-item">
-            <span>Academic Year</span>
-            <strong data-academic-year>Loading academic year</strong>
-        </div>
-    </div>
-    <a href="#profile-academic-information" class="academic-context-edit">View Profile</a>
-</section>
-<section class="library-hero">
-<div class="library-eyebrow">Your academic space</div>
-<h1>Student Profile</h1>
-<p>Keep your academic information, programme details and learning activity organised in one place.</p>
-</section>
-<section class="library-section">
-<div class="library-grid" style="grid-template-columns:minmax(220px,.8fr) minmax(0,2fr)">
-<div class="library-card" style="text-align:center">
-<div style="width:94px;height:94px;border-radius:50%;background:#ffeadc;color:#e87537;display:grid;place-items:center;font-size:34px;font-weight:850;margin:5px auto 18px">AK</div>
-<h2 style="margin:0 0 8px">Student Name</h2>
-<p>University Student</p>
-<div class="library-meta" style="justify-content:center"><span class="library-tag">Student Account</span></div>
-</div>
-<div class="library-card">
-<h2 id="profile-academic-information">Academic Information</h2>
-<div class="location-panel" style="margin-top:20px">
-<div class="location-item"><small>Registration Number</small><strong>Student ID</strong></div>
-<div class="location-item"><small>Programme</small><strong>Programme Name</strong></div>
-<div class="location-item"><small>Academic Field</small><strong>Academic Field</strong></div>
-<div class="location-item"><small>Current Semester</small><strong>Semester</strong></div>
-<div class="location-item"><small>School</small><strong>School Name</strong></div>
-<div class="location-item"><small>Academic Year</small><strong>Academic Year</strong></div>
-</div>
-</div>
-</div>
-</section>
-<section class="library-section">
-<div class="library-section-heading"><div><h2>My Learning Space</h2><p>Your academic activity and saved resources.</p></div></div>
-<div class="library-grid">
-<article class="library-card"><div class="library-icon">▤</div><h3>My Courses</h3><p>Access your programme, semester and enrolled subject information.</p><a class="library-card-link" href="courses.html">Browse courses →</a></article>
-<article class="library-card"><div class="library-icon">▣</div><h3>Saved Resources</h3><p>Keep useful academic books, notes and references together.</p><a class="library-card-link" href="digital-library.html">Open library →</a></article>
-<article class="library-card"><div class="library-icon">✦</div><h3>Exam Preparation</h3><p>Continue exploring revision and practice resources.</p><a class="library-card-link" href="exam-preparation.html">Prepare now →</a></article>
-</div>
-</section>
-</main>
-<footer class="library-footer">AcedeX · Your academic space</footer>
 </body>
 </html>
-
-
-
-
-
-
-
